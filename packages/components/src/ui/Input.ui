@@ -1,0 +1,50 @@
+import { SwissComponent, html } from '@swissjs/core';
+
+interface InputProps {
+  value?: string;
+  placeholder?: string;
+  disabled?: boolean;
+  type?: 'text' | 'email' | 'password' | 'search' | 'number';
+  name?: string;
+  id?: string;
+  ariaLabel?: string;
+  onInput?: (e: InputEvent, value: string) => void;
+}
+
+export default class UiInput extends SwissComponent<InputProps> {
+  constructor(props: InputProps) {
+    super(props);
+  }
+
+  onInput = (e: Event) => {
+    const target = e.target as HTMLInputElement;
+    const v = (target?.value ?? '').toString();
+    this.props.onInput?.(e as InputEvent, v);
+  };
+
+  render() {
+    const { value = '', placeholder = '', disabled = false, type = 'text', name, id, ariaLabel } = this.props;
+    return html`
+      <label class="ui-input-wrapper">
+        <input
+          class="ui-input"
+          type="${type}"
+          name="${name ?? ''}"
+          id="${id ?? ''}"
+          value="${value}"
+          placeholder="${placeholder}"
+          aria-label="${ariaLabel ?? placeholder ?? 'input'}"
+          aria-disabled="${disabled ? 'true' : 'false'}"
+          disabled="${disabled ? 'true' : 'false'}"
+          oninput="${this.onInput}"
+        />
+      </label>
+      <style>
+        .ui-input-wrapper { display:inline-flex; width:100% }
+        .ui-input { width:100%; padding:8px 10px; border:1px solid #ccc; border-radius:6px; font-size:14px }
+        .ui-input:focus { outline: 2px solid #4da3ff; outline-offset: 1px }
+        .ui-input[disabled] { background:#f7f7f7; color:#777 }
+      </style>
+    `;
+  }
+}

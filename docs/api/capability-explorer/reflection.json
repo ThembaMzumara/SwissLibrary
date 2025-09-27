@@ -1,0 +1,470 @@
+{
+	"schemaVersion": "2.0",
+	"id": 917,
+	"name": "@swissjs/capability-explorer",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 925,
+			"name": "DataService",
+			"variant": "declaration",
+			"kind": 128,
+			"flags": {},
+			"children": [
+				{
+					"id": 926,
+					"name": "constructor",
+					"variant": "declaration",
+					"kind": 512,
+					"flags": {},
+					"signatures": [
+						{
+							"id": 927,
+							"name": "DataService",
+							"variant": "signature",
+							"kind": 16384,
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"target": 925,
+								"name": "DataService",
+								"package": "@swissjs/capability-explorer"
+							}
+						}
+					]
+				},
+				{
+					"id": 928,
+					"name": "getSnapshot",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "DataService.ts",
+							"line": 18,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/capability-explorer/src/services/DataService.ts#L18"
+						}
+					],
+					"signatures": [
+						{
+							"id": 929,
+							"name": "getSnapshot",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Get the current snapshot of the component hierarchy from the devtools bridge"
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "DataService.ts",
+									"line": 18,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/capability-explorer/src/services/DataService.ts#L18"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"packageName": "swissjs-monorepo",
+									"packagePath": "",
+									"qualifiedName": "GraphSnapshot"
+								},
+								"name": "GraphSnapshot"
+							}
+						}
+					]
+				},
+				{
+					"id": 930,
+					"name": "isActive",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "DataService.ts",
+							"line": 34,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/capability-explorer/src/services/DataService.ts#L34"
+						}
+					],
+					"signatures": [
+						{
+							"id": 931,
+							"name": "isActive",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Check if devtools bridge is available and active"
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "DataService.ts",
+									"line": 34,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/capability-explorer/src/services/DataService.ts#L34"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					]
+				},
+				{
+					"id": 932,
+					"name": "reset",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "DataService.ts",
+							"line": 46,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/capability-explorer/src/services/DataService.ts#L46"
+						}
+					],
+					"signatures": [
+						{
+							"id": 933,
+							"name": "reset",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Reset the devtools bridge data (useful for testing)"
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "DataService.ts",
+									"line": 46,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/capability-explorer/src/services/DataService.ts#L46"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						926
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						928,
+						930,
+						932
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "DataService.ts",
+					"line": 14,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/capability-explorer/src/services/DataService.ts#L14"
+				}
+			]
+		},
+		{
+			"id": 920,
+			"name": "CapabilityConflict",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 923,
+					"name": "capability",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "DataService.ts",
+							"line": 10,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/capability-explorer/src/services/DataService.ts#L10"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 921,
+					"name": "componentId",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "DataService.ts",
+							"line": 8,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/capability-explorer/src/services/DataService.ts#L8"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 922,
+					"name": "componentName",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "DataService.ts",
+							"line": 9,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/capability-explorer/src/services/DataService.ts#L9"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 924,
+					"name": "reason",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "DataService.ts",
+							"line": 11,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/capability-explorer/src/services/DataService.ts#L11"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						923,
+						921,
+						922,
+						924
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "DataService.ts",
+					"line": 7,
+					"character": 17,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/capability-explorer/src/services/DataService.ts#L7"
+				}
+			]
+		},
+		{
+			"id": 918,
+			"name": "ComponentNode",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 919,
+					"name": "children",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "DataService.ts",
+							"line": 4,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/capability-explorer/src/services/DataService.ts#L4"
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "reference",
+							"target": 918,
+							"name": "ComponentNode",
+							"package": "@swissjs/capability-explorer"
+						}
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						919
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "DataService.ts",
+					"line": 3,
+					"character": 17,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/capability-explorer/src/services/DataService.ts#L3"
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"target": {
+						"packageName": "swissjs-monorepo",
+						"packagePath": "",
+						"qualifiedName": "unknown"
+					},
+					"name": "unknown"
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Classes",
+			"children": [
+				925
+			]
+		},
+		{
+			"title": "Interfaces",
+			"children": [
+				920,
+				918
+			]
+		}
+	],
+	"packageName": "@swissjs/capability-explorer",
+	"packageVersion": "0.1.0",
+	"symbolIdMap": {
+		"917": {
+			"packageName": "@swissjs/capability-explorer",
+			"packagePath": "src/index.ts",
+			"qualifiedName": ""
+		},
+		"918": {
+			"packageName": "@swissjs/capability-explorer",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "ComponentNode"
+		},
+		"919": {
+			"packageName": "@swissjs/capability-explorer",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "ComponentNode.children"
+		},
+		"920": {
+			"packageName": "@swissjs/capability-explorer",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "CapabilityConflict"
+		},
+		"921": {
+			"packageName": "@swissjs/capability-explorer",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "CapabilityConflict.componentId"
+		},
+		"922": {
+			"packageName": "@swissjs/capability-explorer",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "CapabilityConflict.componentName"
+		},
+		"923": {
+			"packageName": "@swissjs/capability-explorer",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "CapabilityConflict.capability"
+		},
+		"924": {
+			"packageName": "@swissjs/capability-explorer",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "CapabilityConflict.reason"
+		},
+		"925": {
+			"packageName": "@swissjs/capability-explorer",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "DataService"
+		},
+		"928": {
+			"packageName": "@swissjs/capability-explorer",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "DataService.getSnapshot"
+		},
+		"929": {
+			"packageName": "@swissjs/capability-explorer",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "DataService.getSnapshot"
+		},
+		"930": {
+			"packageName": "@swissjs/capability-explorer",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "DataService.isActive"
+		},
+		"931": {
+			"packageName": "@swissjs/capability-explorer",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "DataService.isActive"
+		},
+		"932": {
+			"packageName": "@swissjs/capability-explorer",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "DataService.reset"
+		},
+		"933": {
+			"packageName": "@swissjs/capability-explorer",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "DataService.reset"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "packages/devtools/capability-explorer/src/index.ts"
+		},
+		"reflections": {
+			"1": 917
+		}
+	}
+}

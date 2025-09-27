@@ -1,0 +1,8 @@
+import { libraryStore } from '../store/libraryStore';
+
+export function exampleAction() {
+  libraryStore.setState(state => {
+    // update state logic
+    return { ...state };
+  });
+} 

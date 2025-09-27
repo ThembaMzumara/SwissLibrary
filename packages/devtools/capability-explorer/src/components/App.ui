@@ -1,0 +1,339 @@
+import { SwissComponent, html } from '@swissjs/core';
+import { DataService, type ComponentNode, type CapabilityConflict } from '../services/DataService.js';
+import ComponentTree from './ComponentTree.ui';
+
+interface AppState {
+  nodes: ComponentNode[];
+  conflicts: CapabilityConflict[];
+  selectedNode: ComponentNode | null;
+  conflictsOnly: boolean;
+  loading: boolean;
+  searchQuery: string;
+  zoom: number;
+  panX: number;
+  panY: number;
+  isPanning?: boolean;
+  lastPanX?: number;
+  lastPanY?: number;
+}
+
+export default class App extends SwissComponent<{}, AppState> {
+  private dataService = new DataService();
+
+  constructor(props: {}) {
+    super(props);
+    this.state = {
+      nodes: [],
+      conflicts: [],
+      selectedNode: null,
+      conflictsOnly: false,
+      loading: false,
+      searchQuery: '',
+      zoom: 1,
+      panX: 0,
+      panY: 0,
+    };
+  }
+
+  async handleMount() {
+    await this.loadData();
+    // Set up auto-refresh every 2 seconds when devtools is active
+    setInterval(() => this.loadData(), 2000);
+  }
+
+  async loadData() {
+    try {
+      this.setState(state => ({ ...state, loading: true }));
+      const snapshot = this.dataService.getSnapshot();
+      const hierarchicalNodes = this.buildHierarchy(snapshot.nodes);
+      const conflicts = this.detectConflicts(snapshot.nodes);
+      
+      this.setState(state => ({
+        ...state,
+        nodes: hierarchicalNodes,
+        conflicts,
+        loading: false
+      }));
+    } catch (error) {
+      console.error('Failed to load devtools data:', error);
+      this.setState(state => ({ ...state, loading: false }));
+    }
+  }
+
+  private buildHierarchy(nodes: ComponentNode[]): ComponentNode[] {
+    const nodeMap = new Map<string, ComponentNode & { children: ComponentNode[] }>();
+    const roots: ComponentNode[] = [];
+
+    // Create enhanced nodes with children arrays
+    nodes.forEach(node => {
+      nodeMap.set(node.id, { ...node, children: [] });
+    });
+
+    // Build parent-child relationships
+    nodes.forEach(node => {
+      const enhancedNode = nodeMap.get(node.id)!;
+      if (node.parentId && nodeMap.has(node.parentId)) {
+        const parent = nodeMap.get(node.parentId)!;
+        parent.children.push(enhancedNode);
+      } else {
+        roots.push(enhancedNode);
+      }
+    });
+
+    return roots;
+  }
+
+  private detectConflicts(nodes: ComponentNode[]): CapabilityConflict[] {
+    const conflicts: CapabilityConflict[] = [];
+    const nodeMap = new Map<string, ComponentNode>();
+    
+    nodes.forEach(node => nodeMap.set(node.id, node));
+
+    nodes.forEach(node => {
+      node.consumes.forEach(capability => {
+        if (!this.canResolveCapability(node, capability, nodeMap)) {
+          conflicts.push({
+            componentId: node.id,
+            componentName: node.name,
+            capability,
+            reason: `No provider found for '${capability}' in component hierarchy`
+          });
+        }
+      });
+    });
+
+    return conflicts;
+  }
+
+  private canResolveCapability(
+    consumer: ComponentNode, 
+    capability: string, 
+    nodeMap: Map<string, ComponentNode>
+  ): boolean {
+    // Walk up the component tree looking for a provider
+    let current: ComponentNode | undefined = consumer;
+    
+    while (current) {
+      if (current.provides.includes(capability)) {
+        return true;
+      }
+      current = current.parentId ? nodeMap.get(current.parentId) : undefined;
+    }
+    
+    return false;
+  }
+
+  get filteredNodes(): ComponentNode[] {
+    // Start with conflicts-only if enabled
+    let base: ComponentNode[] = this.state.nodes;
+    if (this.state.conflictsOnly) {
+      const conflictNodeIds = new Set(this.state.conflicts.map(c => c.componentId));
+      base = this.filterNodesWithConflicts(this.state.nodes, conflictNodeIds);
+    }
+
+    // Then apply search filter if provided
+    const q = this.state.searchQuery.trim().toLowerCase();
+    if (!q) return base;
+
+    const matchNode = (node: ComponentNode): boolean => {
+      const nameMatch = node.name?.toLowerCase().includes(q);
+      const provMatch = node.provides?.some(cap => cap.toLowerCase().includes(q));
+      const consMatch = node.consumes?.some(cap => cap.toLowerCase().includes(q));
+      return !!(nameMatch || provMatch || consMatch);
+    };
+
+    const filterTree = (nodes: ComponentNode[]): ComponentNode[] => {
+      return nodes
+        .map(n => {
+          const children = (n as any).children ? filterTree((n as any).children) : [];
+          if (matchNode(n) || children.length > 0) {
+            return { ...n, children } as ComponentNode;
+          }
+          return null;
+        })
+        .filter(Boolean) as ComponentNode[];
+    };
+
+    return filterTree(base);
+  }
+
+  private filterNodesWithConflicts(
+    nodes: ComponentNode[], 
+    conflictIds: Set<string>
+  ): ComponentNode[] {
+    return nodes.filter(node => {
+      const hasConflict = conflictIds.has(node.id);
+      const hasChildWithConflict = (node as any).children?.some((child: ComponentNode) => 
+        this.filterNodesWithConflicts([child], conflictIds).length > 0
+      );
+      return hasConflict || hasChildWithConflict;
+    }).map(node => ({
+      ...node,
+      children: (node as any).children ? 
+        this.filterNodesWithConflicts((node as any).children, conflictIds) : []
+    }));
+  }
+
+  get nodeConflicts(): CapabilityConflict[] {
+    if (!this.state.selectedNode) return [];
+    return this.state.conflicts.filter(c => c.componentId === this.state.selectedNode!.id);
+  }
+
+  refreshData = async () => {
+    await this.loadData();
+  };
+
+  toggleConflictsOnly = () => {
+    this.setState(state => ({ 
+      ...state, 
+      conflictsOnly: !state.conflictsOnly,
+      selectedNode: state.conflictsOnly ? null : state.selectedNode
+    }));
+  };
+
+  onNodeSelect = (node: ComponentNode) => {
+    this.setState(state => ({ ...state, selectedNode: node }));
+  };
+
+  onConflictSelect = (conflict: CapabilityConflict) => {
+    const node = this.state.nodes.find(n => n.id === conflict.componentId);
+    if (node) {
+      this.setState(state => ({ ...state, selectedNode: node }));
+    }
+  };
+
+  onSearchInput = (e: any) => {
+    const value = (e?.target?.value ?? '').toString();
+    this.setState(state => ({ ...state, searchQuery: value }));
+  };
+
+  onWheelZoom = (e: WheelEvent) => {
+    e.preventDefault();
+    const delta = -e.deltaY;
+    const factor = delta > 0 ? 1.1 : 0.9;
+    const nextZoom = Math.min(3, Math.max(0.3, this.state.zoom * factor));
+    this.setState(state => ({ ...state, zoom: nextZoom }));
+  };
+
+  onPanStart = (e: MouseEvent) => {
+    this.setState(state => ({ ...state, isPanning: true, lastPanX: e.clientX, lastPanY: e.clientY }));
+  };
+
+  onPanMove = (e: MouseEvent) => {
+    if (!this.state.isPanning) return;
+    const dx = e.clientX - (this.state.lastPanX || 0);
+    const dy = e.clientY - (this.state.lastPanY || 0);
+    this.setState(state => ({
+      ...state,
+      panX: state.panX + dx,
+      panY: state.panY + dy,
+      lastPanX: e.clientX,
+      lastPanY: e.clientY
+    }));
+  };
+
+  onPanEnd = () => {
+    this.setState(state => ({ ...state, isPanning: false }));
+  };
+
+  render() {
+    return html`
+      <div class="capability-explorer">
+        <header class="explorer-header">
+          <h1>SwissJS Capability Explorer</h1>
+          <div class="controls">
+            <input type="search" placeholder="Search components or capabilities" value="${this.state.searchQuery}" oninput="${this.onSearchInput}" />
+            <button onclick="${this.refreshData}">Refresh</button>
+            <button onclick="${this.toggleConflictsOnly}">
+              ${this.state.conflictsOnly ? 'Show All' : 'Conflicts Only'}
+            </button>
+            <button onclick="${() => this.setState(s => ({ ...s, zoom: 1, panX: 0, panY: 0 }))}">Reset View</button>
+          </div>
+        </header>
+
+        <main class="explorer-content">
+          <div class="tree-panel">
+            <h2>Component Hierarchy</h2>
+            <div 
+              class="tree-viewport"
+              onwheel="${this.onWheelZoom}"
+              onmousedown="${this.onPanStart}"
+              onmousemove="${this.onPanMove}"
+              onmouseup="${this.onPanEnd}"
+              onmouseleave="${this.onPanEnd}"
+            >
+              <div 
+                class="tree-canvas"
+                style="transform: translate(${this.state.panX}px, ${this.state.panY}px) scale(${this.state.zoom}); transform-origin: 0 0;"
+              >
+                ${html`<${ComponentTree}
+                  nodes=${this.filteredNodes}
+                  conflicts=${this.state.conflicts}
+                  onNodeSelect=${this.onNodeSelect}
+                  selectedId=${this.state.selectedNode?.id ?? null}
+                />`}
+              </div>
+            </div>
+          </div>
+
+          <div class="details-panel">
+            <h2>Details</h2>
+            ${this.state.selectedNode ? html`
+              <div class="node-details">
+                <h3>${this.state.selectedNode.name}</h3>
+                <p>ID: ${this.state.selectedNode.id}</p>
+                <div class="capabilities">
+                  ${this.state.selectedNode.provides.length > 0 ? html`
+                    <div class="provides">
+                      <span class="label">provides:</span>
+                      ${this.state.selectedNode.provides.map(cap => html`
+                        <span class="capability provides-cap">${cap}</span>
+                      `)}
+                    </div>
+                  ` : ''}
+                  ${this.state.selectedNode.consumes.length > 0 ? html`
+                    <div class="consumes">
+                      <span class="label">consumes:</span>
+                      ${this.state.selectedNode.consumes.map(cap => html`
+                        <span class="capability consumes-cap">${cap}</span>
+                      `)}
+                    </div>
+                  ` : ''}
+                </div>
+              </div>
+            ` : html`
+              <div class="no-selection">Select a component to view details</div>
+            `}
+          </div>
+
+          <div class="conflicts-panel">
+            <h2>Capability Conflicts (${this.state.conflicts.length})</h2>
+            <div class="conflicts-list">
+              ${this.state.conflicts.length === 0 ? html`
+                <div class="no-conflicts">
+                  <div class="success-icon">✅</div>
+                  <div class="message">No capability conflicts detected</div>
+                </div>
+              ` : html`
+                <div class="conflict-items">
+                  ${this.state.conflicts.map(conflict => html`
+                    <div class="conflict-item" onclick="${() => this.onConflictSelect(conflict)}">
+                      <div class="conflict-header">
+                        <span class="component-name">${conflict.componentName}</span>
+                        <span class="capability-name">${conflict.capability}</span>
+                      </div>
+                      <div class="conflict-details">
+                        <span class="reason">${conflict.reason}</span>
+                        <span class="component-id">#${conflict.componentId.slice(-8)}</span>
+                      </div>
+                    </div>
+                  `)}
+                </div>
+              `}
+            </div>
+          </div>
+        </main>
+      </div>
+    `;
+  }
+}

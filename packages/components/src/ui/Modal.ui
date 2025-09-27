@@ -1,0 +1,43 @@
+import { SwissComponent, html } from '@swissjs/core';
+
+interface ModalProps {
+  open?: boolean;
+  title?: string;
+  ariaLabel?: string;
+  onClose?: () => void;
+}
+
+export default class UiModal extends SwissComponent<ModalProps> {
+  onBackdrop = (e: MouseEvent) => {
+    if ((e.target as HTMLElement)?.classList.contains('ui-modal-backdrop')) {
+      this.props.onClose?.();
+    }
+  };
+
+  render() {
+    const { open = false, title = 'Dialog', ariaLabel } = this.props;
+    if (!open) return html``;
+    return html`
+      <div class="ui-modal-backdrop" role="presentation" onclick="${this.onBackdrop}">
+        <div class="ui-modal" role="dialog" aria-modal="true" aria-label="${ariaLabel ?? title}">
+          <header class="ui-modal-header">
+            <h3 class="ui-modal-title">${title}</h3>
+            <button class="ui-modal-close" aria-label="Close" onclick="${() => this.props.onClose?.()}">×</button>
+          </header>
+          <div class="ui-modal-body">
+            <slot></slot>
+          </div>
+        </div>
+      </div>
+      <style>
+        .ui-modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,.5); display:flex; align-items:center; justify-content:center }
+        .ui-modal { background:#fff; color:#222; min-width:320px; max-width:90vw; border-radius:8px; box-shadow: 0 10px 30px rgba(0,0,0,.2) }
+        .ui-modal-header { display:flex; align-items:center; justify-content:space-between; padding:10px 12px; border-bottom:1px solid #eee }
+        .ui-modal-title { margin:0; font-size:16px }
+        .ui-modal-close { border:none; background:transparent; font-size:20px; cursor:pointer }
+        .ui-modal-close:focus { outline:2px solid #4da3ff }
+        .ui-modal-body { padding:12px }
+      </style>
+    `;
+  }
+}

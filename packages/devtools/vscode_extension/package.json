@@ -1,0 +1,163 @@
+{
+  "name": "vscode-swiss",
+  "displayName": "SwissJS Language Support",
+  "description": "Language support for SwissJS .ui files with syntax highlighting, IntelliSense, and more",
+  "publisher": "swissjs",
+  "version": "0.1.0",
+  "main": "./dist/index.js",
+  "private": true,
+  "engines": {
+    "vscode": "^1.85.0",
+    "node": ">=20.0.0 <21"
+  },
+  "categories": [
+    "Programming Languages",
+    "Linters",
+    "Formatters",
+    "Snippets"
+  ],
+  "activationEvents": [
+    "onLanguage:swissjs",
+    "onLanguage:typescriptreact"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "swissjs",
+        "aliases": [
+          "SwissJS",
+          "SwissJS UI"
+        ],
+        "extensions": [
+          ".ui"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "typescriptreact",
+        "extensions": [
+          ".ui"
+        ]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "swissjs",
+        "scopeName": "source.swissjs",
+        "path": "./syntaxes/swissjs.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "swissjs",
+        "path": "./snippets/swissjs.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "swissjs.helloWorld",
+        "title": "Hello World from SwissJS"
+      },
+      {
+        "command": "swissjs.createComponent",
+        "title": "SwissJS: Create New Component"
+      },
+      {
+        "command": "swissjs.preview",
+        "title": "SwissJS: Preview Component"
+      }
+    ],
+    "configuration": {
+      "title": "SwissJS",
+      "properties": {
+        "swissjs.format.enable": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable/disable formatting for SwissJS files"
+        },
+        "swissjs.trace.server": {
+          "type": "string",
+          "enum": [
+            "off",
+            "messages",
+            "verbose"
+          ],
+          "default": "off",
+          "description": "Traces the communication between VS Code and the language server"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build:types": "tsc -p ./ && tsc -p ./server",
+    "clean": "rimraf dist server/dist out",
+    "build:bundle": "esbuild src/index.ts --bundle --platform=node --format=cjs --target=node18 --external:vscode --outfile=dist/index.js && esbuild src/server/server.ts --bundle --platform=node --format=cjs --target=node18 --external:vscode-languageserver --outfile=server/dist/server.js",
+    "build": "run-s clean build:types build:bundle",
+    "watch": "run-p watch:client watch:server",
+    "watch:client": "tsc -w -p ./",
+    "watch:server": "tsc -w -p ./server",
+    "package": "pnpm build && pnpm exec vsce package --no-dependencies",
+    "publish": "pnpm build && pnpm exec vsce publish",
+    "lint": "eslint --cache --cache-location .eslintcache \"src/**/*.ts\" \"server/src/**/*.ts\" \"test/**/*.ts\"",
+    "type-check": "tsc -p ./ --noEmit",
+    "test": "bash -lc \"if [ \\\"$CI\\\" = \\\"1\\\" ]; then echo '[vscode-swiss] Use test:ci in CI'; exit 0; else pnpm run test:fast; fi\"",
+    "test:ci": "TS_NODE_TRANSPILE_ONLY=1 TS_NODE_PROJECT=./test/tsconfig.json mocha --require ts-node/register/transpile-only 'test/unit/**/*.test.ts' --timeout 20000 --exit",
+    "test:all": "pnpm run test:unit && pnpm run test:integration",
+    "test:fast": "TS_NODE_TRANSPILE_ONLY=1 TS_NODE_PROJECT=./test/tsconfig.json mocha --require ts-node/register/transpile-only 'test/unit/**/*.test.ts' --timeout 20000 --exit",
+    "test:unit": "TS_NODE_PROJECT=./test/tsconfig.json mocha --require ts-node/register 'test/unit/**/*.test.ts' --timeout 20000",
+    "test:integration": "node -r ts-node/register ./test/runTest.ts",
+    "vscode:prepublish": "npm run build",
+    "compile": "tsc -p ./"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.12",
+    "@types/glob": "^9.0.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "18.19.121",
+    "@types/sinon": "^17.0.3",
+    "@types/vscode": "^1.85.0",
+    "@vscode/test-electron": "^2.3.9",
+    "@vscode/vsce": "^3.6.0",
+    "chai": "^5.1.1",
+    "esbuild": "^0.23.0",
+    "mocha": "^10.2.0",
+    "glob": "^10.4.5",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^6.0.1",
+    "sinon": "^17.0.1",
+    "typescript": "5.8.2"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1",
+    "vscode-languageserver": "^9.0.1",
+    "vscode-languageserver-textdocument": "^1.0.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThembaMzumara/SWISS.git"
+  },
+  "license": "MIT",
+  "files": [
+    "dist/**",
+    "server/dist/**",
+    "syntaxes/**",
+    "snippets/**",
+    "language-configuration.json",
+    "README.md",
+    "LICENSE.md",
+    "package.json"
+  ],
+  "author": {
+    "name": "Themba Mzumara",
+    "email": "themba@swissjs.dev",
+    "url": "https://github.com/ThembaMzumara"
+  },
+  "homepage": "https://github.com/ThembaMzumara/SWISS#readme",
+  "bugs": {
+    "url": "https://github.com/ThembaMzumara/SWISS/issues"
+  },
+  "keywords": [
+    "swissjs",
+    "framework"
+  ]
+}

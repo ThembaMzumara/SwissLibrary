@@ -1,0 +1,93 @@
+# Node & pnpm
+node_modules/
+.pnpm-debug.log
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Build outputs
+dist/
+build/
+lib/
+.esbuild/
+.next/
+out/
+coverage/
+*.tsbuildinfo
+
+# Turbo
+.turbo/
+turbo.log
+
+# Vite
+.vite/
+*.local
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# VSCode & IDEs
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# VSCode extension: include sources and build artifacts, but keep its node_modules ignored
+packages/devtools/vscode_extension/node_modules/
+!packages/devtools/vscode_extension/src/**
+!packages/devtools/vscode_extension/server/dist/**
+!packages/devtools/vscode_extension/dist/**
+!packages/devtools/vscode_extension/syntaxes/**
+!packages/devtools/vscode_extension/snippets/**
+!packages/devtools/vscode_extension/language-configuration.json
+!packages/devtools/vscode_extension/README.md
+!packages/devtools/vscode_extension/CHANGELOG.md
+!packages/devtools/vscode_extension/LICENSE.md
+!packages/devtools/vscode_extension/package.json
+!packages/devtools/vscode_extension/tsconfig.json
+!packages/devtools/vscode_extension/test/**
+!packages/devtools/vscode_extension/vscode-swiss-*.vsix
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Test snapshots
+__snapshots__/
+*.snap
+
+# Misc
+*.swp
+*.swo
+
+# SwissJS/Monorepo specifics
+packages/*/dist/
+packages/*/build/
+packages/*/.turbo/
+packages/*/.next/
+packages/*/coverage/
+packages/*/*.tsbuildinfo
+
+# Ignore local scripts output
+scripts/*.log
+
+# Ignore lockfiles except pnpm
+package-lock.json
+yarn.lock
+
+# Ignore generated files in docs (if any)
+docs/**/*.html
+docs/**/*.pdf
+
+# Ignore temp files
+tmp/
+temp/
+*.tmp
+
+# Ignore local config
+*.local.*

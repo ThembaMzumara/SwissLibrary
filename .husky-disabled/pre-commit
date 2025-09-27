@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+pnpm precommit:staged
+pnpm precommit:docs-sync

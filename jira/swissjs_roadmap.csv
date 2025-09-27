@@ -1,0 +1,21 @@
+Issue ID,Summary,Type,Epic Link,Sprint
+SWS-ARCH-001,Architecture Research,Research,Foundation,Backlog
+SWS-ARCH-002,Core API Design Spec,Design,Foundation,Backlog
+SWS-ARCH-003,Technology Stack Finalization,Planning,Foundation,Backlog
+SWS-INFRA-001,Monorepo Setup,Infra,Foundation,Sprint 0
+SWS-INFRA-002,CI/CD Pipeline,Infra,Foundation,Sprint 0
+SWS-INFRA-003,Documentation Pipeline,Infra,Foundation,Sprint 0
+SWS-CORE-101,Component System,Core,Core Framework,Sprint 1.1
+SWS-CORE-102,VDOM System,Core,Core Framework,Sprint 1.1
+SWS-CORE-103,Renderer,Core,Core Framework,Sprint 1.1
+SWS-CLI-101,CLI - Create Command,Dev Tool,Core Framework,Sprint 1.1
+SWS-CLI-102,CLI - Dev Server,Dev Tool,Core Framework,Sprint 1.1
+SWS-COMP-101,.1ui Template Parser,Compiler,Core Framework,Sprint 1.1
+SWS-COMP-102,Capability Transformer,Compiler,Core Framework,Sprint 1.1
+SWS-TEST-101,Unit Test Setup,Testing,Core Framework,Sprint 1.1
+SWS-BUG-101,Bug Fix Sprint 1.1,Bug,Core Framework,Sprint 1.1
+SWS-CORE-104,Diffing Algorithm,Core,Core Framework,Sprint 1.2
+SWS-CORE-105,DOM Patching,Core,Core Framework,Sprint 1.2
+SWS-PERF-101,Diffing Optimization,Perf,Core Framework,Sprint 1.2
+SWS-TEST-102,VDOM Test Suite,Testing,Core Framework,Sprint 1.2
+SWS-BUG-102,Bug Fix Sprint 1.2,Bug,Core Framework,Sprint 1.2

@@ -1,0 +1,25 @@
+{
+	"schemaVersion": "2.0",
+	"id": 974,
+	"name": "@swissjs/swiss-extension",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"packageName": "@swissjs/swiss-extension",
+	"packageVersion": "0.1.0",
+	"symbolIdMap": {
+		"974": {
+			"packageName": "@swissjs/swiss-extension",
+			"packagePath": "src/index.ts",
+			"qualifiedName": ""
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "packages/devtools/swiss_extension/src/index.ts"
+		},
+		"reflections": {
+			"1": 974
+		}
+	}
+}

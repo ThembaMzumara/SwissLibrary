@@ -1,0 +1,16 @@
+import { SwissComponent, html } from '@swissjs/core';
+import { libraryStore } from '../store/libraryStore';
+
+export default class {{libraryName}}Component extends SwissComponent {
+  // Example: connect to your store or services
+  store = libraryStore;
+
+  render() {
+    return html`
+      <div>
+        <h1>{{libraryName}} Component</h1>
+        <!-- Add your UI here -->
+      </div>
+    `;
+  }
+}

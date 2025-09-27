@@ -1,0 +1,9 @@
+# Public barrels must be reviewed
+/packages/*/src/index.ts @ThembaMzumara
+
+# Policy docs require review
+/docs/development/* @ThembaMzumara
+
+# CI policy scripts/workflows require review
+/scripts/check-*.mjs @ThembaMzumara
+/.github/workflows/ci.yml @ThembaMzumara

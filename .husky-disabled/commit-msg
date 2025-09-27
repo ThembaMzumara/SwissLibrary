@@ -1,0 +1,25 @@
+#!/usr/bin/env sh
+
+msg_file="$1"
+msg=$(cat "$msg_file")
+
+# Allow changesets automated commits
+if printf "%s" "$msg" | grep -Eq "^(chore\(release\)|Version Packages)"; then
+  exit 0
+fi
+
+regex='^\[(SWS-[A-Z]+-\d+|SWS-[A-Z]+-[A-Z0-9_]+|SWS-RESET|SWS-DOCS-API_FIX)\] .+'
+if printf "%s" "$msg" | grep -Eq "$regex"; then
+  exit 0
+fi
+
+printf "
+Commit message must start with a ticket ID in brackets.
+Examples:
+  [SWS-CORE-101] Implement feature
+  [SWS-CLI-205] Fix CLI option parsing
+  [SWS-RESET] Make reset fully non-interactive and green
+  [SWS-DOCS-API_FIX] Fix API docs routes
+
+" >&2
+exit 1

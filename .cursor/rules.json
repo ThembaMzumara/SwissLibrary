@@ -1,0 +1,34 @@
+{
+  "prompting": {
+    "style": "concise",
+    "askBeforeDeleting": true,
+    "explainMajorRefactors": true
+  },
+  "codeStyle": {
+    "indent": 2,
+    "semi": true,
+    "quotes": "single"
+  },
+  "fileOrganization": {
+    "coreDirs": [
+      "component",
+      "renderer",
+      "vdom",
+      "plugins",
+      "reactivity",
+      "hooks"
+    ],
+    "pluginDir": "packages/plugins"
+  },
+  "imports": {
+    "preferRelative": true,
+    "useAliases": false
+  },
+  "commitMessages": {
+    "format": "[TICKET_ID] Brief summary"
+  },
+  "errorHandling": {
+    "fixIfClear": true,
+    "askIfAmbiguous": true
+  }
+}

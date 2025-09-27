@@ -1,0 +1,16 @@
+import { SwissComponent, html } from '@swissjs/core';
+
+// Main entry for your SwissJS component (pure TypeScript + html``)
+export default class App extends SwissComponent {
+  title = '{{projectName}}';
+  description = '{{description}}';
+
+  render() {
+    return html`
+      <div>
+        <h1>${this.title}</h1>
+        <p>${this.description}</p>
+      </div>
+    `;
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "name": "@swissjs/core",
+  "version": "0.1.0",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./jsx-runtime": {
+      "import": "./dist/jsx-runtime.mjs",
+      "types": "./dist/jsx-runtime.d.ts"
+    },
+    "./jsx-dev-runtime": "./dist/jsx-dev-runtime.js",
+    "./types/*": {
+      "import": "./dist/types/*.js",
+      "types": "./dist/types/*.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "src/global.d.ts"
+  ],
+  "dependencies": {
+    "@swissjs/utils": "workspace:*",
+    "@swissjs/security": "workspace:*"
+  },
+  "devDependencies": {
+    "pnpm": "^10.14.0",
+    "ts-node": "^10.9.2"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "tsc -b --watch",
+    "test": "vitest run",
+    "test:watch": "vitest src/__tests__",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist node_modules && rm -f tsconfig.tsbuildinfo",
+    "lint": "eslint src --ext .ts,.tsx",
+    "docs:api": "typedoc"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Themba Mzumara",
+    "email": "themba@swissjs.dev",
+    "url": "https://github.com/ThembaMzumara"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThembaMzumara/SWISS.git"
+  },
+  "homepage": "https://github.com/ThembaMzumara/SWISS#readme",
+  "bugs": {
+    "url": "https://github.com/ThembaMzumara/SWISS/issues"
+  },
+  "keywords": [
+    "swissjs",
+    "framework"
+  ]
+}

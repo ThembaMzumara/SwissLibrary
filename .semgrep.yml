@@ -1,0 +1,14 @@
+rules:
+  - id: no-hardcoded-api-keys
+    patterns:
+      - pattern: |
+          $KEY = "sk-..."
+      - pattern: |
+          $KEY = "pk_..."
+      - pattern: |
+          $KEY = "ghp_..."
+    message: Potential hardcoded API key detected
+    languages: [typescript, javascript]
+    severity: ERROR
+    metadata:
+      category: security

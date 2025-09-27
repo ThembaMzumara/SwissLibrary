@@ -1,0 +1,62 @@
+{
+  "generatedAt": "2025-08-10T07:23:49.450Z",
+  "packages": [
+    {
+      "package": "packages/cli",
+      "barrel": "packages/cli/src/index.ts",
+      "exportStatements": []
+    },
+    {
+      "package": "packages/compiler",
+      "barrel": "packages/compiler/src/index.ts",
+      "exportStatements": []
+    },
+    {
+      "package": "packages/core",
+      "barrel": "packages/core/src/index.ts",
+      "exportStatements": [
+        "export { SwissFramework, SwissApp, framework, SWISS_VERSION } from './framework.js'",
+        "export { PluginManager } from './plugins/pluginManager.js'",
+        "export * from './component/index.js'",
+        "export * from './vdom/index.js'",
+        "export * from './hooks/index.js'",
+        "export { runtimeService } from './runtime/runtime-service.js'",
+        "export { DevServerService } from './runtime/dev-server.js'",
+        "export { hydrate } from './renderer/index.js'",
+        "export { computed } from './reactivity/index.js'",
+        "export * from './security/index.js'",
+        "export * from './utils/index.js'",
+        "export * from './types/routing.js'",
+        "export * from './jsx-runtime.js'",
+        "export * from './jsx-dev-runtime.js'"
+      ]
+    },
+    {
+      "package": "packages/devtools/fenestration_explorer",
+      "barrel": "packages/devtools/fenestration_explorer/src/index.ts",
+      "exportStatements": []
+    },
+    {
+      "package": "packages/plugins/file-router",
+      "barrel": "packages/plugins/file-router/src/index.ts",
+      "exportStatements": [
+        "export { fileRouterPlugin } from './core/index.js'",
+        "export { \r\n  pathToRoute,\r\n  routeToPath,\r\n  createRouteCache \r\n} from './utils/index.js'",
+        "export { \r\n  createFileWatcher,\r\n  createDevServer \r\n} from './dev/index.js'"
+      ]
+    },
+    {
+      "package": "packages/plugins/vite-plugin-swiss",
+      "barrel": "packages/plugins/vite-plugin-swiss/src/index.ts",
+      "exportStatements": []
+    },
+    {
+      "package": "packages/utils",
+      "barrel": "packages/utils/src/index.ts",
+      "exportStatements": [
+        "export * from './fixDtsExtensions.js'"
+      ]
+    }
+  ],
+  "violations": []
+}
