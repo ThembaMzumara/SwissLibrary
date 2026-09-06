@@ -1,0 +1,9 @@
+
+      import { SwissComponent } from '@swissjs/core';
+
+      export class SimpleComponent extends SwissComponent {
+        render() {
+          return <div className="greeting">Hello World</div>;
+        }
+      }
+    

@@ -1,0 +1,28 @@
+{
+  "name": "@swissjs/plugin-{{pluginName}}",
+  "version": "0.1.0",
+  "description": "{{description}}",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "keywords": [
+    "swissjs-plugin",
+    "{{pluginName}}"
+  ],
+  "scripts": {
+    "build": "swissjs build",
+    "test": "swissjs test"
+  },
+  "peerDependencies": {
+    "@swissjs/core": "workspace:*"
+  },
+  "swissjs": {
+    "type": "plugin",
+    "entry": "src/index.ts",
+    "plugin": {
+      "name": "{{pluginName}}",
+      "install": "manual"
+    }
+  },
+  "license": "MIT"
+} 

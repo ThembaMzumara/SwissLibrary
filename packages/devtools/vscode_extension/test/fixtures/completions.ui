@@ -1,0 +1,28 @@
+import { SwissComponent, html } from '@swissjs/core';
+
+export default class CompletionsTestComponent extends SwissComponent<{ value?: string; handler?: () => void }> {
+  constructor(props: { value?: string; handler?: () => void }) {
+    super(props);
+  }
+
+  render() {
+    return html`
+      <div>
+        <button 
+          class="btn"
+          id="myButton"
+          onclick="${() => {}}"
+        >
+          Click me
+        </button>
+        
+        <input type="text" placeholder="Type here" />
+        
+        <custom-component 
+          prop1="${this.props.value}"
+          onevent="${this.props.handler}"
+        />
+      </div>
+    `;
+  }
+}

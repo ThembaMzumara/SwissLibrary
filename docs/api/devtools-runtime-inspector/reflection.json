@@ -1,0 +1,860 @@
+{
+	"schemaVersion": "2.0",
+	"id": 942,
+	"name": "@swissjs/devtools-runtime-inspector",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 954,
+			"name": "DataService",
+			"variant": "declaration",
+			"kind": 128,
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Minimal data access layer for the Runtime Inspector.\nBridges to core devtools bridge where available; otherwise returns safe defaults."
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 955,
+					"name": "constructor",
+					"variant": "declaration",
+					"kind": 512,
+					"flags": {},
+					"signatures": [
+						{
+							"id": 956,
+							"name": "DataService",
+							"variant": "signature",
+							"kind": 16384,
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"target": 954,
+								"name": "DataService",
+								"package": "@swissjs/devtools-runtime-inspector"
+							}
+						}
+					]
+				},
+				{
+					"id": 965,
+					"name": "drainEvents",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "DataService.ts",
+							"line": 72,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/runtime_inspector/src/services/DataService.ts#L72"
+						}
+					],
+					"signatures": [
+						{
+							"id": 966,
+							"name": "drainEvents",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Drain recent runtime events (mount/update/unmount/usage).\nNote: current bridge does not buffer events; returns empty for now."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "DataService.ts",
+									"line": 72,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/runtime_inspector/src/services/DataService.ts#L72"
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"target": 945,
+									"name": "RuntimeEvent",
+									"package": "@swissjs/devtools-runtime-inspector"
+								}
+							}
+						}
+					]
+				},
+				{
+					"id": 962,
+					"name": "getShallowState",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "DataService.ts",
+							"line": 57,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/runtime_inspector/src/services/DataService.ts#L57"
+						}
+					],
+					"signatures": [
+						{
+							"id": 963,
+							"name": "getShallowState",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Shallow state fetch for a component id.\nNote: current bridge may not expose state; return empty object if unavailable."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "DataService.ts",
+									"line": 57,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/runtime_inspector/src/services/DataService.ts#L57"
+								}
+							],
+							"parameters": [
+								{
+									"id": 964,
+									"name": "_id",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"packageName": "typescript",
+									"packagePath": "lib/lib.es5.d.ts",
+									"qualifiedName": "Record"
+								},
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									},
+									{
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								],
+								"name": "Record",
+								"package": "typescript"
+							}
+						}
+					]
+				},
+				{
+					"id": 957,
+					"name": "getSnapshot",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "DataService.ts",
+							"line": 24,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/runtime_inspector/src/services/DataService.ts#L24"
+						}
+					],
+					"signatures": [
+						{
+							"id": 958,
+							"name": "getSnapshot",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "DataService.ts",
+									"line": 24,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/runtime_inspector/src/services/DataService.ts#L24"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"packageName": "swissjs-monorepo",
+									"packagePath": "",
+									"qualifiedName": "GraphSnapshot"
+								},
+								"name": "GraphSnapshot"
+							}
+						}
+					]
+				},
+				{
+					"id": 970,
+					"name": "restoreSnapshot",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "DataService.ts",
+							"line": 89,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/runtime_inspector/src/services/DataService.ts#L89"
+						}
+					],
+					"signatures": [
+						{
+							"id": 971,
+							"name": "restoreSnapshot",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "DataService.ts",
+									"line": 89,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/runtime_inspector/src/services/DataService.ts#L89"
+								}
+							],
+							"parameters": [
+								{
+									"id": 972,
+									"name": "id",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 973,
+									"name": "state",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": {
+											"packageName": "typescript",
+											"packagePath": "lib/lib.es5.d.ts",
+											"qualifiedName": "Record"
+										},
+										"typeArguments": [
+											{
+												"type": "intrinsic",
+												"name": "string"
+											},
+											{
+												"type": "intrinsic",
+												"name": "unknown"
+											}
+										],
+										"name": "Record",
+										"package": "typescript"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					]
+				},
+				{
+					"id": 967,
+					"name": "takeSnapshot",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "DataService.ts",
+							"line": 84,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/runtime_inspector/src/services/DataService.ts#L84"
+						}
+					],
+					"signatures": [
+						{
+							"id": 968,
+							"name": "takeSnapshot",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "DataService.ts",
+									"line": 84,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/runtime_inspector/src/services/DataService.ts#L84"
+								}
+							],
+							"parameters": [
+								{
+									"id": 969,
+									"name": "id",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 950,
+								"name": "SnapshotEntry",
+								"package": "@swissjs/devtools-runtime-inspector"
+							}
+						}
+					]
+				},
+				{
+					"id": 959,
+					"name": "toHierarchy",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "DataService.ts",
+							"line": 35,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/runtime_inspector/src/services/DataService.ts#L35"
+						}
+					],
+					"signatures": [
+						{
+							"id": 960,
+							"name": "toHierarchy",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Convert flat nodes to hierarchical tree based on parentId."
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "DataService.ts",
+									"line": 35,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/runtime_inspector/src/services/DataService.ts#L35"
+								}
+							],
+							"parameters": [
+								{
+									"id": 961,
+									"name": "nodes",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"target": {
+												"packageName": "swissjs-monorepo",
+												"packagePath": "",
+												"qualifiedName": "ComponentNodePayload"
+											},
+											"name": "ComponentNodePayload"
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"target": 943,
+									"name": "ComponentNode",
+									"package": "@swissjs/devtools-runtime-inspector"
+								}
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						955
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						965,
+						962,
+						957,
+						970,
+						967,
+						959
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "DataService.ts",
+					"line": 23,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/runtime_inspector/src/services/DataService.ts#L23"
+				}
+			]
+		},
+		{
+			"id": 943,
+			"name": "ComponentNode",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 944,
+					"name": "children",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "DataService.ts",
+							"line": 4,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/runtime_inspector/src/services/DataService.ts#L4"
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "reference",
+							"target": 943,
+							"name": "ComponentNode",
+							"package": "@swissjs/devtools-runtime-inspector"
+						}
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						944
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "DataService.ts",
+					"line": 3,
+					"character": 17,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/runtime_inspector/src/services/DataService.ts#L3"
+				}
+			],
+			"extendedTypes": [
+				{
+					"type": "reference",
+					"target": {
+						"packageName": "swissjs-monorepo",
+						"packagePath": "",
+						"qualifiedName": "unknown"
+					},
+					"name": "unknown"
+				}
+			]
+		},
+		{
+			"id": 950,
+			"name": "SnapshotEntry",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 951,
+					"name": "id",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "DataService.ts",
+							"line": 14,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/runtime_inspector/src/services/DataService.ts#L14"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 953,
+					"name": "state",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "DataService.ts",
+							"line": 16,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/runtime_inspector/src/services/DataService.ts#L16"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": {
+							"packageName": "typescript",
+							"packagePath": "lib/lib.es5.d.ts",
+							"qualifiedName": "Record"
+						},
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "intrinsic",
+								"name": "unknown"
+							}
+						],
+						"name": "Record",
+						"package": "typescript"
+					}
+				},
+				{
+					"id": 952,
+					"name": "t",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "DataService.ts",
+							"line": 15,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/runtime_inspector/src/services/DataService.ts#L15"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						951,
+						953,
+						952
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "DataService.ts",
+					"line": 13,
+					"character": 17,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/runtime_inspector/src/services/DataService.ts#L13"
+				}
+			]
+		},
+		{
+			"id": 945,
+			"name": "RuntimeEvent",
+			"variant": "declaration",
+			"kind": 2097152,
+			"flags": {},
+			"children": [
+				{
+					"id": 949,
+					"name": "msg",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "DataService.ts",
+							"line": 10,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/runtime_inspector/src/services/DataService.ts#L10"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 947,
+					"name": "t",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "DataService.ts",
+							"line": 8,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/runtime_inspector/src/services/DataService.ts#L8"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 948,
+					"name": "type",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "DataService.ts",
+							"line": 9,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/runtime_inspector/src/services/DataService.ts#L9"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						949,
+						947,
+						948
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "DataService.ts",
+					"line": 7,
+					"character": 12,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/runtime_inspector/src/services/DataService.ts#L7"
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Classes",
+			"children": [
+				954
+			]
+		},
+		{
+			"title": "Interfaces",
+			"children": [
+				943,
+				950
+			]
+		},
+		{
+			"title": "Type Aliases",
+			"children": [
+				945
+			]
+		}
+	],
+	"packageName": "@swissjs/devtools-runtime-inspector",
+	"packageVersion": "0.1.0",
+	"symbolIdMap": {
+		"942": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/index.ts",
+			"qualifiedName": ""
+		},
+		"943": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "ComponentNode"
+		},
+		"944": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "ComponentNode.children"
+		},
+		"945": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "RuntimeEvent"
+		},
+		"947": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "__type.t"
+		},
+		"948": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "__type.type"
+		},
+		"949": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "__type.msg"
+		},
+		"950": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "SnapshotEntry"
+		},
+		"951": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "SnapshotEntry.id"
+		},
+		"952": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "SnapshotEntry.t"
+		},
+		"953": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "SnapshotEntry.state"
+		},
+		"954": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "DataService"
+		},
+		"957": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "DataService.getSnapshot"
+		},
+		"958": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "DataService.getSnapshot"
+		},
+		"959": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "DataService.toHierarchy"
+		},
+		"960": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "DataService.toHierarchy"
+		},
+		"961": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "nodes"
+		},
+		"962": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "DataService.getShallowState"
+		},
+		"963": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "DataService.getShallowState"
+		},
+		"964": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "_id"
+		},
+		"965": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "DataService.drainEvents"
+		},
+		"966": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "DataService.drainEvents"
+		},
+		"967": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "DataService.takeSnapshot"
+		},
+		"968": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "DataService.takeSnapshot"
+		},
+		"969": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "id"
+		},
+		"970": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "DataService.restoreSnapshot"
+		},
+		"971": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "DataService.restoreSnapshot"
+		},
+		"972": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "id"
+		},
+		"973": {
+			"packageName": "@swissjs/devtools-runtime-inspector",
+			"packagePath": "src/services/DataService.ts",
+			"qualifiedName": "state"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "packages/devtools/runtime_inspector/src/index.ts"
+		},
+		"reflections": {
+			"1": 942
+		}
+	}
+}

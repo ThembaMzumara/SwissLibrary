@@ -1,0 +1,464 @@
+/* SwissJS Capability Explorer Styles */
+
+.capability-explorer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.explorer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+
+.explorer-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.controls button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background: #f0f0f0;
+}
+
+.explorer-content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 300px;
+  gap: 1rem;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.tree-panel,
+.details-panel,
+.conflicts-panel {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.tree-panel h2,
+.details-panel h2,
+.conflicts-panel h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Zoom/Pan viewport for the tree */
+.tree-viewport {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 2rem);
+  border: 1px dashed #e0e0e0;
+  overflow: hidden;
+  user-select: none;
+  cursor: grab;
+}
+
+.tree-viewport:active {
+  cursor: grabbing;
+}
+
+.tree-canvas {
+  will-change: transform;
+  transform-origin: 0 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.no-selection {
+  color: #999;
+  font-style: italic;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Component Tree Styles */
+.component-tree {
+  font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.tree-node {
+  margin: 2px 0;
+}
+
+.tree-node.has-conflicts {
+  background-color: #fff3cd;
+  border-left: 3px solid #ffc107;
+}
+
+.tree-node.selected .node-content {
+  background-color: #e7f1ff;
+  border-left: 3px solid #4da3ff;
+}
+
+.node-content {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 3px;
+  gap: 8px;
+}
+
+.node-content:hover {
+  background-color: #f8f9fa;
+}
+
+.node-icon {
+  width: 12px;
+  text-align: center;
+  color: #666;
+  font-size: 10px;
+}
+
+.node-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.node-id {
+  font-size: 0.8em;
+  color: #999;
+  font-family: monospace;
+}
+
+.capabilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.provides,
+.consumes {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.label {
+  font-size: 0.75em;
+  color: #666;
+  font-weight: 500;
+}
+
+.capability {
+  font-size: 0.75em;
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.provides-cap {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.consumes-cap {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+.consumes-cap.conflict {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Provider/Consumer Connection Indicators */
+.connection-indicator {
+  font-size: 0.65em;
+  font-weight: bold;
+  margin-left: 4px;
+  opacity: 0.7;
+  font-family: monospace;
+}
+
+.provides-cap .connection-indicator {
+  color: #0f5132;
+}
+
+.consumes-cap .connection-indicator {
+  color: #055160;
+  margin-right: 4px;
+  margin-left: 0;
+}
+
+.conflict-indicator {
+  font-size: 0.8em;
+  margin-left: 4px;
+  color: #721c24;
+}
+
+/* Enhanced capability badges with better hover states */
+.capability {
+  position: relative;
+  cursor: help;
+  transition: all 0.2s ease;
+}
+
+.capability:hover {
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.provides-cap:hover {
+  background-color: #c3e6cb;
+  border-color: #b8e6c1;
+}
+
+.consumes-cap:hover {
+  background-color: #bee5eb;
+  border-color: #a6e1ec;
+}
+
+.consumes-cap.conflict:hover {
+  background-color: #f5c6cb;
+  border-color: #f1b0b7;
+}
+
+/* Node Details Styles */
+.node-details {
+  font-size: 0.9rem;
+}
+
+.node-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.node-header h3 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.node-id {
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.section h4 {
+  margin: 0 0 0.75rem 0;
+  color: #555;
+  font-size: 1rem;
+}
+
+.hierarchy-info {
+  background: #f8f9fa;
+  padding: 0.75rem;
+  border-radius: 4px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.info-row:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  font-weight: 500;
+  color: #666;
+}
+
+.value {
+  font-family: monospace;
+  color: #333;
+}
+
+.capability-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.capability-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid;
+}
+
+.capability-item.provides {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+.capability-item.consumes {
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+  color: #0c5460;
+}
+
+.capability-item.conflict {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+
+.capability-name {
+  font-family: monospace;
+  font-weight: 500;
+}
+
+.conflict-indicator {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.empty-state {
+  color: #999;
+  font-style: italic;
+  padding: 1rem;
+  text-align: center;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.section.conflicts {
+  border-top: 2px solid #ffc107;
+  padding-top: 1rem;
+}
+
+.conflict-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.conflict-item {
+  padding: 0.5rem;
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 4px;
+}
+
+.conflict-capability {
+  font-family: monospace;
+  font-weight: 500;
+  color: #856404;
+}
+
+.conflict-reason {
+  display: block;
+  font-size: 0.8rem;
+  color: #856404;
+  margin-top: 0.25rem;
+}
+
+/* Conflicts List Styles */
+.conflicts-list {
+  font-size: 0.9rem;
+}
+
+.no-conflicts {
+  text-align: center;
+  padding: 2rem;
+  color: #28a745;
+}
+
+.success-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.message {
+  font-weight: 500;
+}
+
+.conflict-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.conflict-item {
+  padding: 0.75rem;
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.conflict-item:hover {
+  background: #ffecb3;
+}
+
+.conflict-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.component-name {
+  font-weight: 500;
+  color: #856404;
+}
+
+.capability-name {
+  font-family: monospace;
+  font-size: 0.8rem;
+  background: #fff;
+  padding: 2px 6px;
+  border-radius: 3px;
+  border: 1px solid #ffeaa7;
+}
+
+.conflict-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.reason {
+  color: #856404;
+  flex: 1;
+}
+
+.component-id {
+  font-family: monospace;
+  color: #999;
+}

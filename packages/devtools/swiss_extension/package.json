@@ -1,0 +1,42 @@
+{
+  "name": "@swissjs/swiss-extension",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "SwissJS DevTools browser extension",
+  "scripts": {
+    "dev": "vite --mode development",
+    "build": "vite build",
+    "clean": "rm -rf dist .turbo",
+    "zip": "cd dist && zip -r ../swiss-extension.zip .",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.tsx"
+  },
+  "dependencies": {
+    "webextension-polyfill": "^0.10.0"
+  },
+  "devDependencies": {
+    "typescript": "5.8.2",
+    "vite": "^5.2.0",
+    "rimraf": "^6.0.1",
+    "@types/chrome": "^0.0.258"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Themba Mzumara",
+    "email": "themba@swissjs.dev",
+    "url": "https://github.com/ThembaMzumara"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThembaMzumara/SWISS.git"
+  },
+  "homepage": "https://github.com/ThembaMzumara/SWISS#readme",
+  "bugs": {
+    "url": "https://github.com/ThembaMzumara/SWISS/issues"
+  },
+  "keywords": [
+    "swissjs",
+    "framework"
+  ]
+}

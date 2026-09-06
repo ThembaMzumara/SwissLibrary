@@ -1,0 +1,25 @@
+{
+	"schemaVersion": "2.0",
+	"id": 0,
+	"name": "@swissjs/cli",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"packageName": "@swissjs/cli",
+	"packageVersion": "0.1.1",
+	"symbolIdMap": {
+		"0": {
+			"packageName": "@swissjs/cli",
+			"packagePath": "src/index.ts",
+			"qualifiedName": ""
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "packages/cli/src/index.ts"
+		},
+		"reflections": {
+			"1": 0
+		}
+	}
+}

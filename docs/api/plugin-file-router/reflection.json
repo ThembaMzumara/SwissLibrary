@@ -1,0 +1,5216 @@
+{
+	"schemaVersion": "2.0",
+	"id": 1473,
+	"name": "@swissjs/plugin-file-router",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 1574,
+			"name": "PathTransformer",
+			"variant": "declaration",
+			"kind": 128,
+			"flags": {},
+			"children": [
+				{
+					"id": 1575,
+					"name": "constructor",
+					"variant": "declaration",
+					"kind": 512,
+					"flags": {},
+					"signatures": [
+						{
+							"id": 1576,
+							"name": "PathTransformer",
+							"variant": "signature",
+							"kind": 16384,
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"target": 1574,
+								"name": "PathTransformer",
+								"package": "@swissjs/plugin-file-router"
+							}
+						}
+					]
+				},
+				{
+					"id": 1586,
+					"name": "extractParamNames",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/core/transformer.ts",
+							"line": 63,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/transformer.ts#L63"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1587,
+							"name": "extractParamNames",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Extract parameter names from route pattern"
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "plugins/file-router/src/core/transformer.ts",
+									"line": 63,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/transformer.ts#L63"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1588,
+									"name": "route",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "intrinsic",
+									"name": "string"
+								}
+							}
+						}
+					]
+				},
+				{
+					"id": 1577,
+					"name": "filePathToRoute",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/core/transformer.ts",
+							"line": 11,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/transformer.ts#L11"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1578,
+							"name": "filePathToRoute",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Transform file path to route pattern\n\nExamples:\n- /routes/index.ui -> /\n- /routes/about.ui -> /about\n- /routes/user/[id].ui -> /user/:id\n- /routes/blog/[slug]/edit.ui -> /blog/:slug/edit"
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "plugins/file-router/src/core/transformer.ts",
+									"line": 11,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/transformer.ts#L11"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1579,
+									"name": "filePath",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 1580,
+									"name": "routePrefix",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									},
+									"defaultValue": "''"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					]
+				},
+				{
+					"id": 1589,
+					"name": "matchRoute",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/core/transformer.ts",
+							"line": 71,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/transformer.ts#L71"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1590,
+							"name": "matchRoute",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Check if route pattern matches path"
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "plugins/file-router/src/core/transformer.ts",
+									"line": 71,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/transformer.ts#L71"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1591,
+									"name": "pattern",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 1592,
+									"name": "path",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 1593,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 1594,
+											"name": "match",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "plugins/file-router/src/core/transformer.ts",
+													"line": 71,
+													"character": 47,
+													"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/transformer.ts#L71"
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "boolean"
+											}
+										},
+										{
+											"id": 1595,
+											"name": "params",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "plugins/file-router/src/core/transformer.ts",
+													"line": 71,
+													"character": 63,
+													"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/transformer.ts#L71"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "typescript",
+													"packagePath": "lib/lib.es5.d.ts",
+													"qualifiedName": "Record"
+												},
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "string"
+													}
+												],
+												"name": "Record",
+												"package": "typescript"
+											}
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												1594,
+												1595
+											]
+										}
+									],
+									"sources": [
+										{
+											"fileName": "plugins/file-router/src/core/transformer.ts",
+											"line": 71,
+											"character": 45,
+											"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/transformer.ts#L71"
+										}
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"id": 1581,
+					"name": "routeToFilePaths",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/core/transformer.ts",
+							"line": 43,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/transformer.ts#L43"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1582,
+							"name": "routeToFilePaths",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Transform route pattern back to potential file paths\nUseful for reverse lookups and debugging"
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "plugins/file-router/src/core/transformer.ts",
+									"line": 43,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/transformer.ts#L43"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1583,
+									"name": "route",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 1584,
+									"name": "routesDir",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 1585,
+									"name": "extensions",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "string"
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "intrinsic",
+									"name": "string"
+								}
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						1575
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						1586,
+						1577,
+						1589,
+						1581
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "plugins/file-router/src/core/transformer.ts",
+					"line": 1,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/transformer.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 1515,
+			"name": "RouteCache",
+			"variant": "declaration",
+			"kind": 128,
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Route cache for performance optimization"
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 1516,
+					"name": "constructor",
+					"variant": "declaration",
+					"kind": 512,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/utils/cache.ts",
+							"line": 8,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/utils/cache.ts#L8"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1517,
+							"name": "RouteCache",
+							"variant": "signature",
+							"kind": 16384,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "plugins/file-router/src/utils/cache.ts",
+									"line": 8,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/utils/cache.ts#L8"
+								}
+							],
+							"typeParameters": [
+								{
+									"id": 1518,
+									"name": "TValue",
+									"variant": "typeParam",
+									"kind": 131072,
+									"flags": {},
+									"default": {
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								}
+							],
+							"parameters": [
+								{
+									"id": 1519,
+									"name": "maxSize",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									},
+									"defaultValue": "100"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 1515,
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 1518,
+										"name": "TValue",
+										"package": "@swissjs/plugin-file-router",
+										"qualifiedName": "RouteCache.TValue",
+										"refersToTypeParameter": true
+									}
+								],
+								"name": "RouteCache",
+								"package": "@swissjs/plugin-file-router"
+							}
+						}
+					]
+				},
+				{
+					"id": 1529,
+					"name": "clear",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/utils/cache.ts",
+							"line": 37,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/utils/cache.ts#L37"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1530,
+							"name": "clear",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Clear cache"
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "plugins/file-router/src/utils/cache.ts",
+									"line": 37,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/utils/cache.ts#L37"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 1522,
+					"name": "get",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/utils/cache.ts",
+							"line": 15,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/utils/cache.ts#L15"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1523,
+							"name": "get",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Get cached route"
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "plugins/file-router/src/utils/cache.ts",
+									"line": 15,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/utils/cache.ts#L15"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1524,
+									"name": "key",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 1518,
+								"name": "TValue",
+								"package": "@swissjs/plugin-file-router",
+								"qualifiedName": "RouteCache.TValue",
+								"refersToTypeParameter": true
+							}
+						}
+					]
+				},
+				{
+					"id": 1525,
+					"name": "set",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/utils/cache.ts",
+							"line": 22,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/utils/cache.ts#L22"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1526,
+							"name": "set",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Set cached route"
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "plugins/file-router/src/utils/cache.ts",
+									"line": 22,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/utils/cache.ts#L22"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1527,
+									"name": "key",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 1528,
+									"name": "value",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": 1518,
+										"name": "TValue",
+										"package": "@swissjs/plugin-file-router",
+										"qualifiedName": "RouteCache.TValue",
+										"refersToTypeParameter": true
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 1531,
+					"name": "size",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/utils/cache.ts",
+							"line": 44,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/utils/cache.ts#L44"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1532,
+							"name": "size",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Get cache size"
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "plugins/file-router/src/utils/cache.ts",
+									"line": 44,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/utils/cache.ts#L44"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						1516
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						1529,
+						1522,
+						1525,
+						1531
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "plugins/file-router/src/utils/cache.ts",
+					"line": 4,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/utils/cache.ts#L4"
+				}
+			],
+			"typeParameters": [
+				{
+					"id": 1533,
+					"name": "TValue",
+					"variant": "typeParam",
+					"kind": 131072,
+					"flags": {},
+					"default": {
+						"type": "intrinsic",
+						"name": "unknown"
+					}
+				}
+			]
+		},
+		{
+			"id": 1537,
+			"name": "RouteMatcher",
+			"variant": "declaration",
+			"kind": 128,
+			"flags": {},
+			"children": [
+				{
+					"id": 1538,
+					"name": "constructor",
+					"variant": "declaration",
+					"kind": 512,
+					"flags": {},
+					"signatures": [
+						{
+							"id": 1539,
+							"name": "RouteMatcher",
+							"variant": "signature",
+							"kind": 16384,
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"target": 1537,
+								"name": "RouteMatcher",
+								"package": "@swissjs/plugin-file-router"
+							}
+						}
+					]
+				},
+				{
+					"id": 1548,
+					"name": "findBestMatch",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/core/matcher.ts",
+							"line": 16,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L16"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1549,
+							"name": "findBestMatch",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Find the best matching route from a list of routes"
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "plugins/file-router/src/core/matcher.ts",
+									"line": 16,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L16"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1550,
+									"name": "routes",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reflection",
+											"declaration": {
+												"id": 1551,
+												"name": "__type",
+												"variant": "declaration",
+												"kind": 65536,
+												"flags": {},
+												"children": [
+													{
+														"id": 1552,
+														"name": "path",
+														"variant": "declaration",
+														"kind": 1024,
+														"flags": {},
+														"sources": [
+															{
+																"fileName": "plugins/file-router/src/core/matcher.ts",
+																"line": 17,
+																"character": 20,
+																"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L17"
+															}
+														],
+														"type": {
+															"type": "intrinsic",
+															"name": "string"
+														}
+													}
+												],
+												"groups": [
+													{
+														"title": "Properties",
+														"children": [
+															1552
+														]
+													}
+												],
+												"sources": [
+													{
+														"fileName": "plugins/file-router/src/core/matcher.ts",
+														"line": 17,
+														"character": 18,
+														"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L17"
+													}
+												],
+												"indexSignatures": [
+													{
+														"id": 1553,
+														"name": "__index",
+														"variant": "signature",
+														"kind": 8192,
+														"flags": {},
+														"sources": [
+															{
+																"fileName": "plugins/file-router/src/core/matcher.ts",
+																"line": 17,
+																"character": 34,
+																"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L17"
+															}
+														],
+														"parameters": [
+															{
+																"id": 1554,
+																"name": "key",
+																"variant": "param",
+																"kind": 32768,
+																"flags": {},
+																"type": {
+																	"type": "intrinsic",
+																	"name": "string"
+																}
+															}
+														],
+														"type": {
+															"type": "intrinsic",
+															"name": "unknown"
+														}
+													}
+												]
+											}
+										}
+									}
+								},
+								{
+									"id": 1555,
+									"name": "path",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 1556,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 1562,
+											"name": "params",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "plugins/file-router/src/core/matcher.ts",
+													"line": 19,
+													"character": 56,
+													"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L19"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "typescript",
+													"packagePath": "lib/lib.es5.d.ts",
+													"qualifiedName": "Record"
+												},
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "string"
+													}
+												],
+												"name": "Record",
+												"package": "typescript"
+											}
+										},
+										{
+											"id": 1557,
+											"name": "route",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "plugins/file-router/src/core/matcher.ts",
+													"line": 19,
+													"character": 7,
+													"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L19"
+												}
+											],
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 1558,
+													"name": "__type",
+													"variant": "declaration",
+													"kind": 65536,
+													"flags": {},
+													"children": [
+														{
+															"id": 1559,
+															"name": "path",
+															"variant": "declaration",
+															"kind": 1024,
+															"flags": {},
+															"sources": [
+																{
+																	"fileName": "plugins/file-router/src/core/matcher.ts",
+																	"line": 19,
+																	"character": 16,
+																	"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L19"
+																}
+															],
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														}
+													],
+													"groups": [
+														{
+															"title": "Properties",
+															"children": [
+																1559
+															]
+														}
+													],
+													"sources": [
+														{
+															"fileName": "plugins/file-router/src/core/matcher.ts",
+															"line": 19,
+															"character": 14,
+															"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L19"
+														}
+													],
+													"indexSignatures": [
+														{
+															"id": 1560,
+															"name": "__index",
+															"variant": "signature",
+															"kind": 8192,
+															"flags": {},
+															"sources": [
+																{
+																	"fileName": "plugins/file-router/src/core/matcher.ts",
+																	"line": 19,
+																	"character": 30,
+																	"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L19"
+																}
+															],
+															"parameters": [
+																{
+																	"id": 1561,
+																	"name": "key",
+																	"variant": "param",
+																	"kind": 32768,
+																	"flags": {},
+																	"type": {
+																		"type": "intrinsic",
+																		"name": "string"
+																	}
+																}
+															],
+															"type": {
+																"type": "intrinsic",
+																"name": "unknown"
+															}
+														}
+													]
+												}
+											}
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												1562,
+												1557
+											]
+										}
+									],
+									"sources": [
+										{
+											"fileName": "plugins/file-router/src/core/matcher.ts",
+											"line": 19,
+											"character": 5,
+											"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L19"
+										}
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"id": 1541,
+					"name": "matchRoute",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/core/matcher.ts",
+							"line": 9,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L9"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1542,
+							"name": "matchRoute",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Match a path against a route pattern"
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "plugins/file-router/src/core/matcher.ts",
+									"line": 9,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L9"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1543,
+									"name": "pattern",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 1544,
+									"name": "path",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 1545,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 1546,
+											"name": "match",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "plugins/file-router/src/core/matcher.ts",
+													"line": 9,
+													"character": 47,
+													"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L9"
+												}
+											],
+											"type": {
+												"type": "intrinsic",
+												"name": "boolean"
+											}
+										},
+										{
+											"id": 1547,
+											"name": "params",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "plugins/file-router/src/core/matcher.ts",
+													"line": 9,
+													"character": 63,
+													"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L9"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "typescript",
+													"packagePath": "lib/lib.es5.d.ts",
+													"qualifiedName": "Record"
+												},
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "string"
+													}
+												],
+												"name": "Record",
+												"package": "typescript"
+											}
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												1546,
+												1547
+											]
+										}
+									],
+									"sources": [
+										{
+											"fileName": "plugins/file-router/src/core/matcher.ts",
+											"line": 9,
+											"character": 45,
+											"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L9"
+										}
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"id": 1563,
+					"name": "sortRoutesBySpecificity",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/core/matcher.ts",
+							"line": 33,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L33"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1564,
+							"name": "sortRoutesBySpecificity",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"comment": {
+								"summary": [
+									{
+										"kind": "text",
+										"text": "Sort routes by specificity (most specific first)"
+									}
+								]
+							},
+							"sources": [
+								{
+									"fileName": "plugins/file-router/src/core/matcher.ts",
+									"line": 33,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L33"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1565,
+									"name": "routes",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "reflection",
+											"declaration": {
+												"id": 1566,
+												"name": "__type",
+												"variant": "declaration",
+												"kind": 65536,
+												"flags": {},
+												"children": [
+													{
+														"id": 1567,
+														"name": "path",
+														"variant": "declaration",
+														"kind": 1024,
+														"flags": {},
+														"sources": [
+															{
+																"fileName": "plugins/file-router/src/core/matcher.ts",
+																"line": 34,
+																"character": 20,
+																"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L34"
+															}
+														],
+														"type": {
+															"type": "intrinsic",
+															"name": "string"
+														}
+													}
+												],
+												"groups": [
+													{
+														"title": "Properties",
+														"children": [
+															1567
+														]
+													}
+												],
+												"sources": [
+													{
+														"fileName": "plugins/file-router/src/core/matcher.ts",
+														"line": 34,
+														"character": 18,
+														"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L34"
+													}
+												],
+												"indexSignatures": [
+													{
+														"id": 1568,
+														"name": "__index",
+														"variant": "signature",
+														"kind": 8192,
+														"flags": {},
+														"sources": [
+															{
+																"fileName": "plugins/file-router/src/core/matcher.ts",
+																"line": 34,
+																"character": 34,
+																"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L34"
+															}
+														],
+														"parameters": [
+															{
+																"id": 1569,
+																"name": "key",
+																"variant": "param",
+																"kind": 32768,
+																"flags": {},
+																"type": {
+																	"type": "intrinsic",
+																	"name": "string"
+																}
+															}
+														],
+														"type": {
+															"type": "intrinsic",
+															"name": "unknown"
+														}
+													}
+												]
+											}
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reflection",
+									"declaration": {
+										"id": 1570,
+										"name": "__type",
+										"variant": "declaration",
+										"kind": 65536,
+										"flags": {},
+										"children": [
+											{
+												"id": 1571,
+												"name": "path",
+												"variant": "declaration",
+												"kind": 1024,
+												"flags": {},
+												"sources": [
+													{
+														"fileName": "plugins/file-router/src/core/matcher.ts",
+														"line": 35,
+														"character": 13,
+														"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L35"
+													}
+												],
+												"type": {
+													"type": "intrinsic",
+													"name": "string"
+												}
+											}
+										],
+										"groups": [
+											{
+												"title": "Properties",
+												"children": [
+													1571
+												]
+											}
+										],
+										"sources": [
+											{
+												"fileName": "plugins/file-router/src/core/matcher.ts",
+												"line": 35,
+												"character": 11,
+												"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L35"
+											}
+										],
+										"indexSignatures": [
+											{
+												"id": 1572,
+												"name": "__index",
+												"variant": "signature",
+												"kind": 8192,
+												"flags": {},
+												"sources": [
+													{
+														"fileName": "plugins/file-router/src/core/matcher.ts",
+														"line": 35,
+														"character": 27,
+														"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L35"
+													}
+												],
+												"parameters": [
+													{
+														"id": 1573,
+														"name": "key",
+														"variant": "param",
+														"kind": 32768,
+														"flags": {},
+														"type": {
+															"type": "intrinsic",
+															"name": "string"
+														}
+													}
+												],
+												"type": {
+													"type": "intrinsic",
+													"name": "unknown"
+												}
+											}
+										]
+									}
+								}
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						1538
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						1548,
+						1541,
+						1563
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "plugins/file-router/src/core/matcher.ts",
+					"line": 3,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/matcher.ts#L3"
+				}
+			]
+		},
+		{
+			"id": 1474,
+			"name": "RouteScanner",
+			"variant": "declaration",
+			"kind": 128,
+			"flags": {},
+			"children": [
+				{
+					"id": 1475,
+					"name": "constructor",
+					"variant": "declaration",
+					"kind": 512,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/core/scanner.ts",
+							"line": 9,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/scanner.ts#L9"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1476,
+							"name": "RouteScanner",
+							"variant": "signature",
+							"kind": 16384,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "plugins/file-router/src/core/scanner.ts",
+									"line": 9,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/scanner.ts#L9"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1477,
+									"name": "config",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": 1627,
+										"name": "FileRouterOptions",
+										"package": "@swissjs/plugin-file-router"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 1474,
+								"name": "RouteScanner",
+								"package": "@swissjs/plugin-file-router"
+							}
+						}
+					]
+				},
+				{
+					"id": 1480,
+					"name": "scanRoutes",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/core/scanner.ts",
+							"line": 11,
+							"character": 8,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/scanner.ts#L11"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1481,
+							"name": "scanRoutes",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "plugins/file-router/src/core/scanner.ts",
+									"line": 11,
+									"character": 8,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/scanner.ts#L11"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1482,
+									"name": "directory",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"packageName": "typescript",
+									"packagePath": "lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "array",
+										"elementType": {
+											"type": "reference",
+											"target": 1661,
+											"name": "RouteDefinition",
+											"package": "@swissjs/core"
+										}
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						1475
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						1480
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "plugins/file-router/src/core/scanner.ts",
+					"line": 6,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/scanner.ts#L6"
+				}
+			]
+		},
+		{
+			"id": 1667,
+			"name": "ComponentConstructor",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 1668,
+					"name": "constructor",
+					"variant": "declaration",
+					"kind": 512,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "core/dist/types/index.d.ts",
+							"line": 1,
+							"character": 17
+						}
+					],
+					"signatures": [
+						{
+							"id": 1669,
+							"name": "ComponentConstructor",
+							"variant": "signature",
+							"kind": 16384,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "core/dist/types/index.d.ts",
+									"line": 2,
+									"character": 4
+								}
+							],
+							"parameters": [
+								{
+									"id": 1670,
+									"name": "args",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {
+										"isRest": true
+									},
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "unknown"
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "unknown"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						1668
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "core/dist/types/index.d.ts",
+					"line": 1,
+					"character": 17
+				}
+			]
+		},
+		{
+			"id": 1505,
+			"name": "DevServer",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 1510,
+					"name": "port",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/dev.ts",
+							"line": 35,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/dev.ts#L35"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 1506,
+					"name": "start",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/dev.ts",
+							"line": 33,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/dev.ts#L33"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1507,
+							"name": "start",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "plugins/file-router/src/types/dev.ts",
+									"line": 33,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/dev.ts#L33"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"packageName": "typescript",
+									"packagePath": "lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				},
+				{
+					"id": 1508,
+					"name": "stop",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/dev.ts",
+							"line": 34,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/dev.ts#L34"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1509,
+							"name": "stop",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "plugins/file-router/src/types/dev.ts",
+									"line": 34,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/dev.ts#L34"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"packageName": "typescript",
+									"packagePath": "lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						1510
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						1506,
+						1508
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "plugins/file-router/src/types/dev.ts",
+					"line": 32,
+					"character": 17,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/dev.ts#L32"
+				}
+			]
+		},
+		{
+			"id": 1622,
+			"name": "DevServerOptions",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 1624,
+					"name": "hotReload",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Enable hot reload"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/dev.ts",
+							"line": 17,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/dev.ts#L17"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 1625,
+					"name": "middleware",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Custom middleware"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/dev.ts",
+							"line": 20,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/dev.ts#L20"
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "intrinsic",
+							"name": "unknown"
+						}
+					}
+				},
+				{
+					"id": 1623,
+					"name": "port",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Development server port"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/dev.ts",
+							"line": 14,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/dev.ts#L14"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 1626,
+					"name": "routes",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Custom routes"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/dev.ts",
+							"line": 23,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/dev.ts#L23"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": {
+							"packageName": "typescript",
+							"packagePath": "lib/lib.es5.d.ts",
+							"qualifiedName": "Record"
+						},
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "intrinsic",
+								"name": "unknown"
+							}
+						],
+						"name": "Record",
+						"package": "typescript"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						1624,
+						1625,
+						1623,
+						1626
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "plugins/file-router/src/types/dev.ts",
+					"line": 12,
+					"character": 17,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/dev.ts#L12"
+				}
+			]
+		},
+		{
+			"id": 1627,
+			"name": "FileRouterOptions",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 1637,
+					"name": "dev",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Development server options"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/config.ts",
+							"line": 21,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/config.ts#L21"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 1638,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 1639,
+									"name": "hotReload",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "plugins/file-router/src/types/config.ts",
+											"line": 22,
+											"character": 4,
+											"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/config.ts#L22"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								},
+								{
+									"id": 1640,
+									"name": "port",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "plugins/file-router/src/types/config.ts",
+											"line": 23,
+											"character": 4,
+											"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/config.ts#L23"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										1639,
+										1640
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "plugins/file-router/src/types/config.ts",
+									"line": 21,
+									"character": 8,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/config.ts#L21"
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 1629,
+					"name": "extensions",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "File extensions to scan for routes"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/config.ts",
+							"line": 6,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/config.ts#L6"
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "intrinsic",
+							"name": "string"
+						}
+					}
+				},
+				{
+					"id": 1630,
+					"name": "layouts",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Enable nested layouts"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/config.ts",
+							"line": 9,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/config.ts#L9"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 1631,
+					"name": "lazyLoading",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Enable lazy loading"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/config.ts",
+							"line": 12,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/config.ts#L12"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 1632,
+					"name": "preloading",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Enable route preloading"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/config.ts",
+							"line": 15,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/config.ts#L15"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 1628,
+					"name": "routesDir",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Routes directory relative to project root"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/config.ts",
+							"line": 3,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/config.ts#L3"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 1633,
+					"name": "transform",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Custom route transformation"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/config.ts",
+							"line": 18,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/config.ts#L18"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 1634,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "plugins/file-router/src/types/config.ts",
+									"line": 18,
+									"character": 14,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/config.ts#L18"
+								}
+							],
+							"signatures": [
+								{
+									"id": 1635,
+									"name": "__type",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "plugins/file-router/src/types/config.ts",
+											"line": 18,
+											"character": 14,
+											"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/config.ts#L18"
+										}
+									],
+									"parameters": [
+										{
+											"id": 1636,
+											"name": "path",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							]
+						}
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						1637,
+						1629,
+						1630,
+						1631,
+						1632,
+						1628,
+						1633
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "plugins/file-router/src/types/config.ts",
+					"line": 1,
+					"character": 17,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/config.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 1495,
+			"name": "FileWatcher",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 1503,
+					"name": "close",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/dev.ts",
+							"line": 29,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/dev.ts#L29"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1504,
+							"name": "close",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "plugins/file-router/src/types/dev.ts",
+									"line": 29,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/dev.ts#L29"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"packageName": "typescript",
+									"packagePath": "lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				},
+				{
+					"id": 1496,
+					"name": "on",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/dev.ts",
+							"line": 28,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/dev.ts#L28"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1497,
+							"name": "on",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "plugins/file-router/src/types/dev.ts",
+									"line": 28,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/dev.ts#L28"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1498,
+									"name": "event",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "union",
+										"types": [
+											{
+												"type": "literal",
+												"value": "change"
+											},
+											{
+												"type": "literal",
+												"value": "add"
+											},
+											{
+												"type": "literal",
+												"value": "remove"
+											}
+										]
+									}
+								},
+								{
+									"id": 1499,
+									"name": "handler",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 1500,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "plugins/file-router/src/types/dev.ts",
+													"line": 28,
+													"character": 50,
+													"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/dev.ts#L28"
+												}
+											],
+											"signatures": [
+												{
+													"id": 1501,
+													"name": "__type",
+													"variant": "signature",
+													"kind": 4096,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "plugins/file-router/src/types/dev.ts",
+															"line": 28,
+															"character": 50,
+															"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/dev.ts#L28"
+														}
+													],
+													"parameters": [
+														{
+															"id": 1502,
+															"name": "path",
+															"variant": "param",
+															"kind": 32768,
+															"flags": {},
+															"type": {
+																"type": "intrinsic",
+																"name": "string"
+															}
+														}
+													],
+													"type": {
+														"type": "intrinsic",
+														"name": "void"
+													}
+												}
+											]
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Methods",
+					"children": [
+						1503,
+						1496
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "plugins/file-router/src/types/dev.ts",
+					"line": 27,
+					"character": 17,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/dev.ts#L27"
+				}
+			]
+		},
+		{
+			"id": 1653,
+			"name": "LayoutConfig",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 1654,
+					"name": "component",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Layout component name"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/route.ts",
+							"line": 23,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/route.ts#L23"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 1655,
+					"name": "meta",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Layout metadata"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/route.ts",
+							"line": 26,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/route.ts#L26"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 1656,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 1658,
+									"name": "description",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "plugins/file-router/src/types/route.ts",
+											"line": 28,
+											"character": 4,
+											"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/route.ts#L28"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 1657,
+									"name": "title",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "plugins/file-router/src/types/route.ts",
+											"line": 27,
+											"character": 4,
+											"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/route.ts#L27"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										1658,
+										1657
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "plugins/file-router/src/types/route.ts",
+									"line": 26,
+									"character": 9,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/route.ts#L26"
+								}
+							],
+							"indexSignatures": [
+								{
+									"id": 1659,
+									"name": "__index",
+									"variant": "signature",
+									"kind": 8192,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "plugins/file-router/src/types/route.ts",
+											"line": 29,
+											"character": 4,
+											"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/route.ts#L29"
+										}
+									],
+									"parameters": [
+										{
+											"id": 1660,
+											"name": "key",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								}
+							]
+						}
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						1654,
+						1655
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "plugins/file-router/src/types/route.ts",
+					"line": 21,
+					"character": 17,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/route.ts#L21"
+				}
+			]
+		},
+		{
+			"id": 1641,
+			"name": "RouteConfig",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 1643,
+					"name": "component",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Component file path"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/route.ts",
+							"line": 6,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/route.ts#L6"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 1644,
+					"name": "layout",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Layout component"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/route.ts",
+							"line": 9,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/route.ts#L9"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 1645,
+					"name": "meta",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Route metadata"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/route.ts",
+							"line": 12,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/route.ts#L12"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 1646,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"children": [
+								{
+									"id": 1648,
+									"name": "description",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "plugins/file-router/src/types/route.ts",
+											"line": 14,
+											"character": 4,
+											"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/route.ts#L14"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 1649,
+									"name": "guards",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "plugins/file-router/src/types/route.ts",
+											"line": 15,
+											"character": 4,
+											"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/route.ts#L15"
+										}
+									],
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "string"
+										}
+									}
+								},
+								{
+									"id": 1650,
+									"name": "middleware",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "plugins/file-router/src/types/route.ts",
+											"line": 16,
+											"character": 4,
+											"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/route.ts#L16"
+										}
+									],
+									"type": {
+										"type": "array",
+										"elementType": {
+											"type": "intrinsic",
+											"name": "string"
+										}
+									}
+								},
+								{
+									"id": 1647,
+									"name": "title",
+									"variant": "declaration",
+									"kind": 1024,
+									"flags": {
+										"isOptional": true
+									},
+									"sources": [
+										{
+											"fileName": "plugins/file-router/src/types/route.ts",
+											"line": 13,
+											"character": 4,
+											"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/route.ts#L13"
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"groups": [
+								{
+									"title": "Properties",
+									"children": [
+										1648,
+										1649,
+										1650,
+										1647
+									]
+								}
+							],
+							"sources": [
+								{
+									"fileName": "plugins/file-router/src/types/route.ts",
+									"line": 12,
+									"character": 9,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/route.ts#L12"
+								}
+							],
+							"indexSignatures": [
+								{
+									"id": 1651,
+									"name": "__index",
+									"variant": "signature",
+									"kind": 8192,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "plugins/file-router/src/types/route.ts",
+											"line": 17,
+											"character": 4,
+											"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/route.ts#L17"
+										}
+									],
+									"parameters": [
+										{
+											"id": 1652,
+											"name": "key",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "string"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "unknown"
+									}
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 1642,
+					"name": "path",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Route path pattern"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/route.ts",
+							"line": 3,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/route.ts#L3"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						1643,
+						1644,
+						1645,
+						1642
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "plugins/file-router/src/types/route.ts",
+					"line": 1,
+					"character": 17,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/route.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 1661,
+			"name": "RouteDefinition",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 1665,
+					"name": "children",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "core/dist/types/index.d.ts",
+							"line": 11,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "reference",
+							"target": 1661,
+							"name": "RouteDefinition",
+							"package": "@swissjs/core"
+						}
+					}
+				},
+				{
+					"id": 1663,
+					"name": "component",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "core/dist/types/index.d.ts",
+							"line": 9,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "reference",
+								"target": 1667,
+								"name": "ComponentConstructor",
+								"package": "@swissjs/core"
+							},
+							{
+								"type": "reference",
+								"target": {
+									"packageName": "@swissjs/core",
+									"packagePath": "dist/types/index.d.ts",
+									"qualifiedName": "ComponentImport"
+								},
+								"name": "ComponentImport",
+								"package": "@swissjs/core"
+							}
+						]
+					}
+				},
+				{
+					"id": 1664,
+					"name": "layout",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "core/dist/types/index.d.ts",
+							"line": 10,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "reference",
+								"target": 1667,
+								"name": "ComponentConstructor",
+								"package": "@swissjs/core"
+							},
+							{
+								"type": "reference",
+								"target": {
+									"packageName": "@swissjs/core",
+									"packagePath": "dist/types/index.d.ts",
+									"qualifiedName": "ComponentImport"
+								},
+								"name": "ComponentImport",
+								"package": "@swissjs/core"
+							}
+						]
+					}
+				},
+				{
+					"id": 1666,
+					"name": "meta",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "core/dist/types/index.d.ts",
+							"line": 12,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": {
+							"packageName": "@swissjs/core",
+							"packagePath": "dist/types/index.d.ts",
+							"qualifiedName": "RouteMeta"
+						},
+						"name": "RouteMeta",
+						"package": "@swissjs/core"
+					}
+				},
+				{
+					"id": 1662,
+					"name": "path",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "core/dist/types/index.d.ts",
+							"line": 8,
+							"character": 4
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						1665,
+						1663,
+						1664,
+						1666,
+						1662
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "core/dist/types/index.d.ts",
+					"line": 7,
+					"character": 17
+				}
+			]
+		},
+		{
+			"id": 1618,
+			"name": "WatcherConfig",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 1619,
+					"name": "directory",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Directory to watch"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/dev.ts",
+							"line": 3,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/dev.ts#L3"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 1620,
+					"name": "extensions",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "File extensions to watch"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/dev.ts",
+							"line": 6,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/dev.ts#L6"
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "intrinsic",
+							"name": "string"
+						}
+					}
+				},
+				{
+					"id": 1621,
+					"name": "ignore",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Ignore patterns"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/types/dev.ts",
+							"line": 9,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/dev.ts#L9"
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "intrinsic",
+							"name": "string"
+						}
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						1619,
+						1620,
+						1621
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "plugins/file-router/src/types/dev.ts",
+					"line": 1,
+					"character": 17,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/types/dev.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 1615,
+			"name": "createDevServer",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "plugins/file-router/src/dev/server.ts",
+					"line": 5,
+					"character": 22,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/dev/server.ts#L5"
+				}
+			],
+			"signatures": [
+				{
+					"id": 1616,
+					"name": "createDevServer",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/dev/server.ts",
+							"line": 5,
+							"character": 22,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/dev/server.ts#L5"
+						}
+					],
+					"parameters": [
+						{
+							"id": 1617,
+							"name": "options",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"target": 1622,
+								"name": "DevServerOptions",
+								"package": "@swissjs/plugin-file-router"
+							},
+							"defaultValue": "{}"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": {
+							"packageName": "typescript",
+							"packagePath": "lib/lib.es5.d.ts",
+							"qualifiedName": "Promise"
+						},
+						"typeArguments": [
+							{
+								"type": "reference",
+								"target": 1505,
+								"name": "DevServer",
+								"package": "@swissjs/plugin-file-router"
+							}
+						],
+						"name": "Promise",
+						"package": "typescript"
+					}
+				}
+			]
+		},
+		{
+			"id": 1612,
+			"name": "createFileWatcher",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "plugins/file-router/src/dev/watcher.ts",
+					"line": 3,
+					"character": 22,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/dev/watcher.ts#L3"
+				}
+			],
+			"signatures": [
+				{
+					"id": 1613,
+					"name": "createFileWatcher",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/dev/watcher.ts",
+							"line": 3,
+							"character": 22,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/dev/watcher.ts#L3"
+						}
+					],
+					"parameters": [
+						{
+							"id": 1614,
+							"name": "config",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"target": 1618,
+								"name": "WatcherConfig",
+								"package": "@swissjs/plugin-file-router"
+							}
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": {
+							"packageName": "typescript",
+							"packagePath": "lib/lib.es5.d.ts",
+							"qualifiedName": "Promise"
+						},
+						"typeArguments": [
+							{
+								"type": "reference",
+								"target": 1495,
+								"name": "FileWatcher",
+								"package": "@swissjs/plugin-file-router"
+							}
+						],
+						"name": "Promise",
+						"package": "typescript"
+					}
+				}
+			]
+		},
+		{
+			"id": 1511,
+			"name": "createRouteCache",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "plugins/file-router/src/utils/cache.ts",
+					"line": 52,
+					"character": 16,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/utils/cache.ts#L52"
+				}
+			],
+			"signatures": [
+				{
+					"id": 1512,
+					"name": "createRouteCache",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Create a new route cache"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/utils/cache.ts",
+							"line": 52,
+							"character": 16,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/utils/cache.ts#L52"
+						}
+					],
+					"typeParameters": [
+						{
+							"id": 1513,
+							"name": "TValue",
+							"variant": "typeParam",
+							"kind": 131072,
+							"flags": {},
+							"default": {
+								"type": "intrinsic",
+								"name": "unknown"
+							}
+						}
+					],
+					"parameters": [
+						{
+							"id": 1514,
+							"name": "maxSize",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "number"
+							},
+							"defaultValue": "100"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": 1515,
+						"typeArguments": [
+							{
+								"type": "reference",
+								"target": 1513,
+								"name": "TValue",
+								"package": "@swissjs/plugin-file-router",
+								"refersToTypeParameter": true
+							}
+						],
+						"name": "RouteCache",
+						"package": "@swissjs/plugin-file-router"
+					}
+				}
+			]
+		},
+		{
+			"id": 1596,
+			"name": "createRouteDefinition",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "plugins/file-router/src/core/utils.ts",
+					"line": 6,
+					"character": 16,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/utils.ts#L6"
+				}
+			],
+			"signatures": [
+				{
+					"id": 1597,
+					"name": "createRouteDefinition",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Create a route definition from file path and component"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/core/utils.ts",
+							"line": 6,
+							"character": 16,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/utils.ts#L6"
+						}
+					],
+					"parameters": [
+						{
+							"id": 1598,
+							"name": "path",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 1599,
+							"name": "component",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 1600,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "plugins/file-router/src/core/utils.ts",
+											"line": 8,
+											"character": 13,
+											"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/utils.ts#L8"
+										}
+									],
+									"signatures": [
+										{
+											"id": 1601,
+											"name": "__type",
+											"variant": "signature",
+											"kind": 4096,
+											"flags": {},
+											"sources": [
+												{
+													"fileName": "plugins/file-router/src/core/utils.ts",
+													"line": 8,
+													"character": 13,
+													"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/utils.ts#L8"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "typescript",
+													"packagePath": "lib/lib.es5.d.ts",
+													"qualifiedName": "Promise"
+												},
+												"typeArguments": [
+													{
+														"type": "reflection",
+														"declaration": {
+															"id": 1602,
+															"name": "__type",
+															"variant": "declaration",
+															"kind": 65536,
+															"flags": {},
+															"children": [
+																{
+																	"id": 1603,
+																	"name": "default",
+																	"variant": "declaration",
+																	"kind": 1024,
+																	"flags": {},
+																	"sources": [
+																		{
+																			"fileName": "plugins/file-router/src/core/utils.ts",
+																			"line": 8,
+																			"character": 29,
+																			"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/utils.ts#L8"
+																		}
+																	],
+																	"type": {
+																		"type": "reference",
+																		"target": 1667,
+																		"name": "ComponentConstructor",
+																		"package": "@swissjs/core"
+																	}
+																}
+															],
+															"groups": [
+																{
+																	"title": "Properties",
+																	"children": [
+																		1603
+																	]
+																}
+															],
+															"sources": [
+																{
+																	"fileName": "plugins/file-router/src/core/utils.ts",
+																	"line": 8,
+																	"character": 27,
+																	"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/utils.ts#L8"
+																}
+															]
+														}
+													}
+												],
+												"name": "Promise",
+												"package": "typescript"
+											}
+										}
+									]
+								}
+							}
+						},
+						{
+							"id": 1604,
+							"name": "options",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "reflection",
+								"declaration": {
+									"id": 1605,
+									"name": "__type",
+									"variant": "declaration",
+									"kind": 65536,
+									"flags": {},
+									"children": [
+										{
+											"id": 1606,
+											"name": "layout",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"sources": [
+												{
+													"fileName": "plugins/file-router/src/core/utils.ts",
+													"line": 10,
+													"character": 4,
+													"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/utils.ts#L10"
+												}
+											],
+											"type": {
+												"type": "reflection",
+												"declaration": {
+													"id": 1607,
+													"name": "__type",
+													"variant": "declaration",
+													"kind": 65536,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "plugins/file-router/src/core/utils.ts",
+															"line": 10,
+															"character": 13,
+															"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/utils.ts#L10"
+														}
+													],
+													"signatures": [
+														{
+															"id": 1608,
+															"name": "__type",
+															"variant": "signature",
+															"kind": 4096,
+															"flags": {},
+															"sources": [
+																{
+																	"fileName": "plugins/file-router/src/core/utils.ts",
+																	"line": 10,
+																	"character": 13,
+																	"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/utils.ts#L10"
+																}
+															],
+															"type": {
+																"type": "reference",
+																"target": {
+																	"packageName": "typescript",
+																	"packagePath": "lib/lib.es5.d.ts",
+																	"qualifiedName": "Promise"
+																},
+																"typeArguments": [
+																	{
+																		"type": "reflection",
+																		"declaration": {
+																			"id": 1609,
+																			"name": "__type",
+																			"variant": "declaration",
+																			"kind": 65536,
+																			"flags": {},
+																			"children": [
+																				{
+																					"id": 1610,
+																					"name": "default",
+																					"variant": "declaration",
+																					"kind": 1024,
+																					"flags": {},
+																					"sources": [
+																						{
+																							"fileName": "plugins/file-router/src/core/utils.ts",
+																							"line": 10,
+																							"character": 29,
+																							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/utils.ts#L10"
+																						}
+																					],
+																					"type": {
+																						"type": "reference",
+																						"target": 1667,
+																						"name": "ComponentConstructor",
+																						"package": "@swissjs/core"
+																					}
+																				}
+																			],
+																			"groups": [
+																				{
+																					"title": "Properties",
+																					"children": [
+																						1610
+																					]
+																				}
+																			],
+																			"sources": [
+																				{
+																					"fileName": "plugins/file-router/src/core/utils.ts",
+																					"line": 10,
+																					"character": 27,
+																					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/utils.ts#L10"
+																				}
+																			]
+																		}
+																	}
+																],
+																"name": "Promise",
+																"package": "typescript"
+															}
+														}
+													]
+												}
+											}
+										},
+										{
+											"id": 1611,
+											"name": "meta",
+											"variant": "declaration",
+											"kind": 1024,
+											"flags": {
+												"isOptional": true
+											},
+											"sources": [
+												{
+													"fileName": "plugins/file-router/src/core/utils.ts",
+													"line": 11,
+													"character": 4,
+													"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/utils.ts#L11"
+												}
+											],
+											"type": {
+												"type": "reference",
+												"target": {
+													"packageName": "typescript",
+													"packagePath": "lib/lib.es5.d.ts",
+													"qualifiedName": "Record"
+												},
+												"typeArguments": [
+													{
+														"type": "intrinsic",
+														"name": "string"
+													},
+													{
+														"type": "intrinsic",
+														"name": "unknown"
+													}
+												],
+												"name": "Record",
+												"package": "typescript"
+											}
+										}
+									],
+									"groups": [
+										{
+											"title": "Properties",
+											"children": [
+												1606,
+												1611
+											]
+										}
+									],
+									"sources": [
+										{
+											"fileName": "plugins/file-router/src/core/utils.ts",
+											"line": 9,
+											"character": 11,
+											"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/utils.ts#L9"
+										}
+									]
+								}
+							},
+							"defaultValue": "{}"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": 1661,
+						"name": "RouteDefinition",
+						"package": "@swissjs/core"
+					}
+				}
+			]
+		},
+		{
+			"id": 1534,
+			"name": "fileRouterPlugin",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "plugins/file-router/src/core/plugin.ts",
+					"line": 5,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/plugin.ts#L5"
+				}
+			],
+			"signatures": [
+				{
+					"id": 1535,
+					"name": "fileRouterPlugin",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/core/plugin.ts",
+							"line": 5,
+							"character": 32,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/core/plugin.ts#L5"
+						}
+					],
+					"parameters": [
+						{
+							"id": 1536,
+							"name": "options",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"target": 1627,
+								"name": "FileRouterOptions",
+								"package": "@swissjs/plugin-file-router"
+							},
+							"defaultValue": "{}"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": {
+							"packageName": "@swissjs/core",
+							"packagePath": "dist/plugins/types/index.d.ts",
+							"qualifiedName": "Plugin"
+						},
+						"name": "Plugin",
+						"package": "@swissjs/core"
+					}
+				}
+			]
+		},
+		{
+			"id": 1680,
+			"name": "normalizeRoutePath",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "plugins/file-router/src/utils/route.ts",
+					"line": 4,
+					"character": 16,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/utils/route.ts#L4"
+				}
+			],
+			"signatures": [
+				{
+					"id": 1681,
+					"name": "normalizeRoutePath",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Normalize route path"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/utils/route.ts",
+							"line": 4,
+							"character": 16,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/utils/route.ts#L4"
+						}
+					],
+					"parameters": [
+						{
+							"id": 1682,
+							"name": "path",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			]
+		},
+		{
+			"id": 1671,
+			"name": "pathToRoute",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "plugins/file-router/src/utils/path.ts",
+					"line": 4,
+					"character": 16,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/utils/path.ts#L4"
+				}
+			],
+			"signatures": [
+				{
+					"id": 1672,
+					"name": "pathToRoute",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Convert file path to route path"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/utils/path.ts",
+							"line": 4,
+							"character": 16,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/utils/path.ts#L4"
+						}
+					],
+					"parameters": [
+						{
+							"id": 1673,
+							"name": "filePath",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 1674,
+							"name": "routesDir",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"defaultValue": "'./routes'"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			]
+		},
+		{
+			"id": 1675,
+			"name": "routeToPath",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "plugins/file-router/src/utils/path.ts",
+					"line": 37,
+					"character": 16,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/utils/path.ts#L37"
+				}
+			],
+			"signatures": [
+				{
+					"id": 1676,
+					"name": "routeToPath",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Convert route path to potential file paths"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/utils/path.ts",
+							"line": 37,
+							"character": 16,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/utils/path.ts#L37"
+						}
+					],
+					"parameters": [
+						{
+							"id": 1677,
+							"name": "route",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 1678,
+							"name": "routesDir",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							},
+							"defaultValue": "'./routes'"
+						},
+						{
+							"id": 1679,
+							"name": "extensions",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "intrinsic",
+									"name": "string"
+								}
+							},
+							"defaultValue": "..."
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "intrinsic",
+							"name": "string"
+						}
+					}
+				}
+			]
+		},
+		{
+			"id": 1683,
+			"name": "validateRoutePath",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "plugins/file-router/src/utils/route.ts",
+					"line": 21,
+					"character": 16,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/utils/route.ts#L21"
+				}
+			],
+			"signatures": [
+				{
+					"id": 1684,
+					"name": "validateRoutePath",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Validate route path"
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "plugins/file-router/src/utils/route.ts",
+							"line": 21,
+							"character": 16,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/file-router/src/utils/route.ts#L21"
+						}
+					],
+					"parameters": [
+						{
+							"id": 1685,
+							"name": "path",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Classes",
+			"children": [
+				1574,
+				1515,
+				1537,
+				1474
+			]
+		},
+		{
+			"title": "Interfaces",
+			"children": [
+				1667,
+				1505,
+				1622,
+				1627,
+				1495,
+				1653,
+				1641,
+				1661,
+				1618
+			]
+		},
+		{
+			"title": "Functions",
+			"children": [
+				1615,
+				1612,
+				1511,
+				1596,
+				1534,
+				1680,
+				1671,
+				1675,
+				1683
+			]
+		}
+	],
+	"packageName": "@swissjs/plugin-file-router",
+	"packageVersion": "1.0.0",
+	"symbolIdMap": {
+		"1473": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/index.ts",
+			"qualifiedName": ""
+		},
+		"1474": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/scanner.ts",
+			"qualifiedName": "RouteScanner"
+		},
+		"1475": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/scanner.ts",
+			"qualifiedName": "RouteScanner.__constructor"
+		},
+		"1476": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/scanner.ts",
+			"qualifiedName": "RouteScanner"
+		},
+		"1477": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/scanner.ts",
+			"qualifiedName": "config"
+		},
+		"1480": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/scanner.ts",
+			"qualifiedName": "RouteScanner.scanRoutes"
+		},
+		"1481": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/scanner.ts",
+			"qualifiedName": "RouteScanner.scanRoutes"
+		},
+		"1482": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/scanner.ts",
+			"qualifiedName": "directory"
+		},
+		"1495": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "FileWatcher"
+		},
+		"1496": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "FileWatcher.on"
+		},
+		"1497": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "FileWatcher.on"
+		},
+		"1498": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "event"
+		},
+		"1499": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "handler"
+		},
+		"1500": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "__type"
+		},
+		"1501": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "__type"
+		},
+		"1502": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "path"
+		},
+		"1503": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "FileWatcher.close"
+		},
+		"1504": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "FileWatcher.close"
+		},
+		"1505": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "DevServer"
+		},
+		"1506": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "DevServer.start"
+		},
+		"1507": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "DevServer.start"
+		},
+		"1508": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "DevServer.stop"
+		},
+		"1509": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "DevServer.stop"
+		},
+		"1510": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "DevServer.port"
+		},
+		"1511": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/cache.ts",
+			"qualifiedName": "createRouteCache"
+		},
+		"1512": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/cache.ts",
+			"qualifiedName": "createRouteCache"
+		},
+		"1513": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/cache.ts",
+			"qualifiedName": "TValue"
+		},
+		"1514": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/cache.ts",
+			"qualifiedName": "maxSize"
+		},
+		"1515": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/cache.ts",
+			"qualifiedName": "RouteCache"
+		},
+		"1516": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/cache.ts",
+			"qualifiedName": "RouteCache.__constructor"
+		},
+		"1517": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/cache.ts",
+			"qualifiedName": "RouteCache"
+		},
+		"1518": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/cache.ts",
+			"qualifiedName": "RouteCache.TValue"
+		},
+		"1519": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/cache.ts",
+			"qualifiedName": "maxSize"
+		},
+		"1522": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/cache.ts",
+			"qualifiedName": "RouteCache.get"
+		},
+		"1523": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/cache.ts",
+			"qualifiedName": "RouteCache.get"
+		},
+		"1524": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/cache.ts",
+			"qualifiedName": "key"
+		},
+		"1525": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/cache.ts",
+			"qualifiedName": "RouteCache.set"
+		},
+		"1526": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/cache.ts",
+			"qualifiedName": "RouteCache.set"
+		},
+		"1527": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/cache.ts",
+			"qualifiedName": "key"
+		},
+		"1528": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/cache.ts",
+			"qualifiedName": "value"
+		},
+		"1529": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/cache.ts",
+			"qualifiedName": "RouteCache.clear"
+		},
+		"1530": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/cache.ts",
+			"qualifiedName": "RouteCache.clear"
+		},
+		"1531": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/cache.ts",
+			"qualifiedName": "RouteCache.size"
+		},
+		"1532": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/cache.ts",
+			"qualifiedName": "RouteCache.size"
+		},
+		"1533": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/cache.ts",
+			"qualifiedName": "RouteCache.TValue"
+		},
+		"1534": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/plugin.ts",
+			"qualifiedName": "fileRouterPlugin"
+		},
+		"1535": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/plugin.ts",
+			"qualifiedName": "fileRouterPlugin"
+		},
+		"1536": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/plugin.ts",
+			"qualifiedName": "options"
+		},
+		"1537": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "RouteMatcher"
+		},
+		"1541": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "RouteMatcher.matchRoute"
+		},
+		"1542": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "RouteMatcher.matchRoute"
+		},
+		"1543": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "pattern"
+		},
+		"1544": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "path"
+		},
+		"1545": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "__type"
+		},
+		"1546": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "__type.match"
+		},
+		"1547": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "__type.params"
+		},
+		"1548": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "RouteMatcher.findBestMatch"
+		},
+		"1549": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "RouteMatcher.findBestMatch"
+		},
+		"1550": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "routes"
+		},
+		"1551": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "__type"
+		},
+		"1552": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "__type.path"
+		},
+		"1553": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "__type.__index"
+		},
+		"1555": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "path"
+		},
+		"1556": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "__type"
+		},
+		"1557": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "__type.route"
+		},
+		"1558": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "__type"
+		},
+		"1559": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "__type.path"
+		},
+		"1560": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "__type.__index"
+		},
+		"1562": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "__type.params"
+		},
+		"1563": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "RouteMatcher.sortRoutesBySpecificity"
+		},
+		"1564": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "RouteMatcher.sortRoutesBySpecificity"
+		},
+		"1565": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "routes"
+		},
+		"1566": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "__type"
+		},
+		"1567": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "__type.path"
+		},
+		"1568": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "__type.__index"
+		},
+		"1570": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "__type"
+		},
+		"1571": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "__type.path"
+		},
+		"1572": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/matcher.ts",
+			"qualifiedName": "__type.__index"
+		},
+		"1574": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/transformer.ts",
+			"qualifiedName": "PathTransformer"
+		},
+		"1577": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/transformer.ts",
+			"qualifiedName": "PathTransformer.filePathToRoute"
+		},
+		"1578": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/transformer.ts",
+			"qualifiedName": "PathTransformer.filePathToRoute"
+		},
+		"1579": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/transformer.ts",
+			"qualifiedName": "filePath"
+		},
+		"1580": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/transformer.ts",
+			"qualifiedName": "routePrefix"
+		},
+		"1581": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/transformer.ts",
+			"qualifiedName": "PathTransformer.routeToFilePaths"
+		},
+		"1582": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/transformer.ts",
+			"qualifiedName": "PathTransformer.routeToFilePaths"
+		},
+		"1583": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/transformer.ts",
+			"qualifiedName": "route"
+		},
+		"1584": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/transformer.ts",
+			"qualifiedName": "routesDir"
+		},
+		"1585": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/transformer.ts",
+			"qualifiedName": "extensions"
+		},
+		"1586": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/transformer.ts",
+			"qualifiedName": "PathTransformer.extractParamNames"
+		},
+		"1587": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/transformer.ts",
+			"qualifiedName": "PathTransformer.extractParamNames"
+		},
+		"1588": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/transformer.ts",
+			"qualifiedName": "route"
+		},
+		"1589": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/transformer.ts",
+			"qualifiedName": "PathTransformer.matchRoute"
+		},
+		"1590": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/transformer.ts",
+			"qualifiedName": "PathTransformer.matchRoute"
+		},
+		"1591": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/transformer.ts",
+			"qualifiedName": "pattern"
+		},
+		"1592": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/transformer.ts",
+			"qualifiedName": "path"
+		},
+		"1593": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/transformer.ts",
+			"qualifiedName": "__type"
+		},
+		"1594": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/transformer.ts",
+			"qualifiedName": "__type.match"
+		},
+		"1595": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/transformer.ts",
+			"qualifiedName": "__type.params"
+		},
+		"1596": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/utils.ts",
+			"qualifiedName": "createRouteDefinition"
+		},
+		"1597": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/utils.ts",
+			"qualifiedName": "createRouteDefinition"
+		},
+		"1598": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/utils.ts",
+			"qualifiedName": "path"
+		},
+		"1599": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/utils.ts",
+			"qualifiedName": "component"
+		},
+		"1600": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/utils.ts",
+			"qualifiedName": "__type"
+		},
+		"1601": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/utils.ts",
+			"qualifiedName": "__type"
+		},
+		"1602": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/utils.ts",
+			"qualifiedName": "__type"
+		},
+		"1603": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/utils.ts",
+			"qualifiedName": "__type.default"
+		},
+		"1604": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/utils.ts",
+			"qualifiedName": "options"
+		},
+		"1605": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/utils.ts",
+			"qualifiedName": "__type"
+		},
+		"1606": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/utils.ts",
+			"qualifiedName": "__type.layout"
+		},
+		"1607": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/utils.ts",
+			"qualifiedName": "__type"
+		},
+		"1608": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/utils.ts",
+			"qualifiedName": "__type"
+		},
+		"1609": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/utils.ts",
+			"qualifiedName": "__type"
+		},
+		"1610": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/utils.ts",
+			"qualifiedName": "__type.default"
+		},
+		"1611": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/core/utils.ts",
+			"qualifiedName": "__type.meta"
+		},
+		"1612": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/dev/watcher.ts",
+			"qualifiedName": "createFileWatcher"
+		},
+		"1613": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/dev/watcher.ts",
+			"qualifiedName": "createFileWatcher"
+		},
+		"1614": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/dev/watcher.ts",
+			"qualifiedName": "config"
+		},
+		"1615": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/dev/server.ts",
+			"qualifiedName": "createDevServer"
+		},
+		"1616": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/dev/server.ts",
+			"qualifiedName": "createDevServer"
+		},
+		"1617": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/dev/server.ts",
+			"qualifiedName": "options"
+		},
+		"1618": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "WatcherConfig"
+		},
+		"1619": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "WatcherConfig.directory"
+		},
+		"1620": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "WatcherConfig.extensions"
+		},
+		"1621": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "WatcherConfig.ignore"
+		},
+		"1622": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "DevServerOptions"
+		},
+		"1623": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "DevServerOptions.port"
+		},
+		"1624": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "DevServerOptions.hotReload"
+		},
+		"1625": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "DevServerOptions.middleware"
+		},
+		"1626": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/dev.ts",
+			"qualifiedName": "DevServerOptions.routes"
+		},
+		"1627": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/config.ts",
+			"qualifiedName": "FileRouterOptions"
+		},
+		"1628": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/config.ts",
+			"qualifiedName": "FileRouterOptions.routesDir"
+		},
+		"1629": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/config.ts",
+			"qualifiedName": "FileRouterOptions.extensions"
+		},
+		"1630": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/config.ts",
+			"qualifiedName": "FileRouterOptions.layouts"
+		},
+		"1631": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/config.ts",
+			"qualifiedName": "FileRouterOptions.lazyLoading"
+		},
+		"1632": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/config.ts",
+			"qualifiedName": "FileRouterOptions.preloading"
+		},
+		"1633": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/config.ts",
+			"qualifiedName": "FileRouterOptions.transform"
+		},
+		"1634": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/config.ts",
+			"qualifiedName": "__type"
+		},
+		"1635": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/config.ts",
+			"qualifiedName": "__type"
+		},
+		"1636": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/config.ts",
+			"qualifiedName": "path"
+		},
+		"1637": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/config.ts",
+			"qualifiedName": "FileRouterOptions.dev"
+		},
+		"1638": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/config.ts",
+			"qualifiedName": "__type"
+		},
+		"1639": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/config.ts",
+			"qualifiedName": "__type.hotReload"
+		},
+		"1640": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/config.ts",
+			"qualifiedName": "__type.port"
+		},
+		"1641": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/route.ts",
+			"qualifiedName": "RouteConfig"
+		},
+		"1642": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/route.ts",
+			"qualifiedName": "RouteConfig.path"
+		},
+		"1643": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/route.ts",
+			"qualifiedName": "RouteConfig.component"
+		},
+		"1644": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/route.ts",
+			"qualifiedName": "RouteConfig.layout"
+		},
+		"1645": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/route.ts",
+			"qualifiedName": "RouteConfig.meta"
+		},
+		"1646": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/route.ts",
+			"qualifiedName": "__type"
+		},
+		"1647": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/route.ts",
+			"qualifiedName": "__type.title"
+		},
+		"1648": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/route.ts",
+			"qualifiedName": "__type.description"
+		},
+		"1649": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/route.ts",
+			"qualifiedName": "__type.guards"
+		},
+		"1650": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/route.ts",
+			"qualifiedName": "__type.middleware"
+		},
+		"1651": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/route.ts",
+			"qualifiedName": "__type.__index"
+		},
+		"1653": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/route.ts",
+			"qualifiedName": "LayoutConfig"
+		},
+		"1654": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/route.ts",
+			"qualifiedName": "LayoutConfig.component"
+		},
+		"1655": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/route.ts",
+			"qualifiedName": "LayoutConfig.meta"
+		},
+		"1656": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/route.ts",
+			"qualifiedName": "__type"
+		},
+		"1657": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/route.ts",
+			"qualifiedName": "__type.title"
+		},
+		"1658": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/route.ts",
+			"qualifiedName": "__type.description"
+		},
+		"1659": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/types/route.ts",
+			"qualifiedName": "__type.__index"
+		},
+		"1661": {
+			"packageName": "@swissjs/core",
+			"packagePath": "dist/types/index.d.ts",
+			"qualifiedName": "RouteDefinition"
+		},
+		"1662": {
+			"packageName": "@swissjs/core",
+			"packagePath": "dist/types/index.d.ts",
+			"qualifiedName": "RouteDefinition.path"
+		},
+		"1663": {
+			"packageName": "@swissjs/core",
+			"packagePath": "dist/types/index.d.ts",
+			"qualifiedName": "RouteDefinition.component"
+		},
+		"1664": {
+			"packageName": "@swissjs/core",
+			"packagePath": "dist/types/index.d.ts",
+			"qualifiedName": "RouteDefinition.layout"
+		},
+		"1665": {
+			"packageName": "@swissjs/core",
+			"packagePath": "dist/types/index.d.ts",
+			"qualifiedName": "RouteDefinition.children"
+		},
+		"1666": {
+			"packageName": "@swissjs/core",
+			"packagePath": "dist/types/index.d.ts",
+			"qualifiedName": "RouteDefinition.meta"
+		},
+		"1667": {
+			"packageName": "@swissjs/core",
+			"packagePath": "dist/types/index.d.ts",
+			"qualifiedName": "ComponentConstructor"
+		},
+		"1668": {
+			"packageName": "@swissjs/core",
+			"packagePath": "dist/types/index.d.ts",
+			"qualifiedName": "ComponentConstructor"
+		},
+		"1669": {
+			"packageName": "@swissjs/core",
+			"packagePath": "dist/types/index.d.ts",
+			"qualifiedName": "ComponentConstructor"
+		},
+		"1670": {
+			"packageName": "@swissjs/core",
+			"packagePath": "dist/types/index.d.ts",
+			"qualifiedName": "args"
+		},
+		"1671": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/path.ts",
+			"qualifiedName": "pathToRoute"
+		},
+		"1672": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/path.ts",
+			"qualifiedName": "pathToRoute"
+		},
+		"1673": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/path.ts",
+			"qualifiedName": "filePath"
+		},
+		"1674": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/path.ts",
+			"qualifiedName": "routesDir"
+		},
+		"1675": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/path.ts",
+			"qualifiedName": "routeToPath"
+		},
+		"1676": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/path.ts",
+			"qualifiedName": "routeToPath"
+		},
+		"1677": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/path.ts",
+			"qualifiedName": "route"
+		},
+		"1678": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/path.ts",
+			"qualifiedName": "routesDir"
+		},
+		"1679": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/path.ts",
+			"qualifiedName": "extensions"
+		},
+		"1680": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/route.ts",
+			"qualifiedName": "normalizeRoutePath"
+		},
+		"1681": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/route.ts",
+			"qualifiedName": "normalizeRoutePath"
+		},
+		"1682": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/route.ts",
+			"qualifiedName": "path"
+		},
+		"1683": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/route.ts",
+			"qualifiedName": "validateRoutePath"
+		},
+		"1684": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/route.ts",
+			"qualifiedName": "validateRoutePath"
+		},
+		"1685": {
+			"packageName": "@swissjs/plugin-file-router",
+			"packagePath": "src/utils/route.ts",
+			"qualifiedName": "path"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "packages/plugins/file-router/src/index.ts"
+		},
+		"reflections": {
+			"1": 1473
+		}
+	}
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SwissJS DevTools Panel</title>
+    <style>
+      body {
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          sans-serif;
+        margin: 12px;
+      }
+      .row {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+      button {
+        padding: 6px 10px;
+        border: 1px solid #e5e7eb;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+      pre {
+        margin-top: 8px;
+        padding: 8px;
+        background: #f9fafb;
+        border: 1px solid #e5e7eb;
+        border-radius: 6px;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>SwissJS DevTools: Fenestration</h3>
+    <div class="row">
+      <button id="ping">Ping</button>
+      <button id="list">List Plugins</button>
+    </div>
+    <pre id="out">Ready.</pre>
+    <script type="module" src="./panel.js"></script>
+  </body>
+</html>

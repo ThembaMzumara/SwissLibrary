@@ -1,0 +1,34 @@
+import { SwissComponent, html } from '@swissjs/core';
+import App from './components/App.ui';
+import './styles/main.css';
+
+export default class CapabilityExplorerRoot extends SwissComponent {
+  constructor(props: {}) {
+    super(props);
+  }
+
+  render() {
+    return html`
+      <div id="capability-explorer-root">
+        ${new App({})}
+      </div>
+    `;
+  }
+}
+
+// Initialize the Capability Explorer
+export function initCapabilityExplorer(container: HTMLElement): void {
+  const root = new CapabilityExplorerRoot({});
+  root.mount(container);
+}
+
+// Export the main App component for direct use
+export { default as CapabilityExplorer } from './components/App.ui';
+
+// Auto-initialize if container element is found
+if (typeof window !== 'undefined') {
+  const container = document.getElementById('capability-explorer');
+  if (container) {
+    initCapabilityExplorer(container);
+  }
+}

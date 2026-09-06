@@ -1,0 +1,239 @@
+{
+	"schemaVersion": "2.0",
+	"id": 934,
+	"name": "@swissjs/devtools-pdk-harness",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 938,
+			"name": "HarnessResult",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 940,
+					"name": "activated",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "harness.ts",
+							"line": 5,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/pdk_harness/src/harness.ts#L5"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 941,
+					"name": "errors",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "harness.ts",
+							"line": 6,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/pdk_harness/src/harness.ts#L6"
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "intrinsic",
+							"name": "string"
+						}
+					}
+				},
+				{
+					"id": 939,
+					"name": "loaded",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "harness.ts",
+							"line": 4,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/pdk_harness/src/harness.ts#L4"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						940,
+						941,
+						939
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "harness.ts",
+					"line": 3,
+					"character": 17,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/pdk_harness/src/harness.ts#L3"
+				}
+			]
+		},
+		{
+			"id": 935,
+			"name": "runPluginHarness",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "harness.ts",
+					"line": 14,
+					"character": 22,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/pdk_harness/src/harness.ts#L14"
+				}
+			],
+			"signatures": [
+				{
+					"id": 936,
+					"name": "runPluginHarness",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"comment": {
+						"summary": [
+							{
+								"kind": "text",
+								"text": "Minimal PDK harness to exercise a plugin's lifecycle shape in isolation.\nThis does not boot the full framework; it validates the object shape and\ninvokes optional lifecycle methods if present."
+							}
+						]
+					},
+					"sources": [
+						{
+							"fileName": "harness.ts",
+							"line": 14,
+							"character": 22,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/pdk_harness/src/harness.ts#L14"
+						}
+					],
+					"parameters": [
+						{
+							"id": 937,
+							"name": "plugin",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"target": {
+									"packageName": "swissjs-monorepo",
+									"packagePath": "",
+									"qualifiedName": "Plugin"
+								},
+								"name": "Plugin"
+							}
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": {
+							"packageName": "typescript",
+							"packagePath": "lib/lib.es5.d.ts",
+							"qualifiedName": "Promise"
+						},
+						"typeArguments": [
+							{
+								"type": "reference",
+								"target": 938,
+								"name": "HarnessResult",
+								"package": "@swissjs/devtools-pdk-harness"
+							}
+						],
+						"name": "Promise",
+						"package": "typescript"
+					}
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Interfaces",
+			"children": [
+				938
+			]
+		},
+		{
+			"title": "Functions",
+			"children": [
+				935
+			]
+		}
+	],
+	"packageName": "@swissjs/devtools-pdk-harness",
+	"packageVersion": "0.1.0",
+	"symbolIdMap": {
+		"934": {
+			"packageName": "@swissjs/devtools-pdk-harness",
+			"packagePath": "src/index.ts",
+			"qualifiedName": ""
+		},
+		"935": {
+			"packageName": "@swissjs/devtools-pdk-harness",
+			"packagePath": "src/harness.ts",
+			"qualifiedName": "runPluginHarness"
+		},
+		"936": {
+			"packageName": "@swissjs/devtools-pdk-harness",
+			"packagePath": "src/harness.ts",
+			"qualifiedName": "runPluginHarness"
+		},
+		"937": {
+			"packageName": "@swissjs/devtools-pdk-harness",
+			"packagePath": "src/harness.ts",
+			"qualifiedName": "plugin"
+		},
+		"938": {
+			"packageName": "@swissjs/devtools-pdk-harness",
+			"packagePath": "src/harness.ts",
+			"qualifiedName": "HarnessResult"
+		},
+		"939": {
+			"packageName": "@swissjs/devtools-pdk-harness",
+			"packagePath": "src/harness.ts",
+			"qualifiedName": "HarnessResult.loaded"
+		},
+		"940": {
+			"packageName": "@swissjs/devtools-pdk-harness",
+			"packagePath": "src/harness.ts",
+			"qualifiedName": "HarnessResult.activated"
+		},
+		"941": {
+			"packageName": "@swissjs/devtools-pdk-harness",
+			"packagePath": "src/harness.ts",
+			"qualifiedName": "HarnessResult.errors"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "packages/devtools/pdk_harness/src/index.ts"
+		},
+		"reflections": {
+			"1": 934
+		}
+	}
+}

@@ -1,0 +1,38 @@
+import { SwissComponent } from '@swissjs/core';
+
+interface ButtonProps {
+  label?: string;
+  disabled?: boolean;
+  type?: 'button' | 'submit' | 'reset';
+  onClick?: (e: MouseEvent) => void;
+}
+
+export default class UiButton extends SwissComponent<ButtonProps> {
+  handleClick = (e: MouseEvent) => {
+    if (this.props.disabled) return;
+    this.props.onClick?.(e);
+  };
+
+  render() {
+    const { label = 'Button', disabled = false, type = 'button' } = this.props;
+    
+    return (
+      <button
+        type={type}
+        class="ui-btn"
+        aria-disabled={disabled ? 'true' : 'false'}
+        disabled={disabled}
+        onClick={this.handleClick}
+      >
+        <span class="label">{label}</span>
+        
+        <style>{`
+          .ui-btn { padding: 8px 12px; border: 1px solid #ccc; background: #fff; border-radius: 6px; cursor: pointer }
+          .ui-btn:hover { background: #f7f7f7 }
+          .ui-btn[disabled] { opacity: .6; cursor: not-allowed }
+          .label { font-weight: 600 }
+        `}</style>
+      </button>
+    );
+  }
+}
