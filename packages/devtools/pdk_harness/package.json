@@ -1,0 +1,25 @@
+{
+  "name": "@swissjs/devtools-pdk-harness",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "src/harness.ts",
+  "license": "MIT",
+  "author": {
+    "name": "Themba Mzumara",
+    "email": "themba@swissjs.dev",
+    "url": "https://github.com/ThembaMzumara"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThembaMzumara/SWISS.git"
+  },
+  "homepage": "https://github.com/ThembaMzumara/SWISS#readme",
+  "bugs": {
+    "url": "https://github.com/ThembaMzumara/SWISS/issues"
+  },
+  "keywords": [
+    "swissjs",
+    "framework"
+  ]
+}

@@ -1,0 +1,13 @@
+/*
+ * Copyright (c) 2024 Themba Mzumara
+ * This file is part of SwissJS Framework. All rights reserved.
+ * Licensed under the MIT License. See LICENSE in the project root for license information.
+ */
+
+/**
+ * SwissJS Directives Module Barrel
+ * Exports directive system functionality
+ */
+
+// Export core directives and handlers
+export * from './coreDirectives.js'; 

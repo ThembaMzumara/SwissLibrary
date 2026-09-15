@@ -1,0 +1,7 @@
+/*
+ * Copyright (c) 2024 Themba Mzumara
+ * This file is part of SwissJS Framework. All rights reserved.
+ * Licensed under the MIT License. See LICENSE in the project root for license information.
+ */
+
+window.navigationData = "eJyV1dFugjAUgOF36bUZm5su845ps5AxMdTokmUxFY/aDIuhddMse/dFQ4Qiwuk1P98JhwY+fomGvSY98gqHCY93wHSS8hW46iAj0iJbrtekR4TUkC55BMqpCm/WehOTFvkSckF67U73r3UNZkiXNbBZNuQbUFseQW7qwxaUU75esm6fHu867YLXd0czNg5C94XO+j51wxz85qng8xiUcxGZ6v010BsO6Dsd4GAjthwQUneA9Y+tNf8WTCh+wLG2HDENvTF6wilGDvCDvuvj3kAhtcIx289LSxqz+WJrxaO2XkiROGYhFqvALcHq8RllzAuGuHNhxJYDMKsottY8ZjVmbTkCdUaMGDkABTeBpU9DFVdKENjpxNdRpwABZWupo7KkBpvCPPurjeLdSsgqrdzUcFEKXIMnF7CHRXZTTi53MtIikcqp6ky2+3DB+knE40a0WDWSDJQSiWxEza6GFeo5TX4UpFXW+eIF8PkP0Dvy6A=="
