@@ -1,0 +1,136 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "SwissJS",
+  "scopeName": "source.swissjs",
+  "fileTypes": ["ui"],
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#doctype" },
+    { "include": "#tag" },
+    { "include": "#embedded-code" },
+    { "include": "#interpolations" },
+    { "include": "#directives" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [{
+        "name": "comment.line.double-slash.swissjs",
+        "match": "//.*$"
+      }, {
+        "name": "comment.block.documentation.swissjs",
+        "begin": "/\\*\\*",
+        "end": "\\*/",
+        "patterns": [
+          { "include": "#jsdoc-tags" },
+          { "include": "#jsdoc-inline-tags" }
+        ]
+      }, {
+        "name": "comment.block.swissjs",
+        "begin": "/\\*",
+        "end": "\\*/"
+      }]
+    },
+    "doctype": {
+      "name": "meta.tag.sgml.doctype.swissjs",
+      "begin": "<!\\s*[Dd][Oo][Cc]",
+      "end": ">"
+    },
+    "tag": {
+      "name": "meta.tag.swissjs",
+      "begin": "<([A-Za-z][A-Za-z0-9]*(?:-[A-Za-z0-9]+)*)",
+      "beginCaptures": {
+        "1": { "name": "entity.name.tag.swissjs" }
+      },
+      "end": "(/?>)",
+      "endCaptures": {
+        "1": { "name": "punctuation.definition.tag.end.swissjs" }
+      },
+      "patterns": [
+        { "include": "#tag-attributes" },
+        { "include": "#interpolations" }
+      ]
+    },
+    "tag-attributes": {
+      "patterns": [{
+        "name": "entity.other.attribute-name.swiss-event.swissjs",
+        "match": "on:[a-zA-Z][a-zA-Z0-9]*",
+        "captures": {
+          "0": { "name": "support.type.property-name.swiss-event.swissjs" }
+        }
+      }, {
+        "name": "entity.other.attribute-name.swiss-prop.swissjs",
+        "match": ":[a-zA-Z][a-zA-Z0-9]*",
+        "captures": {
+          "0": { "name": "support.type.property-name.swiss-prop.swissjs" }
+        }
+      }, {
+        "name": "entity.other.attribute-name.swiss-at-event.swissjs",
+        "match": "@[a-zA-Z][a-zA-Z0-9]*",
+        "captures": {
+          "0": { "name": "support.type.property-name.swiss-at-event.swissjs" }
+        }
+      }, {
+        "name": "entity.other.attribute-name.swiss-directive.swissjs",
+        "match": "v-[a-zA-Z][a-zA-Z0-9-]*",
+        "captures": {
+          "0": { "name": "support.type.property-name.swiss-directive.swissjs" }
+        }
+      }, {
+        "name": "entity.other.attribute-name.swissjs",
+        "match": "[A-Za-z_:][-A-Za-z0-9_:.]*"
+      }, {
+        "name": "string.quoted.double.swissjs",
+        "begin": "\"",
+        "end": "\"",
+        "patterns": [
+          { "include": "#interpolations" },
+          { "include": "#embedded-code" }
+        ]
+      }, {
+        "name": "string.quoted.single.swissjs",
+        "begin": "'",
+        "end": "'",
+        "patterns": [
+          { "include": "#interpolations" },
+          { "include": "#embedded-code" }
+        ]
+      }, {
+        "name": "string.quoted.template.swissjs",
+        "begin": "`",
+        "end": "`",
+        "patterns": [
+          { "include": "#interpolations" },
+          { "include": "source.ts" }
+        ]
+      }]
+    },
+    "embedded-code": {
+      "name": "source.ts.embedded.swissjs",
+      "begin": "\\{",
+      "end": "\\}",
+      "patterns": [{ "include": "source.ts" }]
+    },
+    "interpolations": {
+      "patterns": [{
+        "name": "meta.embedded.expression.swissjs",
+        "begin": "\\$\\{",
+        "end": "\\}",
+        "patterns": [{ "include": "source.ts" }]
+      }]
+    },
+    "directives": {
+      "patterns": [{
+        "name": "meta.directive.swissjs",
+        "match": "^\\s*@[a-zA-Z][a-zA-Z0-9]*"
+      }]
+    },
+    "jsdoc-tags": {
+      "name": "storage.type.class.jsdoc",
+      "match": "@[a-zA-Z][a-zA-Z0-9]*"
+    },
+    "jsdoc-inline-tags": {
+      "name": "storage.type.class.jsdoc.inline",
+      "match": "\\{@[a-zA-Z][a-zA-Z0-9]*\\}"
+    }
+  }
+}
