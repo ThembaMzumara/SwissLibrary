@@ -1,0 +1,128 @@
+{
+	"schemaVersion": "2.0",
+	"id": 1868,
+	"name": "@swissjs/utils",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 1869,
+			"name": "fixDtsExtensions",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "fixDtsExtensions.ts",
+					"line": 4,
+					"character": 22,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/utils/src/fixDtsExtensions.ts#L4"
+				}
+			],
+			"signatures": [
+				{
+					"id": 1870,
+					"name": "fixDtsExtensions",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "fixDtsExtensions.ts",
+							"line": 4,
+							"character": 22,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/utils/src/fixDtsExtensions.ts#L4"
+						}
+					],
+					"parameters": [
+						{
+							"id": 1871,
+							"name": "distDir",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						},
+						{
+							"id": 1872,
+							"name": "debug",
+							"variant": "param",
+							"kind": 32768,
+							"flags": {},
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							},
+							"defaultValue": "false"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": {
+							"packageName": "typescript",
+							"packagePath": "lib/lib.es5.d.ts",
+							"qualifiedName": "Promise"
+						},
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "void"
+							}
+						],
+						"name": "Promise",
+						"package": "typescript"
+					}
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Functions",
+			"children": [
+				1869
+			]
+		}
+	],
+	"packageName": "@swissjs/utils",
+	"packageVersion": "0.1.0",
+	"symbolIdMap": {
+		"1868": {
+			"packageName": "@swissjs/utils",
+			"packagePath": "src/index.ts",
+			"qualifiedName": ""
+		},
+		"1869": {
+			"packageName": "@swissjs/utils",
+			"packagePath": "src/fixDtsExtensions.ts",
+			"qualifiedName": "fixDtsExtensions"
+		},
+		"1870": {
+			"packageName": "@swissjs/utils",
+			"packagePath": "src/fixDtsExtensions.ts",
+			"qualifiedName": "fixDtsExtensions"
+		},
+		"1871": {
+			"packageName": "@swissjs/utils",
+			"packagePath": "src/fixDtsExtensions.ts",
+			"qualifiedName": "distDir"
+		},
+		"1872": {
+			"packageName": "@swissjs/utils",
+			"packagePath": "src/fixDtsExtensions.ts",
+			"qualifiedName": "debug"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "packages/utils/src/index.ts"
+		},
+		"reflections": {
+			"1": 1868
+		}
+	}
+}

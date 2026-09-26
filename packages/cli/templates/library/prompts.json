@@ -1,0 +1,16 @@
+{
+  "prompts": [
+    {
+      "type": "input",
+      "name": "libraryName",
+      "message": "Library name:",
+      "default": "my-library"
+    },
+    {
+      "type": "input",
+      "name": "description",
+      "message": "Library description:",
+      "default": "A reusable SwissJS library module"
+    }
+  ]
+} 

@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "types": ["node", "bun"],
+    "typeRoots": ["./node_modules/@types"],
+    "declaration": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node16",
+    "moduleDetection": "force",
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": false,
+    "verbatimModuleSyntax": true,
+    "composite": true,
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "paths": {
+      "@swissjs/core": [
+        "./packages/core/src/index.ts",
+        "./packages/core/dist/index.mjs"
+      ],
+      "@swissjs/core/*": ["./packages/core/src/*", "./packages/core/dist/*"],
+      "@swissjs/security": ["./packages/security/dist/index.js"],
+      "@swissjs/security/*": ["./packages/security/dist/*"],
+      "@swissjs/compiler": ["./packages/compiler/dist/index"],
+      "@swissjs/compiler/*": ["./packages/compiler/dist/*"],
+      "@swissjs/cli": ["./packages/cli/dist/index"],
+      "@swissjs/cli/*": ["./packages/cli/dist/*"],
+      "@swissjs/vite-plugin-swiss": [
+        "./packages/plugins/vite-plugin-swiss/dist/index"
+      ],
+      "@swissjs/vite-plugin-swiss/*": [
+        "./packages/plugins/vite-plugin-swiss/dist/*"
+      ],
+      "@swissjs/testing": ["./packages/testing/dist/index"],
+      "@swissjs/testing/*": ["./packages/testing/dist/*"],
+      "@swissjs/capability": ["./packages/plugins/capability/dist/index"],
+      "@swissjs/capability/*": ["./packages/plugins/capability/dist/*"],
+      "@swissjs/plugin-*": ["./packages/plugins/*/dist/index"],
+      "@plugins/*": ["./packages/plugins/*/dist"]
+    },
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  }
+}
