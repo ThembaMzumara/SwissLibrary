@@ -1,0 +1,25 @@
+globs:
+  - "**/*.md"
+  - "!docs/api/**"
+  - "!**/node_modules/**"
+  - "!**/dist/**"
+  - "!docs/.vitepress/dist/**"
+  - "!docs_old/**"
+  - "!jira/**"
+
+# Relax selected rules to avoid blocking reset on internal docs/CHANGELOGs
+config:
+  MD013: false # line-length
+  MD022: false # blanks-around-headings
+  MD031: false # blanks-around-fences
+  MD032: false # blanks-around-lists
+  MD040: false # fenced-code-language
+  MD047: false # single-trailing-newline
+  MD009: false # no-trailing-spaces
+  MD025: false # single-title/single-h1
+  MD024: false # no-duplicate-heading
+  MD026: false # no-trailing-punctuation
+  MD030: false # list-marker-space
+  MD034: false # no-bare-urls
+  MD051: false # link-fragments
+  MD058: false # blanks-around-tables

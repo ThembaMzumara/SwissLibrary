@@ -1,0 +1,236 @@
+import { SwissComponent, html } from '@swissjs/core';
+import { DataService, type ComponentNode, type RuntimeEvent, type SnapshotEntry } from './services/DataService.js';
+
+interface AppState {
+  nodes: ComponentNode[];
+  selectedNode: ComponentNode | null;
+  events: RuntimeEvent[];
+  fps: number;
+  filter: {
+    text: string;
+    types: Record<string, boolean>;
+  };
+  snapshots: Record<string, SnapshotEntry[]>; // per-component history
+  onlySelected: boolean; // filter events to selected component only
+}
+
+export default class App extends SwissComponent<{}, AppState> {
+  private data = new DataService();
+  private fpsSamples: number[] = [];
+  private lastFrame = performance.now();
+
+  constructor(props: {}) {
+    super(props);
+    this.state = {
+      nodes: [],
+      selectedNode: null,
+      events: [],
+      fps: 0,
+      filter: {
+        text: '',
+        types: { mount: true, update: true, unmount: true, render: true }
+      },
+      snapshots: {},
+      onlySelected: false
+    };
+  }
+
+  async handleMount() {
+    this.refresh();
+    setInterval(() => this.refresh(), 1500);
+    requestAnimationFrame(this.tick);
+  }
+
+  tick = (t: number) => {
+    const dt = t - this.lastFrame;
+    this.lastFrame = t;
+    const fps = 1000 / (dt || 16.7);
+    this.fpsSamples.push(fps);
+    if (this.fpsSamples.length > 30) this.fpsSamples.shift();
+    const avg = this.fpsSamples.reduce((a, b) => a + b, 0) / this.fpsSamples.length;
+    if (Math.abs(avg - this.state.fps) > 0.5) {
+      this.setState(s => ({ ...s, fps: Math.round(avg) }));
+    }
+    requestAnimationFrame(this.tick);
+  };
+
+  refresh() {
+    const snapshot = this.data.getSnapshot();
+    const nodes = this.data.toHierarchy(snapshot.nodes);
+    const events = this.data.drainEvents();
+    this.setState(s => ({ ...s, nodes, events: [...events, ...s.events].slice(0, 250) }));
+  }
+
+  onSelect = (node: ComponentNode) => {
+    this.setState(s => ({ ...s, selectedNode: node }));
+  };
+
+  takeSnapshot = () => {
+    if (!this.state.selectedNode) return;
+    const id = this.state.selectedNode.id;
+    const entry = this.data.takeSnapshot(id);
+    if (!entry) return;
+    this.setState(s => {
+      const list = s.snapshots[id] ? [entry, ...s.snapshots[id]] : [entry];
+      return { ...s, snapshots: { ...s.snapshots, [id]: list.slice(0, 10) } };
+    });
+  };
+
+  restoreLatest = () => {
+    if (!this.state.selectedNode) return;
+    const id = this.state.selectedNode.id;
+    const list = this.state.snapshots[id] || [];
+    if (list.length === 0) return;
+    const ok = this.data.restoreSnapshot(id, list[0].state);
+    if (!ok) {
+      // no-op; could show a toast in future
+    }
+  };
+
+  setFilterText = (e: any) => {
+    const v = (e?.target?.value ?? '').toString();
+    this.setState(s => ({ ...s, filter: { ...s.filter, text: v } }));
+  };
+
+  toggleType = (type: string) => {
+    this.setState(s => ({ ...s, filter: { ...s.filter, types: { ...s.filter.types, [type]: !s.filter.types[type] } } }));
+  };
+
+  toggleOnlySelected = () => {
+    this.setState(s => ({ ...s, onlySelected: !s.onlySelected }));
+  };
+
+  get filteredEvents(): RuntimeEvent[] {
+    const { text, types } = this.state.filter;
+    const q = text.trim().toLowerCase();
+    return this.state.events.filter(ev => {
+      if (!types[ev.type]) return false;
+      if (!q) return true;
+      const inText = ev.msg?.toLowerCase().includes(q) || ev.type?.toLowerCase().includes(q);
+      if (!inText) return false;
+      if (this.state.onlySelected && this.state.selectedNode) {
+        // For messages like "<id>:<ms>", ensure id matches
+        const id = this.state.selectedNode.id;
+        return ev.msg?.startsWith(id);
+      }
+      return true;
+    });
+  }
+
+  get renderStats(): { avg: number; min: number; max: number } {
+    const durations: number[] = [];
+    for (const ev of this.state.events) {
+      if (ev.type !== 'render') continue;
+      const idx = ev.msg?.lastIndexOf(':') ?? -1;
+      if (idx <= 0) continue;
+      const ms = Number(ev.msg.slice(idx + 1));
+      if (!Number.isFinite(ms)) continue;
+      if (this.state.onlySelected && this.state.selectedNode) {
+        if (!ev.msg.startsWith(this.state.selectedNode.id)) continue;
+      }
+      durations.push(ms);
+    }
+    if (durations.length === 0) return { avg: 0, min: 0, max: 0 };
+    const sum = durations.reduce((a, b) => a + b, 0);
+    return { avg: Math.round(sum / durations.length), min: Math.min(...durations), max: Math.max(...durations) };
+  }
+
+  render() {
+    return html`
+      <div class="inspector">
+        <header class="header">
+          <h1>SwissJS Runtime Inspector</h1>
+          <div class="stats">
+            <span>FPS: <strong>${this.state.fps}</strong></span>
+            <span class="sep">|</span>
+            <span>Render ms (avg/min/max): <strong>${this.renderStats.avg}</strong>/<span>${this.renderStats.min}</span>/<span>${this.renderStats.max}</span></span>
+          </div>
+        </header>
+        <main class="content">
+          <section class="left">
+            <h2>Components</h2>
+            <div class="tree">
+              ${this.state.nodes.map(n => html`
+                <div class="node" onclick="${() => this.onSelect(n)}">
+                  <span class="name">${n.name}</span>
+                  <span class="id">#${n.id.slice(-8)}</span>
+                </div>
+              `)}
+            </div>
+          </section>
+          <section class="center">
+            <h2>State</h2>
+            ${this.state.selectedNode ? html`
+              <div class="state-toolbar">
+                <button onclick="${this.takeSnapshot}">Take Snapshot</button>
+                <button onclick="${this.restoreLatest}" ${((this.state.snapshots[this.state.selectedNode.id]||[]).length===0)?'disabled':''}>Restore Latest</button>
+                <span class="snapcount">Snapshots: ${(this.state.snapshots[this.state.selectedNode.id]||[]).length}</span>
+              </div>
+              <pre class="state">${JSON.stringify(this.data.getShallowState(this.state.selectedNode.id), null, 2)}</pre>
+              <div class="snapshot-list">
+                ${(this.state.snapshots[this.state.selectedNode.id]||[]).map(snap => html`
+                  <div class="snapshot-item">
+                    <span class="t">${new Date(snap.t).toLocaleTimeString()}</span>
+                    <button onclick="${() => this.data.restoreSnapshot(snap.id, snap.state)}">Restore</button>
+                  </div>
+                `)}
+              </div>
+            ` : html`<div class="empty">Select a component</div>`}
+          </section>
+          <section class="right">
+            <h2>Events</h2>
+            <div class="filters">
+              <input type="search" placeholder="Filter events" value="${this.state.filter.text}" oninput="${this.setFilterText}" />
+              <label><input type="checkbox" checked="${this.state.filter.types.mount}" onchange="${() => this.toggleType('mount')}" /> mount</label>
+              <label><input type="checkbox" checked="${this.state.filter.types.update}" onchange="${() => this.toggleType('update')}" /> update</label>
+              <label><input type="checkbox" checked="${this.state.filter.types.unmount}" onchange="${() => this.toggleType('unmount')}" /> unmount</label>
+            </div>
+            <div class="events">
+              <div class="filters">
+                <input type="search" placeholder="Filter events" value="${this.state.filter.text}" oninput="${this.setFilterText}" />
+                <label><input type="checkbox" checked="${this.state.filter.types.mount}" onchange="${() => this.toggleType('mount')}" /> mount</label>
+                <label><input type="checkbox" checked="${this.state.filter.types.update}" onchange="${() => this.toggleType('update')}" /> update</label>
+                <label><input type="checkbox" checked="${this.state.filter.types.unmount}" onchange="${() => this.toggleType('unmount')}" /> unmount</label>
+                <label><input type="checkbox" checked="${this.state.filter.types.render}" onchange="${() => this.toggleType('render')}" /> render</label>
+                <label><input type="checkbox" checked="${this.state.onlySelected}" onchange="${this.toggleOnlySelected}" /> only selected</label>
+              </div>
+              ${this.filteredEvents.map(ev => html`
+                <div class="event">
+                  <span class="time">${new Date(ev.t).toLocaleTimeString()}</span>
+                  <span class="type">${ev.type}</span>
+                  <span class="msg">${ev.msg}</span>
+                </div>
+              `)}
+            </div>
+          </section>
+        </main>
+      </div>
+      <style>
+        .inspector { height: 100vh; display: flex; flex-direction: column; font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif }
+        .header { display:flex; align-items:center; justify-content: space-between; padding: 10px 14px; border-bottom: 1px solid #eee; background:#fafafa }
+        .content { flex:1; display:grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; padding: 12px; }
+        .left,.center,.right { border:1px solid #eee; border-radius:6px; padding: 10px; overflow:auto }
+        h2 { margin: 0 0 8px 0; font-size: 14px; color:#555 }
+        .tree .node { display:flex; gap:8px; padding:6px; border-radius:4px; cursor:pointer }
+        .tree .node:hover { background:#f5f5f5 }
+        .name { font-weight:600 }
+        .id { color:#999; font-family: monospace; font-size: 12px }
+        .state { background:#111; color:#e6f3ff; padding: 8px; border-radius:6px; font-size:12px; line-height:1.35 }
+        .state-toolbar { display:flex; gap:8px; align-items:center; margin-bottom:8px }
+        .state-toolbar button { padding:6px 10px; border:1px solid #ddd; background:#fff; border-radius:4px; cursor:pointer }
+        .state-toolbar button[disabled] { opacity:0.5; cursor:not-allowed }
+        .snapshot-list { display:flex; flex-direction:column; gap:6px; margin-top:8px }
+        .snapshot-item { display:flex; gap:8px; align-items:center }
+        .snapshot-item .t { color:#777; font-size:12px }
+        .filters { display:flex; gap:8px; align-items:center; margin-bottom:8px; flex-wrap: wrap }
+        .filters input[type="search"] { flex:1; padding:6px 8px; border:1px solid #ddd; border-radius:4px }
+        .filters .seg { display:flex; gap:8px; align-items:center }
+        .events { display:flex; flex-direction:column; gap:6px }
+        .event { display:flex; gap:8px; font-size:12px }
+        .time { color:#777; width:70px }
+        .type { font-weight:600 }
+        .empty { color:#888; font-style: italic; padding: 12px; text-align:center }
+      </style>
+    `;
+  }
+}

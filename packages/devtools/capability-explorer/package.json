@@ -1,0 +1,54 @@
+{
+  "name": "@swissjs/capability-explorer",
+  "version": "0.1.0",
+  "description": "SwissJS Capability Explorer - Visual devtools for component hierarchy and capability bindings",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "node ../../cli/dist/main.js dev",
+    "build": "node ../../cli/dist/main.js build",
+    "preview": "vite preview",
+    "lint": "eslint src --ext .ts,.js,.ui",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@swissjs/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@swissjs/cli": "workspace:*",
+    "vite": "^5.0.0",
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "keywords": [
+    "swissjs",
+    "devtools",
+    "capability",
+    "explorer",
+    "debugging",
+    "framework"
+  ],
+  "author": {
+    "name": "Themba Mzumara",
+    "email": "themba@swissjs.dev",
+    "url": "https://github.com/ThembaMzumara"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThembaMzumara/SWISS.git"
+  },
+  "homepage": "https://github.com/ThembaMzumara/SWISS#readme",
+  "bugs": {
+    "url": "https://github.com/ThembaMzumara/SWISS/issues"
+  }
+}
