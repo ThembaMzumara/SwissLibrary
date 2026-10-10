@@ -1,0 +1,13 @@
+# Generated docs (TypeDoc Markdown)
+docs/api/
+# VitePress build output and cache
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+# Package build outputs
+**/dist/
+# Generated plugin docs
+packages/plugins/**/docs/
+# Node modules
+**/node_modules/
+# Temporary reports
+/docs/reports/

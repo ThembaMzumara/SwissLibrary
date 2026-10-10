@@ -1,0 +1,61 @@
+{
+  "name": "@swissjs/plugin-web-storage",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@swissjs/core": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "5.8.2",
+    "vitest": "^3.2.4"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "dev": "tsc -b --watch",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist node_modules && rm -f tsconfig.tsbuildinfo",
+    "lint": "eslint src --ext .ts,.tsx",
+    "docs:api": "typedoc"
+  },
+  "typedoc": {
+    "entryPoints": [
+      "src/index.ts"
+    ],
+    "plugin": [
+      "typedoc-plugin-markdown"
+    ],
+    "out": "../../../docs/api/plugin-web-storage",
+    "readme": "none"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Themba Mzumara",
+    "email": "themba@swissjs.dev",
+    "url": "https://github.com/ThembaMzumara"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThembaMzumara/SWISS.git"
+  },
+  "homepage": "https://github.com/ThembaMzumara/SWISS#readme",
+  "bugs": {
+    "url": "https://github.com/ThembaMzumara/SWISS/issues"
+  },
+  "keywords": [
+    "swissjs",
+    "framework"
+  ]
+}

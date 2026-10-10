@@ -1,0 +1,17 @@
+{
+  "entryPoints": [
+    "packages/*/src/index.ts"
+  ],
+  "out": "docs/api",
+  "exclude": [
+    "**/__tests__/**",
+    "**/*.test.ts",
+    "**/*.spec.ts"
+  ],
+  "tsconfig": "tsconfig.json",
+  "includeVersion": true,
+  "excludePrivate": true,
+  "excludeProtected": false,
+  "excludeExternals": true,
+  "readme": "README.md"
+} 

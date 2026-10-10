@@ -1,0 +1,30 @@
+{
+  "name": "@swissjs/router",
+  "version": "0.1.0",
+  "description": "Swiss framework routing and SSR",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "lint": "eslint src"
+  },
+  "keywords": [
+    "swiss",
+    "router",
+    "ssr",
+    "ssg"
+  ],
+  "author": "Themba Mzumara",
+  "license": "MIT",
+  "dependencies": {
+    "@swissjs/core": "workspace:*"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  }
+}

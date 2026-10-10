@@ -1,0 +1,1471 @@
+{
+	"schemaVersion": "2.0",
+	"id": 1689,
+	"name": "@swissjs/plugin-web-storage",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 1723,
+			"name": "KeyValueStorageAsync",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 1734,
+					"name": "clear",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "public/types.ts",
+							"line": 12,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/types.ts#L12"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1735,
+							"name": "clear",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "public/types.ts",
+									"line": 12,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/types.ts#L12"
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"packageName": "typescript",
+									"packagePath": "lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				},
+				{
+					"id": 1724,
+					"name": "get",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "public/types.ts",
+							"line": 9,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/types.ts#L9"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1725,
+							"name": "get",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "public/types.ts",
+									"line": 9,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/types.ts#L9"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1726,
+									"name": "key",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"packageName": "typescript",
+									"packagePath": "lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				},
+				{
+					"id": 1731,
+					"name": "remove",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "public/types.ts",
+							"line": 11,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/types.ts#L11"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1732,
+							"name": "remove",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "public/types.ts",
+									"line": 11,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/types.ts#L11"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1733,
+									"name": "key",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"packageName": "typescript",
+									"packagePath": "lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				},
+				{
+					"id": 1727,
+					"name": "set",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "public/types.ts",
+							"line": 10,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/types.ts#L10"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1728,
+							"name": "set",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "public/types.ts",
+									"line": 10,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/types.ts#L10"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1729,
+									"name": "key",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 1730,
+									"name": "value",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"packageName": "typescript",
+									"packagePath": "lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "intrinsic",
+										"name": "void"
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Methods",
+					"children": [
+						1734,
+						1724,
+						1731,
+						1727
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "public/types.ts",
+					"line": 8,
+					"character": 17,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/types.ts#L8"
+				}
+			]
+		},
+		{
+			"id": 1710,
+			"name": "KeyValueStorageSync",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 1721,
+					"name": "clear",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "public/types.ts",
+							"line": 5,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/types.ts#L5"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1722,
+							"name": "clear",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "public/types.ts",
+									"line": 5,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/types.ts#L5"
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 1711,
+					"name": "get",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "public/types.ts",
+							"line": 2,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/types.ts#L2"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1712,
+							"name": "get",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "public/types.ts",
+									"line": 2,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/types.ts#L2"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1713,
+									"name": "key",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "string"
+							}
+						}
+					]
+				},
+				{
+					"id": 1718,
+					"name": "remove",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "public/types.ts",
+							"line": 4,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/types.ts#L4"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1719,
+							"name": "remove",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "public/types.ts",
+									"line": 4,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/types.ts#L4"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1720,
+									"name": "key",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 1714,
+					"name": "set",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "public/types.ts",
+							"line": 3,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/types.ts#L3"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1715,
+							"name": "set",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "public/types.ts",
+									"line": 3,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/types.ts#L3"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1716,
+									"name": "key",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 1717,
+									"name": "value",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Methods",
+					"children": [
+						1721,
+						1711,
+						1718,
+						1714
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "public/types.ts",
+					"line": 1,
+					"character": 17,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/types.ts#L1"
+				}
+			]
+		},
+		{
+			"id": 1736,
+			"name": "StorageNamespace",
+			"variant": "declaration",
+			"kind": 2097152,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "public/types.ts",
+					"line": 15,
+					"character": 12,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/types.ts#L15"
+				}
+			],
+			"type": {
+				"type": "union",
+				"types": [
+					{
+						"type": "literal",
+						"value": "local"
+					},
+					{
+						"type": "literal",
+						"value": "session"
+					},
+					{
+						"type": "literal",
+						"value": "indexed"
+					}
+				]
+			}
+		},
+		{
+			"id": 1694,
+			"name": "CAP_STORAGE_CLEAR",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "public/capabilities.ts",
+					"line": 4,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/capabilities.ts#L4"
+				}
+			],
+			"type": {
+				"type": "literal",
+				"value": "storage:clear"
+			},
+			"defaultValue": "'storage:clear'"
+		},
+		{
+			"id": 1706,
+			"name": "CAP_STORAGE_INDEXED_CLEAR",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "public/capabilities.ts",
+					"line": 19,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/capabilities.ts#L19"
+				}
+			],
+			"type": {
+				"type": "literal",
+				"value": "storage:indexed:clear"
+			},
+			"defaultValue": "'storage:indexed:clear'"
+		},
+		{
+			"id": 1703,
+			"name": "CAP_STORAGE_INDEXED_READ",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "public/capabilities.ts",
+					"line": 16,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/capabilities.ts#L16"
+				}
+			],
+			"type": {
+				"type": "literal",
+				"value": "storage:indexed:read"
+			},
+			"defaultValue": "'storage:indexed:read'"
+		},
+		{
+			"id": 1705,
+			"name": "CAP_STORAGE_INDEXED_REMOVE",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "public/capabilities.ts",
+					"line": 18,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/capabilities.ts#L18"
+				}
+			],
+			"type": {
+				"type": "literal",
+				"value": "storage:indexed:remove"
+			},
+			"defaultValue": "'storage:indexed:remove'"
+		},
+		{
+			"id": 1704,
+			"name": "CAP_STORAGE_INDEXED_WRITE",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "public/capabilities.ts",
+					"line": 17,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/capabilities.ts#L17"
+				}
+			],
+			"type": {
+				"type": "literal",
+				"value": "storage:indexed:write"
+			},
+			"defaultValue": "'storage:indexed:write'"
+		},
+		{
+			"id": 1698,
+			"name": "CAP_STORAGE_LOCAL_CLEAR",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "public/capabilities.ts",
+					"line": 9,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/capabilities.ts#L9"
+				}
+			],
+			"type": {
+				"type": "literal",
+				"value": "storage:local:clear"
+			},
+			"defaultValue": "'storage:local:clear'"
+		},
+		{
+			"id": 1695,
+			"name": "CAP_STORAGE_LOCAL_READ",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "public/capabilities.ts",
+					"line": 6,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/capabilities.ts#L6"
+				}
+			],
+			"type": {
+				"type": "literal",
+				"value": "storage:local:read"
+			},
+			"defaultValue": "'storage:local:read'"
+		},
+		{
+			"id": 1697,
+			"name": "CAP_STORAGE_LOCAL_REMOVE",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "public/capabilities.ts",
+					"line": 8,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/capabilities.ts#L8"
+				}
+			],
+			"type": {
+				"type": "literal",
+				"value": "storage:local:remove"
+			},
+			"defaultValue": "'storage:local:remove'"
+		},
+		{
+			"id": 1696,
+			"name": "CAP_STORAGE_LOCAL_WRITE",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "public/capabilities.ts",
+					"line": 7,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/capabilities.ts#L7"
+				}
+			],
+			"type": {
+				"type": "literal",
+				"value": "storage:local:write"
+			},
+			"defaultValue": "'storage:local:write'"
+		},
+		{
+			"id": 1691,
+			"name": "CAP_STORAGE_READ",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "public/capabilities.ts",
+					"line": 1,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/capabilities.ts#L1"
+				}
+			],
+			"type": {
+				"type": "literal",
+				"value": "storage:read"
+			},
+			"defaultValue": "'storage:read'"
+		},
+		{
+			"id": 1693,
+			"name": "CAP_STORAGE_REMOVE",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "public/capabilities.ts",
+					"line": 3,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/capabilities.ts#L3"
+				}
+			],
+			"type": {
+				"type": "literal",
+				"value": "storage:remove"
+			},
+			"defaultValue": "'storage:remove'"
+		},
+		{
+			"id": 1702,
+			"name": "CAP_STORAGE_SESSION_CLEAR",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "public/capabilities.ts",
+					"line": 14,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/capabilities.ts#L14"
+				}
+			],
+			"type": {
+				"type": "literal",
+				"value": "storage:session:clear"
+			},
+			"defaultValue": "'storage:session:clear'"
+		},
+		{
+			"id": 1699,
+			"name": "CAP_STORAGE_SESSION_READ",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "public/capabilities.ts",
+					"line": 11,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/capabilities.ts#L11"
+				}
+			],
+			"type": {
+				"type": "literal",
+				"value": "storage:session:read"
+			},
+			"defaultValue": "'storage:session:read'"
+		},
+		{
+			"id": 1701,
+			"name": "CAP_STORAGE_SESSION_REMOVE",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "public/capabilities.ts",
+					"line": 13,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/capabilities.ts#L13"
+				}
+			],
+			"type": {
+				"type": "literal",
+				"value": "storage:session:remove"
+			},
+			"defaultValue": "'storage:session:remove'"
+		},
+		{
+			"id": 1700,
+			"name": "CAP_STORAGE_SESSION_WRITE",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "public/capabilities.ts",
+					"line": 12,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/capabilities.ts#L12"
+				}
+			],
+			"type": {
+				"type": "literal",
+				"value": "storage:session:write"
+			},
+			"defaultValue": "'storage:session:write'"
+		},
+		{
+			"id": 1692,
+			"name": "CAP_STORAGE_WRITE",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "public/capabilities.ts",
+					"line": 2,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/capabilities.ts#L2"
+				}
+			],
+			"type": {
+				"type": "literal",
+				"value": "storage:write"
+			},
+			"defaultValue": "'storage:write'"
+		},
+		{
+			"id": 1709,
+			"name": "STORAGE_INDEXED",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "public/services.ts",
+					"line": 3,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/services.ts#L3"
+				}
+			],
+			"type": {
+				"type": "literal",
+				"value": "storage:indexed"
+			},
+			"defaultValue": "'storage:indexed'"
+		},
+		{
+			"id": 1707,
+			"name": "STORAGE_LOCAL",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "public/services.ts",
+					"line": 1,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/services.ts#L1"
+				}
+			],
+			"type": {
+				"type": "literal",
+				"value": "storage:local"
+			},
+			"defaultValue": "'storage:local'"
+		},
+		{
+			"id": 1708,
+			"name": "STORAGE_SESSION",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "public/services.ts",
+					"line": 2,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/public/services.ts#L2"
+				}
+			],
+			"type": {
+				"type": "literal",
+				"value": "storage:session"
+			},
+			"defaultValue": "'storage:session'"
+		},
+		{
+			"id": 1690,
+			"name": "WebStoragePlugin",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"sources": [
+				{
+					"fileName": "plugin.ts",
+					"line": 7,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/plugin.ts#L7"
+				}
+			],
+			"type": {
+				"type": "reference",
+				"target": {
+					"packageName": "@swissjs/core",
+					"packagePath": "dist/plugins/types/index.d.ts",
+					"qualifiedName": "Plugin"
+				},
+				"name": "Plugin",
+				"package": "@swissjs/core"
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 1739,
+			"name": "createIndexedStorage",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "runtime/indexed.ts",
+					"line": 7,
+					"character": 16,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/runtime/indexed.ts#L7"
+				}
+			],
+			"signatures": [
+				{
+					"id": 1740,
+					"name": "createIndexedStorage",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "runtime/indexed.ts",
+							"line": 7,
+							"character": 16,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/runtime/indexed.ts#L7"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": 1723,
+						"name": "KeyValueStorageAsync",
+						"package": "@swissjs/plugin-web-storage"
+					}
+				}
+			]
+		},
+		{
+			"id": 1741,
+			"name": "createLocalStorage",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "runtime/local.ts",
+					"line": 4,
+					"character": 16,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/runtime/local.ts#L4"
+				}
+			],
+			"signatures": [
+				{
+					"id": 1742,
+					"name": "createLocalStorage",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "runtime/local.ts",
+							"line": 4,
+							"character": 16,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/runtime/local.ts#L4"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": 1710,
+						"name": "KeyValueStorageSync",
+						"package": "@swissjs/plugin-web-storage"
+					}
+				}
+			]
+		},
+		{
+			"id": 1743,
+			"name": "createSessionStorage",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "runtime/session.ts",
+					"line": 4,
+					"character": 16,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/runtime/session.ts#L4"
+				}
+			],
+			"signatures": [
+				{
+					"id": 1744,
+					"name": "createSessionStorage",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "runtime/session.ts",
+							"line": 4,
+							"character": 16,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/runtime/session.ts#L4"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": 1710,
+						"name": "KeyValueStorageSync",
+						"package": "@swissjs/plugin-web-storage"
+					}
+				}
+			]
+		},
+		{
+			"id": 1737,
+			"name": "isBrowser",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "runtime/env.ts",
+					"line": 1,
+					"character": 16,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/runtime/env.ts#L1"
+				}
+			],
+			"signatures": [
+				{
+					"id": 1738,
+					"name": "isBrowser",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "runtime/env.ts",
+							"line": 1,
+							"character": 16,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/web-storage/src/runtime/env.ts#L1"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Interfaces",
+			"children": [
+				1723,
+				1710
+			]
+		},
+		{
+			"title": "Type Aliases",
+			"children": [
+				1736
+			]
+		},
+		{
+			"title": "Variables",
+			"children": [
+				1694,
+				1706,
+				1703,
+				1705,
+				1704,
+				1698,
+				1695,
+				1697,
+				1696,
+				1691,
+				1693,
+				1702,
+				1699,
+				1701,
+				1700,
+				1692,
+				1709,
+				1707,
+				1708,
+				1690
+			]
+		},
+		{
+			"title": "Functions",
+			"children": [
+				1739,
+				1741,
+				1743,
+				1737
+			]
+		}
+	],
+	"packageName": "@swissjs/plugin-web-storage",
+	"packageVersion": "0.1.0",
+	"symbolIdMap": {
+		"1689": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/index.ts",
+			"qualifiedName": ""
+		},
+		"1690": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/plugin.ts",
+			"qualifiedName": "WebStoragePlugin"
+		},
+		"1691": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/capabilities.ts",
+			"qualifiedName": "CAP_STORAGE_READ"
+		},
+		"1692": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/capabilities.ts",
+			"qualifiedName": "CAP_STORAGE_WRITE"
+		},
+		"1693": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/capabilities.ts",
+			"qualifiedName": "CAP_STORAGE_REMOVE"
+		},
+		"1694": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/capabilities.ts",
+			"qualifiedName": "CAP_STORAGE_CLEAR"
+		},
+		"1695": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/capabilities.ts",
+			"qualifiedName": "CAP_STORAGE_LOCAL_READ"
+		},
+		"1696": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/capabilities.ts",
+			"qualifiedName": "CAP_STORAGE_LOCAL_WRITE"
+		},
+		"1697": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/capabilities.ts",
+			"qualifiedName": "CAP_STORAGE_LOCAL_REMOVE"
+		},
+		"1698": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/capabilities.ts",
+			"qualifiedName": "CAP_STORAGE_LOCAL_CLEAR"
+		},
+		"1699": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/capabilities.ts",
+			"qualifiedName": "CAP_STORAGE_SESSION_READ"
+		},
+		"1700": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/capabilities.ts",
+			"qualifiedName": "CAP_STORAGE_SESSION_WRITE"
+		},
+		"1701": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/capabilities.ts",
+			"qualifiedName": "CAP_STORAGE_SESSION_REMOVE"
+		},
+		"1702": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/capabilities.ts",
+			"qualifiedName": "CAP_STORAGE_SESSION_CLEAR"
+		},
+		"1703": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/capabilities.ts",
+			"qualifiedName": "CAP_STORAGE_INDEXED_READ"
+		},
+		"1704": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/capabilities.ts",
+			"qualifiedName": "CAP_STORAGE_INDEXED_WRITE"
+		},
+		"1705": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/capabilities.ts",
+			"qualifiedName": "CAP_STORAGE_INDEXED_REMOVE"
+		},
+		"1706": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/capabilities.ts",
+			"qualifiedName": "CAP_STORAGE_INDEXED_CLEAR"
+		},
+		"1707": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/services.ts",
+			"qualifiedName": "STORAGE_LOCAL"
+		},
+		"1708": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/services.ts",
+			"qualifiedName": "STORAGE_SESSION"
+		},
+		"1709": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/services.ts",
+			"qualifiedName": "STORAGE_INDEXED"
+		},
+		"1710": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "KeyValueStorageSync"
+		},
+		"1711": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "KeyValueStorageSync.get"
+		},
+		"1712": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "KeyValueStorageSync.get"
+		},
+		"1713": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "key"
+		},
+		"1714": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "KeyValueStorageSync.set"
+		},
+		"1715": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "KeyValueStorageSync.set"
+		},
+		"1716": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "key"
+		},
+		"1717": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "value"
+		},
+		"1718": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "KeyValueStorageSync.remove"
+		},
+		"1719": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "KeyValueStorageSync.remove"
+		},
+		"1720": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "key"
+		},
+		"1721": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "KeyValueStorageSync.clear"
+		},
+		"1722": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "KeyValueStorageSync.clear"
+		},
+		"1723": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "KeyValueStorageAsync"
+		},
+		"1724": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "KeyValueStorageAsync.get"
+		},
+		"1725": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "KeyValueStorageAsync.get"
+		},
+		"1726": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "key"
+		},
+		"1727": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "KeyValueStorageAsync.set"
+		},
+		"1728": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "KeyValueStorageAsync.set"
+		},
+		"1729": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "key"
+		},
+		"1730": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "value"
+		},
+		"1731": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "KeyValueStorageAsync.remove"
+		},
+		"1732": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "KeyValueStorageAsync.remove"
+		},
+		"1733": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "key"
+		},
+		"1734": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "KeyValueStorageAsync.clear"
+		},
+		"1735": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "KeyValueStorageAsync.clear"
+		},
+		"1736": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/public/types.ts",
+			"qualifiedName": "StorageNamespace"
+		},
+		"1737": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/runtime/env.ts",
+			"qualifiedName": "isBrowser"
+		},
+		"1738": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/runtime/env.ts",
+			"qualifiedName": "isBrowser"
+		},
+		"1739": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/runtime/indexed.ts",
+			"qualifiedName": "createIndexedStorage"
+		},
+		"1740": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/runtime/indexed.ts",
+			"qualifiedName": "createIndexedStorage"
+		},
+		"1741": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/runtime/local.ts",
+			"qualifiedName": "createLocalStorage"
+		},
+		"1742": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/runtime/local.ts",
+			"qualifiedName": "createLocalStorage"
+		},
+		"1743": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/runtime/session.ts",
+			"qualifiedName": "createSessionStorage"
+		},
+		"1744": {
+			"packageName": "@swissjs/plugin-web-storage",
+			"packagePath": "src/runtime/session.ts",
+			"qualifiedName": "createSessionStorage"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "packages/plugins/web-storage/src/index.ts"
+		},
+		"reflections": {
+			"1": 1689
+		}
+	}
+}

@@ -1,0 +1,17 @@
+title = "SwissJS Gitleaks Config"
+
+[extend]
+# You can extend from the default config or add allowlists here as needed
+
+[allowlist]
+# Paths to ignore (generated docs, build outputs)
+paths = [
+  "docs/api/",
+  "docs/.vitepress/dist/",
+  "node_modules/",
+  "dist/",
+  "packages/*/node_modules/",
+  "packages/*/dist/"
+]
+# Example: add known test keys or patterns here if needed to avoid false positives
+# regexes = []
