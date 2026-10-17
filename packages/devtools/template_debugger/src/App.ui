@@ -1,0 +1,79 @@
+import { SwissComponent, html } from '@swissjs/core';
+import { PreviewService } from './services/PreviewService.js';
+
+interface AppState {
+  source: string;
+  errors: string[];
+  previewHtml: string;
+  diagnostics: string[];
+}
+
+export default class App extends SwissComponent<{}, AppState> {
+  private preview = new PreviewService();
+  private debounceTimer: number | null = null;
+  constructor(props: {}) {
+    super(props);
+    this.state = {
+      source: `// Paste a .ui or template snippet here` ,
+      errors: [],
+      previewHtml: '',
+      diagnostics: [],
+    };
+  }
+
+  onSourceInput = (e: any) => {
+    const v = (e?.target?.value ?? '').toString();
+    this.setState(s => ({ ...s, source: v }));
+    // debounce compile
+    if (this.debounceTimer) window.clearTimeout(this.debounceTimer);
+    this.debounceTimer = window.setTimeout(() => { this.compileNow(); }, 300);
+  };
+
+  async compileNow() {
+    const { source } = this.state;
+    const res = await this.preview.compileAndRender(source);
+    this.setState(s => ({ ...s, previewHtml: res.html, diagnostics: res.diagnostics }));
+  }
+
+  async handleMount() {
+    await this.compileNow();
+  }
+
+  render() {
+    return html`
+      <div class="templ-debugger">
+        <header class="header">
+          <h1>SwissJS Template Debugger</h1>
+        </header>
+        <main class="content">
+          <section class="left">
+            <h2>Template Source</h2>
+            <textarea class="src" value="${this.state.source}" oninput="${this.onSourceInput}"></textarea>
+          </section>
+          <section class="right">
+            <h2>Preview</h2>
+            <div class="preview">
+              <iframe class="frame" srcdoc="${this.state.previewHtml}"></iframe>
+            </div>
+            <h2>Diagnostics</h2>
+            <ul class="errors">
+              ${(this.state.diagnostics.length === 0) ? html`<li class="ok">No diagnostics</li>` : this.state.diagnostics.map(err => html`<li>${err}</li>`)}
+            </ul>
+          </section>
+        </main>
+      </div>
+      <style>
+        .templ-debugger { height:100vh; display:flex; flex-direction:column; font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif }
+        .header { padding:10px 14px; border-bottom:1px solid #eee; background:#fafafa }
+        .content { flex:1; display:grid; grid-template-columns: 1fr 1fr; gap:12px; padding:12px }
+        .left,.right { border:1px solid #eee; border-radius:6px; padding:10px; overflow:auto }
+        h2 { margin:0 0 8px 0; font-size:14px; color:#555 }
+        .src { width:100%; height:70vh; font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:12px; padding:8px; border:1px solid #ddd; border-radius:4px }
+        .preview { min-height:200px; border:1px dashed #ccc; border-radius:4px; color:#777; overflow:hidden }
+        .frame { width:100%; height:300px; border:0 }
+        .errors { margin:8px 0; padding-left:18px }
+        .ok { color:#2e7d32 }
+      </style>
+    `;
+  }
+}

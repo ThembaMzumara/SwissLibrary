@@ -1,0 +1,53 @@
+{
+  "name": "@swissjs/skltn",
+  "version": "0.1.0",
+  "description": "Swiss Skeleton - UI framework for enterprise applications",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./tokens": {
+      "import": "./dist/tokens/index.css"
+    },
+    "./themes/*": {
+      "import": "./themes/*.css"
+    }
+  },
+  "files": [
+    "dist",
+    "themes",
+    "src"
+  ],
+  "scripts": {
+    "build": "swiss-build",
+    "dev": "swiss-build --watch",
+    "test": "vitest",
+    "lint": "eslint src"
+  },
+  "keywords": [
+    "swissjs",
+    "skltn",
+    "skeleton",
+    "ui-framework",
+    "enterprise"
+  ],
+  "author": "Themba Mzumara",
+  "license": "MIT",
+  "dependencies": {
+    "@swissjs/core": "workspace:*",
+    "@swissjs/router": "workspace:*"
+  },
+  "devDependencies": {
+    "@swissjs/compiler": "workspace:*",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  },
+  "peerDependencies": {
+    "@swissjs/core": "^0.1.0",
+    "@swissjs/router": "^0.1.0"
+  }
+}

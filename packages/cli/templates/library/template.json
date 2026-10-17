@@ -1,0 +1,18 @@
+{
+  "name": "SwissJS Library",
+  "type": "library",
+  "version": "1.0.0",
+  "description": "A SwissJS library module template (state, services, types, and components)",
+  "author": "SwissJS Team",
+  "tags": ["library", "module", "swissjs"],
+  "capabilities": [],
+  "dependencies": {
+    "@swissjs/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "typescript": "^5.0.0"
+  },
+  "createdAt": "2024-01-01T00:00:00.000Z",
+  "updatedAt": "2024-01-01T00:00:00.000Z"
+} 
