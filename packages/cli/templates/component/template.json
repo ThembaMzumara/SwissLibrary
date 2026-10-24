@@ -1,0 +1,18 @@
+{
+  "name": "SwissJS Component",
+  "type": "component",
+  "version": "1.0.0",
+  "description": "A SwissJS component template (entry, components, styles, and public assets)",
+  "author": "SwissJS Team",
+  "tags": ["component", "ui", "swissjs"],
+  "capabilities": [],
+  "dependencies": {
+    "@swissjs/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "typescript": "^5.0.0"
+  },
+  "createdAt": "2024-01-01T00:00:00.000Z",
+  "updatedAt": "2024-01-01T00:00:00.000Z"
+} 

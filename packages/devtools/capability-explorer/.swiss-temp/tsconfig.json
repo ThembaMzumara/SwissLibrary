@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "types": ["@swissjs/core"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "@swissjs/core",
+    "outDir": "dist"
+  },
+  "include": ["**/*"]
+}

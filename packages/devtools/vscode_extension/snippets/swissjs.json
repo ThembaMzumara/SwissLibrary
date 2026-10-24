@@ -1,0 +1,248 @@
+{
+  "Component Skeleton": {
+    "prefix": "swiss-component",
+    "body": [
+      "import { SwissComponent, html, css } from '@swiss/core';",
+      "",
+      "/**",
+      " * ${1:ComponentName} component",
+      " */",
+      "export class ${1:ComponentName} extends SwissComponent {",
+      "  static styles = css`",
+      "    :host {",
+      "      display: block;",
+      "    }",
+      "  `;",
+      "",
+      "  render() {",
+      "    return html`",
+      "      <div class=\"${2:component-class}\">",
+      "        ${3:<!-- Content -->}",
+      "      </div>",
+      "    `;",
+      "  }",
+      "}",
+      "",
+      "// Register the component",
+      "customElements.define('${4:component-name}', ${1:ComponentName});"
+    ],
+    "description": "Creates a new SwissJS component"
+  },
+  "Template Literal": {
+    "prefix": "html",
+    "body": [
+      "html`${1:content}`"
+    ],
+    "description": "HTML template literal tag"
+  },
+  "CSS Literal": {
+    "prefix": "css",
+    "body": [
+      "css`${1:styles}`"
+    ],
+    "description": "CSS template literal tag"
+  },
+  "Lifecycle - connectedCallback": {
+    "prefix": "connected",
+    "body": [
+      "connectedCallback() {",
+      "  super.connectedCallback();",
+      "  ${1:// Initialization code}",
+      "}"
+    ],
+    "description": "Lifecycle: connectedCallback"
+  },
+  "Lifecycle - disconnectedCallback": {
+    "prefix": "disconnected",
+    "body": [
+      "disconnectedCallback() {",
+      "  ${1:// Cleanup code}",
+      "  super.disconnectedCallback();",
+      "}"
+    ],
+    "description": "Lifecycle: disconnectedCallback"
+  },
+  "@onMount Decorator": {
+    "prefix": "onmount",
+    "body": [
+      "@onMount()",
+      "${1:methodName}() {",
+      "  ${2:// Code to run when component is mounted}",
+      "}"
+    ],
+    "description": "Add @onMount lifecycle hook"
+  },
+  "@onUpdate Decorator": {
+    "prefix": "onupdate",
+    "body": [
+      "@onUpdate()",
+      "${1:methodName}() {",
+      "  ${2:// Code to run when component updates}",
+      "}"
+    ],
+    "description": "Add @onUpdate lifecycle hook"
+  },
+  "@property Decorator": {
+    "prefix": "prop",
+    "body": [
+      "@property({ type: ${1:type}${2:, reflect: true}${3:, attribute: '${4:attr-name}'} })",
+      "${5:propertyName}${6:: ${7:type}} = ${8:defaultValue};"
+    ],
+    "description": "Add a property with @property decorator"
+  },
+  "@state Decorator": {
+    "prefix": "state",
+    "body": [
+      "@state()",
+      "private ${1:stateName}${2:: ${3:type}} = ${4:defaultValue};"
+    ],
+    "description": "Add a reactive state property"
+  },
+  "@query Decorator": {
+    "prefix": "query",
+    "body": [
+      "@query('${1:selector}')",
+      "private ${2:elementName}${3:!}: ${4:HTMLElement};"
+    ],
+    "description": "Query an element in the component's shadow DOM"
+  },
+  "@queryAll Decorator": {
+    "prefix": "queryall",
+    "body": [
+      "@queryAll('${1:selector}')",
+      "private ${2:elements}${3:!}: NodeListOf<${4:HTMLElement}>;"
+    ],
+    "description": "Query all elements matching a selector in the component's shadow DOM"
+  },
+  "@event Decorator": {
+    "prefix": "event",
+    "body": [
+      "@event('${1:event-name}')",
+      "private handle${2:Event}(event: CustomEvent<${3:EventDetail}>) {",
+      "  ${4:// Event handler code}",
+      "}"
+    ],
+    "description": "Add an event handler with @event decorator"
+  },
+  "@capability Decorator": {
+    "prefix": "capability",
+    "body": [
+      "@capability('${1:capability-name}')",
+      "private ${2:capability}${3:!}: ${4:CapabilityType};"
+    ],
+    "description": "Request a capability with @capability decorator"
+  },
+  "@provide Decorator": {
+    "prefix": "provide",
+    "body": [
+      "@provide({ capability: '${1:capability-name}'${2:, options: ${3:options}} })",
+      "private ${4:provider} = ${5:providerValue};"
+    ],
+    "description": "Provide a capability with @provide decorator"
+  },
+  "@inject Decorator": {
+    "prefix": "inject",
+    "body": [
+      "@inject('${1:service-name}')",
+      "private ${2:service}${3:!}: ${4:ServiceType};"
+    ],
+    "description": "Inject a service with @inject decorator"
+  },
+  "@observe Decorator": {
+    "prefix": "observe",
+    "body": [
+      "@observe('${1:propertyName}')",
+      "private ${2:methodName}(${3:newValue}: ${4:Type}, ${5:oldValue}: ${4:Type}) {",
+      "  ${6:// React to property changes}",
+      "}"
+    ],
+    "description": "Observe property changes with @observe decorator"
+  },
+  "@customElement Decorator": {
+    "prefix": "customelement",
+    "body": [
+      "@customElement('${1:element-name}')",
+      "export class ${2:ElementName} extends SwissComponent {",
+      "  static styles = css`${3:css}`;\n",
+      "  render() {",
+      "    return html`",
+      "      <div class=\"container\">",
+      "        ${4:<!-- Content -->}",
+      "      </div>",
+      "    `;",
+      "  }",
+      "}"
+    ],
+    "description": "Create a custom element with @customElement decorator"
+  },
+  "Event Handler (onclick)": {
+    "prefix": "on",
+    "body": [
+      "on${1:click}=\"\\${${2:this.handler}}\""
+    ],
+    "description": "SwissJS event handler attribute"
+  },
+  "Property Binding": {
+    "prefix": "prop",
+    "body": [
+      "${1:property}=\"\\${${2:this.value}}\""
+    ],
+    "description": "SwissJS property binding attribute"
+  },
+  "Event Listener": {
+    "prefix": "event",
+    "body": [
+      "on${1:click}=\"\\${${2:this.handler}}\""
+    ],
+    "description": "SwissJS event listener attribute"
+  },
+  "Conditional Rendering": {
+    "prefix": "if",
+    "body": [
+      "\\${${1:this.condition} ? html\\`${2:content}\\` : ''}"
+    ],
+    "description": "SwissJS conditional rendering with template literals"
+  },
+  "Loop Rendering": {
+    "prefix": "for",
+    "body": [
+      "\\${${1:this.items}.map(${2:item} => html\\`${3:<div>\\${item}</div>}\\`)}"
+    ],
+    "description": "SwissJS loop rendering with template literals"
+  },
+  "Show/Hide Conditional": {
+    "prefix": "show",
+    "body": [
+      "style=\"display: \\${${1:this.condition} ? 'block' : 'none'}\""
+    ],
+    "description": "SwissJS show/hide with conditional styling"
+  },
+  "Two-way Binding": {
+    "prefix": "model",
+    "body": [
+      "value=\"\\${${1:this.property}}\" oninput=\"\\${${2:this.updateProperty}}\""
+    ],
+    "description": "SwissJS two-way data binding with TypeScript"
+  },
+  "Swiss Template": {
+    "prefix": "swiss-template",
+    "body": [
+      "render() {",
+      "  return html`",
+      "    <div class=\"${1:component-name}\">",
+      "      <h1 title=\"\\${${2:this.titleProp}}\">${3:\\${this.title}}</h1>",
+      "      <button onclick=\"\\${${4:this.handleClick}}\">",
+      "        ${5:Click me}",
+      "      </button>",
+      "      \\${${6:this.showContent} ? html`",
+      "        <div>",
+      "          ${7:<!-- Conditional content -->}",
+      "        </div>",
+      "      ` : ''}",
+      "    </div>",
+      "  `;",
+      "}"
+    ],
+    "description": "SwissJS template with TypeScript + html template literals"
+  }
+}
