@@ -1,0 +1,100 @@
+{
+	"schemaVersion": "2.0",
+	"id": 42,
+	"name": "@swissjs/components",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 43,
+			"name": "UiButton",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {},
+			"type": {
+				"type": "intrinsic",
+				"name": "any"
+			}
+		},
+		{
+			"id": 44,
+			"name": "UiInput",
+			"variant": "reference",
+			"kind": 4194304,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 2,
+					"character": 20,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/4724a91d6a8edd0b774969332ffac105f6e92424/packages/components/src/index.ts#L2"
+				}
+			],
+			"target": 43
+		},
+		{
+			"id": 45,
+			"name": "UiModal",
+			"variant": "reference",
+			"kind": 4194304,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 3,
+					"character": 20,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/4724a91d6a8edd0b774969332ffac105f6e92424/packages/components/src/index.ts#L3"
+				}
+			],
+			"target": 43
+		}
+	],
+	"groups": [
+		{
+			"title": "Variables",
+			"children": [
+				43
+			]
+		},
+		{
+			"title": "References",
+			"children": [
+				44,
+				45
+			]
+		}
+	],
+	"packageName": "@swissjs/components",
+	"packageVersion": "0.1.0",
+	"symbolIdMap": {
+		"42": {
+			"packageName": "@swissjs/components",
+			"packagePath": "src/index.ts",
+			"qualifiedName": ""
+		},
+		"43": {
+			"packageName": "swissjs-monorepo",
+			"packagePath": "",
+			"qualifiedName": "unknown"
+		},
+		"44": {
+			"packageName": "@swissjs/components",
+			"packagePath": "src/index.ts",
+			"qualifiedName": "UiInput"
+		},
+		"45": {
+			"packageName": "@swissjs/components",
+			"packagePath": "src/index.ts",
+			"qualifiedName": "UiModal"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "packages/components/src/index.ts"
+		},
+		"reflections": {
+			"1": 42
+		}
+	}
+}

@@ -1,0 +1,259 @@
+{
+	"schemaVersion": "2.0",
+	"id": 975,
+	"name": "@swissjs/devtools-template-debugger",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 980,
+			"name": "PreviewService",
+			"variant": "declaration",
+			"kind": 128,
+			"flags": {},
+			"children": [
+				{
+					"id": 981,
+					"name": "constructor",
+					"variant": "declaration",
+					"kind": 512,
+					"flags": {},
+					"signatures": [
+						{
+							"id": 982,
+							"name": "PreviewService",
+							"variant": "signature",
+							"kind": 16384,
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"target": 980,
+								"name": "PreviewService",
+								"package": "@swissjs/devtools-template-debugger"
+							}
+						}
+					]
+				},
+				{
+					"id": 983,
+					"name": "compileAndRender",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "PreviewService.ts",
+							"line": 13,
+							"character": 8,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/template_debugger/src/services/PreviewService.ts#L13"
+						}
+					],
+					"signatures": [
+						{
+							"id": 984,
+							"name": "compileAndRender",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "PreviewService.ts",
+									"line": 13,
+									"character": 8,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/template_debugger/src/services/PreviewService.ts#L13"
+								}
+							],
+							"parameters": [
+								{
+									"id": 985,
+									"name": "source",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": {
+									"packageName": "typescript",
+									"packagePath": "lib/lib.es5.d.ts",
+									"qualifiedName": "Promise"
+								},
+								"typeArguments": [
+									{
+										"type": "reference",
+										"target": 976,
+										"name": "PreviewResult",
+										"package": "@swissjs/devtools-template-debugger"
+									}
+								],
+								"name": "Promise",
+								"package": "typescript"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						981
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						983
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "PreviewService.ts",
+					"line": 12,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/template_debugger/src/services/PreviewService.ts#L12"
+				}
+			]
+		},
+		{
+			"id": 976,
+			"name": "PreviewResult",
+			"variant": "declaration",
+			"kind": 2097152,
+			"flags": {},
+			"children": [
+				{
+					"id": 979,
+					"name": "diagnostics",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "PreviewService.ts",
+							"line": 3,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/template_debugger/src/services/PreviewService.ts#L3"
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "intrinsic",
+							"name": "string"
+						}
+					}
+				},
+				{
+					"id": 978,
+					"name": "html",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "PreviewService.ts",
+							"line": 2,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/template_debugger/src/services/PreviewService.ts#L2"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						979,
+						978
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "PreviewService.ts",
+					"line": 1,
+					"character": 12,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/devtools/template_debugger/src/services/PreviewService.ts#L1"
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Classes",
+			"children": [
+				980
+			]
+		},
+		{
+			"title": "Type Aliases",
+			"children": [
+				976
+			]
+		}
+	],
+	"packageName": "@swissjs/devtools-template-debugger",
+	"packageVersion": "0.1.0",
+	"symbolIdMap": {
+		"975": {
+			"packageName": "@swissjs/devtools-template-debugger",
+			"packagePath": "src/index.ts",
+			"qualifiedName": ""
+		},
+		"976": {
+			"packageName": "@swissjs/devtools-template-debugger",
+			"packagePath": "src/services/PreviewService.ts",
+			"qualifiedName": "PreviewResult"
+		},
+		"978": {
+			"packageName": "@swissjs/devtools-template-debugger",
+			"packagePath": "src/services/PreviewService.ts",
+			"qualifiedName": "__type.html"
+		},
+		"979": {
+			"packageName": "@swissjs/devtools-template-debugger",
+			"packagePath": "src/services/PreviewService.ts",
+			"qualifiedName": "__type.diagnostics"
+		},
+		"980": {
+			"packageName": "@swissjs/devtools-template-debugger",
+			"packagePath": "src/services/PreviewService.ts",
+			"qualifiedName": "PreviewService"
+		},
+		"983": {
+			"packageName": "@swissjs/devtools-template-debugger",
+			"packagePath": "src/services/PreviewService.ts",
+			"qualifiedName": "PreviewService.compileAndRender"
+		},
+		"984": {
+			"packageName": "@swissjs/devtools-template-debugger",
+			"packagePath": "src/services/PreviewService.ts",
+			"qualifiedName": "PreviewService.compileAndRender"
+		},
+		"985": {
+			"packageName": "@swissjs/devtools-template-debugger",
+			"packagePath": "src/services/PreviewService.ts",
+			"qualifiedName": "source"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "packages/devtools/template_debugger/src/index.ts"
+		},
+		"reflections": {
+			"1": 975
+		}
+	}
+}
