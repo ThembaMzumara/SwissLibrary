@@ -1,0 +1,20 @@
+import { SwissComponent, html } from '@swissjs/core';
+
+export default class TestComponent extends SwissComponent {
+  constructor(props: {}) {
+    super(props);
+  }
+
+  render() {
+    return html`
+      <component>
+        <div class="test">
+          <span>Test Content</span>
+        </div>
+        <button onclick="${() => console.log('clicked')}">
+          Click Me
+        </button>
+      </component>
+    `;
+  }
+}

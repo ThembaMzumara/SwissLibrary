@@ -1,0 +1,46 @@
+# This file configures pre-commit hooks for the SwissJS monorepo.
+# For more info: https://pre-commit.com
+# To add more hooks, see: https://pre-commit.com/hooks.html
+
+exclude: ^.*\/tests\/.*$
+fail_fast: false
+repos:
+  - repo: https://github.com/psf/black
+    rev: 24.8.0
+    hooks:
+      - id: black
+        args: ["--line-length", "120"]
+  - repo: https://github.com/PyCQA/autoflake
+    rev: v2.3.1
+    hooks:
+      - id: autoflake
+        args: [--in-place, --remove-unused-variables]
+  - repo: https://github.com/pycqa/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        name: isort (python)
+        args: ["--profile", "black", "--line-length", "120"]
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: check-xml
+      - id: debug-statements
+      - id: detect-private-key
+      - id: detect-aws-credentials
+      - id: end-of-file-fixer
+      - id: forbid-submodules
+      - id: mixed-line-ending
+      - id: trailing-whitespace
+      - id: check-added-large-files
+        args: ["--maxkb=35000"]
+  # JS/TS linting placeholder (uncomment and configure if needed)
+  # - repo: local
+  #   hooks:
+  #     - id: js-lint
+  #       name: Lint JS/TS files
+  #       entry: pnpm lint
+  #       language: system
+  #       types: [js, ts, tsx, jsx]

@@ -1,0 +1,47 @@
+{
+    "$schema": "https://turbo.build/schema.json",
+    "ui": "tui",
+    "tasks": {
+      "build": {
+        "dependsOn": ["^build"],
+        "inputs": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx"],
+        "outputs": ["dist/**", "build/**", ".next/**", "!.next/cache/**"]
+      },
+      "docs:api": {
+        "dependsOn": ["^build"],
+        "outputs": ["docs/api/**"]
+      },
+      "@swissjs/fenestration-explorer#build": {
+        "dependsOn": ["@swissjs/core#build"]
+      },
+      "dev": {
+        "cache": false,
+        "persistent": true
+      },
+      "clean": {
+        "cache": false
+      },
+      "link": {
+        "cache": false,
+        "dependsOn": ["build"]
+      },
+      "unlink": {
+        "cache": false
+      },
+      "test": {
+        "dependsOn": ["^build"],
+        "inputs": ["src/**/*.ts", "src/**/*.tsx", "**/*.test.ts", "**/*.spec.ts"],
+        "outputs": ["coverage/**"]
+      },
+      "lint": {
+        "dependsOn": ["^build"],
+        "inputs": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js", "src/**/*.jsx", ".eslintrc*", "eslint.config.*"],
+        "outputs": []
+      },
+      "type-check": {
+        "dependsOn": ["^build"],
+        "inputs": ["src/**/*.ts", "src/**/*.tsx", "tsconfig.json"],
+        "outputs": []
+      }
+    }
+  }

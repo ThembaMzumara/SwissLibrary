@@ -1,0 +1,15 @@
+import { SwissComponent, html } from '@swissjs/core';
+
+export default class HelloComponent extends SwissComponent {
+  name = 'SwissJS';
+
+  render() {
+    return html`
+      <section>
+        <h2>Hello, ${this.name}!</h2>
+        <p>Edit HelloComponent to get started.</p>
+      </section>
+    `;
+  }
+}
+ 

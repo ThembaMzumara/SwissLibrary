@@ -1,0 +1,18 @@
+import { SwissComponent, html } from '@swissjs/core';
+import { install } from '@swissjs/plugin-{{pluginName}}';
+
+// Example usage of the plugin within a SwissComponent
+export default class PluginExample extends SwissComponent {
+  onMount() {
+    // Initialize or configure the plugin
+    install?.(this as unknown as Record<string, unknown>);
+  }
+
+  render() {
+    return html`
+      <div>
+        <h1>Plugin {{pluginName}} Example</h1>
+      </div>
+    `;
+  }
+}
