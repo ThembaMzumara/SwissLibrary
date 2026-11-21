@@ -1,0 +1,5 @@
+dist/
+server/dist/
+out/
+manual-test.js
+direct-test.js

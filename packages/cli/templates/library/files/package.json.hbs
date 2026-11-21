@@ -1,0 +1,17 @@
+{
+  "name": "@repo/{{libraryName}}",
+  "version": "0.1.0",
+  "description": "{{description}}",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "peerDependencies": {
+    "@swissjs/core": "workspace:*"
+  },
+  "swissjs": {
+    "type": "library",
+    "entry": "src/index.ts"
+  },
+  "license": "MIT"
+} 

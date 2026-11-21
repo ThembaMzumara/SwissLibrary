@@ -1,0 +1,84 @@
+// Temporary exports for testing - .ui files need proper module resolution
+
+interface ButtonProps {
+  label?: string;
+  onClick?: (e: MouseEvent) => void;
+}
+
+interface InputProps {
+  placeholder?: string;
+  value?: string;
+  onInput?: (e: Event, value: string) => void;
+}
+
+interface ModalProps {
+  open?: boolean;
+  title?: string;
+  onClose?: () => void;
+}
+
+export class UiButton {
+  constructor(public props: ButtonProps) {}
+  mount(host: HTMLElement) {
+    const button = document.createElement('button');
+    button.textContent = this.props.label || 'Button';
+    if (this.props.onClick) {
+      button.addEventListener('click', this.props.onClick);
+    }
+    host.appendChild(button);
+  }
+}
+
+export class UiInput {
+  constructor(public props: InputProps) {}
+  mount(host: HTMLElement) {
+    const input = document.createElement('input');
+    input.placeholder = this.props.placeholder || '';
+    input.value = this.props.value || '';
+    if (this.props.onInput) {
+      input.addEventListener('input', (e) => {
+        const target = e.target as HTMLInputElement;
+        this.props.onInput?.(e, target.value);
+      });
+    }
+    host.appendChild(input);
+  }
+}
+
+export class UiModal {
+  constructor(public props: ModalProps) {}
+  mount(host: HTMLElement) {
+    if (!this.props.open) return;
+    
+    const backdrop = document.createElement('div');
+    backdrop.className = 'ui-modal-backdrop';
+    backdrop.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5);';
+    
+    const modal = document.createElement('div');
+    modal.className = 'ui-modal';
+    modal.style.cssText = 'position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border-radius: 8px;';
+    
+    const title = document.createElement('h2');
+    title.textContent = this.props.title || 'Modal';
+    
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'ui-modal-close';
+    closeBtn.textContent = '×';
+    closeBtn.style.cssText = 'position: absolute; top: 10px; right: 10px; border: none; background: none; font-size: 20px; cursor: pointer;';
+    
+    modal.appendChild(title);
+    modal.appendChild(closeBtn);
+    backdrop.appendChild(modal);
+    
+    if (this.props.onClose) {
+      backdrop.addEventListener('click', (e) => {
+        if (e.target === backdrop) {
+          this.props.onClose?.();
+        }
+      });
+      closeBtn.addEventListener('click', () => this.props.onClose?.());
+    }
+    
+    host.appendChild(backdrop);
+  }
+}

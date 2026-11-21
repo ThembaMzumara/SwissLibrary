@@ -1,0 +1,44 @@
+{
+  "name": "@swissjs/utils",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist",
+    "lint": "eslint src --ext .ts,.tsx",
+    "test": "echo 'No tests yet'",
+    "docs:api": "typedoc"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/node": "^24.0.14",
+    "fs-extra": "^11.2.0",
+    "pnpm": "^10.14.0"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Themba Mzumara",
+    "email": "themba@swissjs.dev",
+    "url": "https://github.com/ThembaMzumara"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThembaMzumara/SWISS.git"
+  },
+  "homepage": "https://github.com/ThembaMzumara/SWISS#readme",
+  "bugs": {
+    "url": "https://github.com/ThembaMzumara/SWISS/issues"
+  },
+  "keywords": [
+    "swissjs",
+    "framework"
+  ]
+}
