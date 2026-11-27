@@ -1,0 +1,2616 @@
+{
+	"schemaVersion": "2.0",
+	"id": 1745,
+	"name": "@swissjs/security",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 1746,
+			"name": "InMemorySecurityEngine",
+			"variant": "declaration",
+			"kind": 128,
+			"flags": {},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "In-memory security engine implementing the SecurityGateway surface.\n- Maintains registered policies and defaults\n- Provides evaluation and auditing"
+					}
+				]
+			},
+			"children": [
+				{
+					"id": 1747,
+					"name": "constructor",
+					"variant": "declaration",
+					"kind": 512,
+					"flags": {},
+					"signatures": [
+						{
+							"id": 1748,
+							"name": "InMemorySecurityEngine",
+							"variant": "signature",
+							"kind": 16384,
+							"flags": {},
+							"type": {
+								"type": "reference",
+								"target": 1746,
+								"name": "InMemorySecurityEngine",
+								"package": "@swissjs/security"
+							}
+						}
+					]
+				},
+				{
+					"id": 1766,
+					"name": "audit",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "engine.ts",
+							"line": 27,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/engine.ts#L27"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1767,
+							"name": "audit",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "engine.ts",
+									"line": 27,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/engine.ts#L27"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1768,
+									"name": "entry",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": 1803,
+										"name": "AuditEntry",
+										"package": "@swissjs/security"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"target": 1822,
+								"name": "SecurityGateway.audit"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"target": 1821,
+						"name": "SecurityGateway.audit"
+					}
+				},
+				{
+					"id": 1780,
+					"name": "auditPlugin",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "engine.ts",
+							"line": 54,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/engine.ts#L54"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1781,
+							"name": "auditPlugin",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "engine.ts",
+									"line": 54,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/engine.ts#L54"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1782,
+									"name": "plugin",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 1783,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"children": [
+												{
+													"id": 1784,
+													"name": "name",
+													"variant": "declaration",
+													"kind": 1024,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "engine.ts",
+															"line": 54,
+															"character": 24,
+															"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/engine.ts#L54"
+														}
+													],
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												},
+												{
+													"id": 1786,
+													"name": "requiredCapabilities",
+													"variant": "declaration",
+													"kind": 1024,
+													"flags": {
+														"isOptional": true
+													},
+													"sources": [
+														{
+															"fileName": "engine.ts",
+															"line": 54,
+															"character": 56,
+															"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/engine.ts#L54"
+														}
+													],
+													"type": {
+														"type": "array",
+														"elementType": {
+															"type": "intrinsic",
+															"name": "string"
+														}
+													}
+												},
+												{
+													"id": 1785,
+													"name": "version",
+													"variant": "declaration",
+													"kind": 1024,
+													"flags": {
+														"isOptional": true
+													},
+													"sources": [
+														{
+															"fileName": "engine.ts",
+															"line": 54,
+															"character": 38,
+															"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/engine.ts#L54"
+														}
+													],
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												}
+											],
+											"groups": [
+												{
+													"title": "Properties",
+													"children": [
+														1784,
+														1786,
+														1785
+													]
+												}
+											],
+											"sources": [
+												{
+													"fileName": "engine.ts",
+													"line": 54,
+													"character": 22,
+													"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/engine.ts#L54"
+												}
+											]
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 1856,
+								"name": "ValidationResult",
+								"package": "@swissjs/security"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"target": 1839,
+								"name": "SecurityGateway.auditPlugin"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"target": 1838,
+						"name": "SecurityGateway.auditPlugin"
+					}
+				},
+				{
+					"id": 1771,
+					"name": "evaluate",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "engine.ts",
+							"line": 36,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/engine.ts#L36"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1772,
+							"name": "evaluate",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "engine.ts",
+									"line": 36,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/engine.ts#L36"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1773,
+									"name": "target",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 1774,
+									"name": "ctx",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": 1811,
+										"name": "SecurityContext",
+										"package": "@swissjs/security"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"target": 1825,
+								"name": "SecurityGateway.evaluate"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"target": 1824,
+						"name": "SecurityGateway.evaluate"
+					}
+				},
+				{
+					"id": 1775,
+					"name": "evaluateWithPolicy",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "engine.ts",
+							"line": 40,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/engine.ts#L40"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1776,
+							"name": "evaluateWithPolicy",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "engine.ts",
+									"line": 40,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/engine.ts#L40"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1777,
+									"name": "target",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 1778,
+									"name": "ctx",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": 1811,
+										"name": "SecurityContext",
+										"package": "@swissjs/security"
+									}
+								},
+								{
+									"id": 1779,
+									"name": "policyId",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"target": 1829,
+								"name": "SecurityGateway.evaluateWithPolicy"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"target": 1828,
+						"name": "SecurityGateway.evaluateWithPolicy"
+					}
+				},
+				{
+					"id": 1769,
+					"name": "getAuditLog",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "engine.ts",
+							"line": 32,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/engine.ts#L32"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1770,
+							"name": "getAuditLog",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "engine.ts",
+									"line": 32,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/engine.ts#L32"
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"target": 1803,
+									"name": "AuditEntry",
+									"package": "@swissjs/security"
+								}
+							},
+							"implementationOf": {
+								"type": "reference",
+								"target": 1834,
+								"name": "SecurityGateway.getAuditLog"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"target": 1833,
+						"name": "SecurityGateway.getAuditLog"
+					}
+				},
+				{
+					"id": 1757,
+					"name": "registerPolicy",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "engine.ts",
+							"line": 15,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/engine.ts#L15"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1758,
+							"name": "registerPolicy",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "engine.ts",
+									"line": 15,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/engine.ts#L15"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1759,
+									"name": "policy",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": 1845,
+										"name": "SecurityPolicy",
+										"package": "@swissjs/security"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 1760,
+					"name": "removePolicy",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "engine.ts",
+							"line": 19,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/engine.ts#L19"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1761,
+							"name": "removePolicy",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "engine.ts",
+									"line": 19,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/engine.ts#L19"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1762,
+									"name": "id",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 1763,
+					"name": "setContextDefaults",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "engine.ts",
+							"line": 23,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/engine.ts#L23"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1764,
+							"name": "setContextDefaults",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "engine.ts",
+									"line": 23,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/engine.ts#L23"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1765,
+									"name": "defaults",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": {
+											"packageName": "typescript",
+											"packagePath": "lib/lib.es5.d.ts",
+											"qualifiedName": "Partial"
+										},
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 1811,
+												"name": "SecurityContext",
+												"package": "@swissjs/security"
+											}
+										],
+										"name": "Partial",
+										"package": "typescript"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							},
+							"implementationOf": {
+								"type": "reference",
+								"target": 1836,
+								"name": "SecurityGateway.setContextDefaults"
+							}
+						}
+					],
+					"implementationOf": {
+						"type": "reference",
+						"target": 1835,
+						"name": "SecurityGateway.setContextDefaults"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Constructors",
+					"children": [
+						1747
+					]
+				},
+				{
+					"title": "Methods",
+					"children": [
+						1766,
+						1780,
+						1771,
+						1775,
+						1769,
+						1757,
+						1760,
+						1763
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "engine.ts",
+					"line": 8,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/engine.ts#L8"
+				}
+			],
+			"implementedTypes": [
+				{
+					"type": "reference",
+					"target": 1820,
+					"name": "SecurityGateway",
+					"package": "@swissjs/security"
+				}
+			]
+		},
+		{
+			"id": 1803,
+			"name": "AuditEntry",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 1807,
+					"name": "context",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 38,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L38"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": 1811,
+						"name": "SecurityContext",
+						"package": "@swissjs/security"
+					}
+				},
+				{
+					"id": 1810,
+					"name": "details",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 41,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L41"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": {
+							"packageName": "typescript",
+							"packagePath": "lib/lib.es5.d.ts",
+							"qualifiedName": "Record"
+						},
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "intrinsic",
+								"name": "unknown"
+							}
+						],
+						"name": "Record",
+						"package": "typescript"
+					}
+				},
+				{
+					"id": 1806,
+					"name": "policyId",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 37,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L37"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 1809,
+					"name": "reason",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 40,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L40"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 1808,
+					"name": "success",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 39,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L39"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 1805,
+					"name": "target",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 36,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L36"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 1804,
+					"name": "timestamp",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 35,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L35"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						1807,
+						1810,
+						1806,
+						1809,
+						1808,
+						1805,
+						1804
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "types.ts",
+					"line": 34,
+					"character": 17,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L34"
+				}
+			]
+		},
+		{
+			"id": 1811,
+			"name": "SecurityContext",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 1813,
+					"name": "componentName",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 23,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L23"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 1812,
+					"name": "layer",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 21,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L21"
+						}
+					],
+					"type": {
+						"type": "union",
+						"types": [
+							{
+								"type": "literal",
+								"value": "component"
+							},
+							{
+								"type": "literal",
+								"value": "service"
+							},
+							{
+								"type": "literal",
+								"value": "plugin"
+							},
+							{
+								"type": "literal",
+								"value": "runtime"
+							}
+						]
+					}
+				},
+				{
+					"id": 1819,
+					"name": "meta",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 30,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L30"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": {
+							"packageName": "typescript",
+							"packagePath": "lib/lib.es5.d.ts",
+							"qualifiedName": "Record"
+						},
+						"typeArguments": [
+							{
+								"type": "intrinsic",
+								"name": "string"
+							},
+							{
+								"type": "intrinsic",
+								"name": "unknown"
+							}
+						],
+						"name": "Record",
+						"package": "typescript"
+					}
+				},
+				{
+					"id": 1818,
+					"name": "permissions",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 28,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L28"
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "intrinsic",
+							"name": "string"
+						}
+					}
+				},
+				{
+					"id": 1814,
+					"name": "pluginName",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 24,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L24"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 1817,
+					"name": "roles",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 27,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L27"
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "intrinsic",
+							"name": "string"
+						}
+					}
+				},
+				{
+					"id": 1816,
+					"name": "tenantId",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 26,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L26"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 1815,
+					"name": "userId",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 25,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L25"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						1813,
+						1812,
+						1819,
+						1818,
+						1814,
+						1817,
+						1816,
+						1815
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "types.ts",
+					"line": 19,
+					"character": 17,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L19"
+				}
+			]
+		},
+		{
+			"id": 1820,
+			"name": "SecurityGateway",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 1821,
+					"name": "audit",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 52,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L52"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1822,
+							"name": "audit",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "types.ts",
+									"line": 52,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L52"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1823,
+									"name": "entry",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": 1803,
+										"name": "AuditEntry",
+										"package": "@swissjs/security"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				},
+				{
+					"id": 1838,
+					"name": "auditPlugin",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 57,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L57"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1839,
+							"name": "auditPlugin",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "types.ts",
+									"line": 57,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L57"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1840,
+									"name": "plugin",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "reflection",
+										"declaration": {
+											"id": 1841,
+											"name": "__type",
+											"variant": "declaration",
+											"kind": 65536,
+											"flags": {},
+											"children": [
+												{
+													"id": 1842,
+													"name": "name",
+													"variant": "declaration",
+													"kind": 1024,
+													"flags": {},
+													"sources": [
+														{
+															"fileName": "types.ts",
+															"line": 57,
+															"character": 24,
+															"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L57"
+														}
+													],
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												},
+												{
+													"id": 1844,
+													"name": "requiredCapabilities",
+													"variant": "declaration",
+													"kind": 1024,
+													"flags": {
+														"isOptional": true
+													},
+													"sources": [
+														{
+															"fileName": "types.ts",
+															"line": 57,
+															"character": 56,
+															"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L57"
+														}
+													],
+													"type": {
+														"type": "array",
+														"elementType": {
+															"type": "intrinsic",
+															"name": "string"
+														}
+													}
+												},
+												{
+													"id": 1843,
+													"name": "version",
+													"variant": "declaration",
+													"kind": 1024,
+													"flags": {
+														"isOptional": true
+													},
+													"sources": [
+														{
+															"fileName": "types.ts",
+															"line": 57,
+															"character": 38,
+															"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L57"
+														}
+													],
+													"type": {
+														"type": "intrinsic",
+														"name": "string"
+													}
+												}
+											],
+											"groups": [
+												{
+													"title": "Properties",
+													"children": [
+														1842,
+														1844,
+														1843
+													]
+												}
+											],
+											"sources": [
+												{
+													"fileName": "types.ts",
+													"line": 57,
+													"character": 22,
+													"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L57"
+												}
+											]
+										}
+									}
+								}
+							],
+							"type": {
+								"type": "reference",
+								"target": 1856,
+								"name": "ValidationResult",
+								"package": "@swissjs/security"
+							}
+						}
+					]
+				},
+				{
+					"id": 1824,
+					"name": "evaluate",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 53,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L53"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1825,
+							"name": "evaluate",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "types.ts",
+									"line": 53,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L53"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1826,
+									"name": "target",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 1827,
+									"name": "ctx",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": 1811,
+										"name": "SecurityContext",
+										"package": "@swissjs/security"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					]
+				},
+				{
+					"id": 1828,
+					"name": "evaluateWithPolicy",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 54,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L54"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1829,
+							"name": "evaluateWithPolicy",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "types.ts",
+									"line": 54,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L54"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1830,
+									"name": "target",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								},
+								{
+									"id": 1831,
+									"name": "ctx",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": 1811,
+										"name": "SecurityContext",
+										"package": "@swissjs/security"
+									}
+								},
+								{
+									"id": 1832,
+									"name": "policyId",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "string"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "boolean"
+							}
+						}
+					]
+				},
+				{
+					"id": 1833,
+					"name": "getAuditLog",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 55,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L55"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1834,
+							"name": "getAuditLog",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "types.ts",
+									"line": 55,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L55"
+								}
+							],
+							"type": {
+								"type": "array",
+								"elementType": {
+									"type": "reference",
+									"target": 1803,
+									"name": "AuditEntry",
+									"package": "@swissjs/security"
+								}
+							}
+						}
+					]
+				},
+				{
+					"id": 1835,
+					"name": "setContextDefaults",
+					"variant": "declaration",
+					"kind": 2048,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 56,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L56"
+						}
+					],
+					"signatures": [
+						{
+							"id": 1836,
+							"name": "setContextDefaults",
+							"variant": "signature",
+							"kind": 4096,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "types.ts",
+									"line": 56,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L56"
+								}
+							],
+							"parameters": [
+								{
+									"id": 1837,
+									"name": "defaults",
+									"variant": "param",
+									"kind": 32768,
+									"flags": {},
+									"type": {
+										"type": "reference",
+										"target": {
+											"packageName": "typescript",
+											"packagePath": "lib/lib.es5.d.ts",
+											"qualifiedName": "Partial"
+										},
+										"typeArguments": [
+											{
+												"type": "reference",
+												"target": 1811,
+												"name": "SecurityContext",
+												"package": "@swissjs/security"
+											}
+										],
+										"name": "Partial",
+										"package": "typescript"
+									}
+								}
+							],
+							"type": {
+								"type": "intrinsic",
+								"name": "void"
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Methods",
+					"children": [
+						1821,
+						1838,
+						1824,
+						1828,
+						1833,
+						1835
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "types.ts",
+					"line": 51,
+					"character": 17,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L51"
+				}
+			],
+			"implementedBy": [
+				{
+					"type": "reference",
+					"target": 1746,
+					"name": "InMemorySecurityEngine"
+				}
+			]
+		},
+		{
+			"id": 1845,
+			"name": "SecurityPolicy",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 1847,
+					"name": "description",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 6,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L6"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 1846,
+					"name": "id",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 5,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L5"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				},
+				{
+					"id": 1850,
+					"name": "permissions",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 11,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L11"
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "intrinsic",
+							"name": "string"
+						}
+					}
+				},
+				{
+					"id": 1852,
+					"name": "predicate",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 15,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L15"
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 1853,
+							"name": "__type",
+							"variant": "declaration",
+							"kind": 65536,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "types.ts",
+									"line": 15,
+									"character": 14,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L15"
+								}
+							],
+							"signatures": [
+								{
+									"id": 1854,
+									"name": "__type",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "types.ts",
+											"line": 15,
+											"character": 14,
+											"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L15"
+										}
+									],
+									"parameters": [
+										{
+											"id": 1855,
+											"name": "ctx",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"target": 1811,
+												"name": "SecurityContext",
+												"package": "@swissjs/security"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 1851,
+					"name": "rateLimitPerMinute",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 13,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L13"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "number"
+					}
+				},
+				{
+					"id": 1849,
+					"name": "roles",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 10,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L10"
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "intrinsic",
+							"name": "string"
+						}
+					}
+				},
+				{
+					"id": 1848,
+					"name": "target",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 8,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L8"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "string"
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						1847,
+						1846,
+						1850,
+						1852,
+						1851,
+						1849,
+						1848
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "types.ts",
+					"line": 4,
+					"character": 17,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L4"
+				}
+			]
+		},
+		{
+			"id": 1856,
+			"name": "ValidationResult",
+			"variant": "declaration",
+			"kind": 256,
+			"flags": {},
+			"children": [
+				{
+					"id": 1857,
+					"name": "ok",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 46,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L46"
+						}
+					],
+					"type": {
+						"type": "intrinsic",
+						"name": "boolean"
+					}
+				},
+				{
+					"id": 1858,
+					"name": "reasons",
+					"variant": "declaration",
+					"kind": 1024,
+					"flags": {
+						"isOptional": true
+					},
+					"sources": [
+						{
+							"fileName": "types.ts",
+							"line": 47,
+							"character": 2,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L47"
+						}
+					],
+					"type": {
+						"type": "array",
+						"elementType": {
+							"type": "intrinsic",
+							"name": "string"
+						}
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Properties",
+					"children": [
+						1857,
+						1858
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "types.ts",
+					"line": 45,
+					"character": 17,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/types.ts#L45"
+				}
+			]
+		},
+		{
+			"id": 1859,
+			"name": "SecurityValidator",
+			"variant": "declaration",
+			"kind": 32,
+			"flags": {
+				"isConst": true
+			},
+			"comment": {
+				"summary": [
+					{
+						"kind": "text",
+						"text": "Simple policy validator helpers."
+					}
+				]
+			},
+			"sources": [
+				{
+					"fileName": "validator.ts",
+					"line": 6,
+					"character": 13,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/validator.ts#L6"
+				}
+			],
+			"type": {
+				"type": "reflection",
+				"declaration": {
+					"id": 1860,
+					"name": "__type",
+					"variant": "declaration",
+					"kind": 65536,
+					"flags": {},
+					"children": [
+						{
+							"id": 1864,
+							"name": "canAccess",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "validator.ts",
+									"line": 19,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/validator.ts#L19"
+								}
+							],
+							"signatures": [
+								{
+									"id": 1865,
+									"name": "canAccess",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "validator.ts",
+											"line": 19,
+											"character": 2,
+											"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/validator.ts#L19"
+										}
+									],
+									"parameters": [
+										{
+											"id": 1866,
+											"name": "policy",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"target": 1845,
+												"name": "SecurityPolicy",
+												"package": "@swissjs/security"
+											}
+										},
+										{
+											"id": 1867,
+											"name": "ctx",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"target": 1811,
+												"name": "SecurityContext",
+												"package": "@swissjs/security"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "boolean"
+									}
+								}
+							]
+						},
+						{
+							"id": 1861,
+							"name": "validatePolicy",
+							"variant": "declaration",
+							"kind": 2048,
+							"flags": {},
+							"sources": [
+								{
+									"fileName": "validator.ts",
+									"line": 7,
+									"character": 2,
+									"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/validator.ts#L7"
+								}
+							],
+							"signatures": [
+								{
+									"id": 1862,
+									"name": "validatePolicy",
+									"variant": "signature",
+									"kind": 4096,
+									"flags": {},
+									"sources": [
+										{
+											"fileName": "validator.ts",
+											"line": 7,
+											"character": 2,
+											"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/validator.ts#L7"
+										}
+									],
+									"parameters": [
+										{
+											"id": 1863,
+											"name": "policy",
+											"variant": "param",
+											"kind": 32768,
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"target": 1845,
+												"name": "SecurityPolicy",
+												"package": "@swissjs/security"
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"target": 1856,
+										"name": "ValidationResult",
+										"package": "@swissjs/security"
+									}
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Methods",
+							"children": [
+								1864,
+								1861
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "validator.ts",
+							"line": 6,
+							"character": 33,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/validator.ts#L6"
+						}
+					]
+				}
+			},
+			"defaultValue": "..."
+		},
+		{
+			"id": 1801,
+			"name": "getDefaultSecurityEngine",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "engine.ts",
+					"line": 126,
+					"character": 16,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/engine.ts#L126"
+				}
+			],
+			"signatures": [
+				{
+					"id": 1802,
+					"name": "getDefaultSecurityEngine",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "engine.ts",
+							"line": 126,
+							"character": 16,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/security/src/engine.ts#L126"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": 1746,
+						"name": "InMemorySecurityEngine",
+						"package": "@swissjs/security"
+					}
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Classes",
+			"children": [
+				1746
+			]
+		},
+		{
+			"title": "Interfaces",
+			"children": [
+				1803,
+				1811,
+				1820,
+				1845,
+				1856
+			]
+		},
+		{
+			"title": "Variables",
+			"children": [
+				1859
+			]
+		},
+		{
+			"title": "Functions",
+			"children": [
+				1801
+			]
+		}
+	],
+	"packageName": "@swissjs/security",
+	"packageVersion": "0.1.0",
+	"symbolIdMap": {
+		"1745": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/index.ts",
+			"qualifiedName": ""
+		},
+		"1746": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "InMemorySecurityEngine"
+		},
+		"1757": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "InMemorySecurityEngine.registerPolicy"
+		},
+		"1758": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "InMemorySecurityEngine.registerPolicy"
+		},
+		"1759": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "policy"
+		},
+		"1760": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "InMemorySecurityEngine.removePolicy"
+		},
+		"1761": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "InMemorySecurityEngine.removePolicy"
+		},
+		"1762": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "id"
+		},
+		"1763": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "InMemorySecurityEngine.setContextDefaults"
+		},
+		"1764": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "InMemorySecurityEngine.setContextDefaults"
+		},
+		"1765": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "defaults"
+		},
+		"1766": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "InMemorySecurityEngine.audit"
+		},
+		"1767": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "InMemorySecurityEngine.audit"
+		},
+		"1768": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "entry"
+		},
+		"1769": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "InMemorySecurityEngine.getAuditLog"
+		},
+		"1770": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "InMemorySecurityEngine.getAuditLog"
+		},
+		"1771": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "InMemorySecurityEngine.evaluate"
+		},
+		"1772": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "InMemorySecurityEngine.evaluate"
+		},
+		"1773": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "target"
+		},
+		"1774": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "ctx"
+		},
+		"1775": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "InMemorySecurityEngine.evaluateWithPolicy"
+		},
+		"1776": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "InMemorySecurityEngine.evaluateWithPolicy"
+		},
+		"1777": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "target"
+		},
+		"1778": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "ctx"
+		},
+		"1779": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "policyId"
+		},
+		"1780": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "InMemorySecurityEngine.auditPlugin"
+		},
+		"1781": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "InMemorySecurityEngine.auditPlugin"
+		},
+		"1782": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "plugin"
+		},
+		"1783": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "__type"
+		},
+		"1784": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "__type.name"
+		},
+		"1785": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "__type.version"
+		},
+		"1786": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "__type.requiredCapabilities"
+		},
+		"1801": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "getDefaultSecurityEngine"
+		},
+		"1802": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/engine.ts",
+			"qualifiedName": "getDefaultSecurityEngine"
+		},
+		"1803": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "AuditEntry"
+		},
+		"1804": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "AuditEntry.timestamp"
+		},
+		"1805": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "AuditEntry.target"
+		},
+		"1806": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "AuditEntry.policyId"
+		},
+		"1807": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "AuditEntry.context"
+		},
+		"1808": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "AuditEntry.success"
+		},
+		"1809": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "AuditEntry.reason"
+		},
+		"1810": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "AuditEntry.details"
+		},
+		"1811": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityContext"
+		},
+		"1812": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityContext.layer"
+		},
+		"1813": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityContext.componentName"
+		},
+		"1814": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityContext.pluginName"
+		},
+		"1815": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityContext.userId"
+		},
+		"1816": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityContext.tenantId"
+		},
+		"1817": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityContext.roles"
+		},
+		"1818": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityContext.permissions"
+		},
+		"1819": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityContext.meta"
+		},
+		"1820": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityGateway"
+		},
+		"1821": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityGateway.audit"
+		},
+		"1822": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityGateway.audit"
+		},
+		"1823": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "entry"
+		},
+		"1824": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityGateway.evaluate"
+		},
+		"1825": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityGateway.evaluate"
+		},
+		"1826": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "target"
+		},
+		"1827": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "ctx"
+		},
+		"1828": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityGateway.evaluateWithPolicy"
+		},
+		"1829": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityGateway.evaluateWithPolicy"
+		},
+		"1830": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "target"
+		},
+		"1831": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "ctx"
+		},
+		"1832": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "policyId"
+		},
+		"1833": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityGateway.getAuditLog"
+		},
+		"1834": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityGateway.getAuditLog"
+		},
+		"1835": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityGateway.setContextDefaults"
+		},
+		"1836": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityGateway.setContextDefaults"
+		},
+		"1837": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "defaults"
+		},
+		"1838": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityGateway.auditPlugin"
+		},
+		"1839": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityGateway.auditPlugin"
+		},
+		"1840": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "plugin"
+		},
+		"1841": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "__type"
+		},
+		"1842": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "__type.name"
+		},
+		"1843": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "__type.version"
+		},
+		"1844": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "__type.requiredCapabilities"
+		},
+		"1845": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityPolicy"
+		},
+		"1846": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityPolicy.id"
+		},
+		"1847": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityPolicy.description"
+		},
+		"1848": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityPolicy.target"
+		},
+		"1849": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityPolicy.roles"
+		},
+		"1850": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityPolicy.permissions"
+		},
+		"1851": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityPolicy.rateLimitPerMinute"
+		},
+		"1852": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "SecurityPolicy.predicate"
+		},
+		"1853": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "__type"
+		},
+		"1854": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "__type"
+		},
+		"1855": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "ctx"
+		},
+		"1856": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "ValidationResult"
+		},
+		"1857": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "ValidationResult.ok"
+		},
+		"1858": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/types.ts",
+			"qualifiedName": "ValidationResult.reasons"
+		},
+		"1859": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/validator.ts",
+			"qualifiedName": "SecurityValidator"
+		},
+		"1860": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/validator.ts",
+			"qualifiedName": "__object"
+		},
+		"1861": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/validator.ts",
+			"qualifiedName": "__object.validatePolicy"
+		},
+		"1862": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/validator.ts",
+			"qualifiedName": "__object.validatePolicy"
+		},
+		"1863": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/validator.ts",
+			"qualifiedName": "policy"
+		},
+		"1864": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/validator.ts",
+			"qualifiedName": "__object.canAccess"
+		},
+		"1865": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/validator.ts",
+			"qualifiedName": "__object.canAccess"
+		},
+		"1866": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/validator.ts",
+			"qualifiedName": "policy"
+		},
+		"1867": {
+			"packageName": "@swissjs/security",
+			"packagePath": "src/validator.ts",
+			"qualifiedName": "ctx"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "packages/security/src/index.ts"
+		},
+		"reflections": {
+			"1": 1745
+		}
+	}
+}

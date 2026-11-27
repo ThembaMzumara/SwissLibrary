@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SwissJS Devtools Capability Explorer Schema",
+  "type": "object",
+  "definitions": {
+    "ComponentId": { "type": "string" },
+    "CapabilityName": { "type": "string" },
+    "ComponentNodePayload": {
+      "type": "object",
+      "properties": {
+        "id": { "$ref": "#/definitions/ComponentId" },
+        "name": { "type": "string" },
+        "parentId": {
+          "anyOf": [{ "$ref": "#/definitions/ComponentId" }, { "type": "null" }]
+        },
+        "provides": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/CapabilityName" }
+        },
+        "consumes": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/CapabilityName" }
+        }
+      },
+      "required": ["id", "name", "parentId", "provides", "consumes"],
+      "additionalProperties": false
+    },
+    "Edge": {
+      "type": "object",
+      "properties": {
+        "from": { "$ref": "#/definitions/ComponentId" },
+        "to": { "type": "string" },
+        "type": { "type": "string", "enum": ["provides", "consumes", "parent"] }
+      },
+      "required": ["from", "to", "type"],
+      "additionalProperties": false
+    }
+  },
+  "properties": {
+    "nodes": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/ComponentNodePayload" }
+    },
+    "edges": { "type": "array", "items": { "$ref": "#/definitions/Edge" } },
+    "createdAt": { "type": "number", "description": "Epoch milliseconds" }
+  },
+  "required": ["nodes", "edges", "createdAt"],
+  "additionalProperties": false
+}

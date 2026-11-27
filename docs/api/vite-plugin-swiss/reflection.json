@@ -1,0 +1,87 @@
+{
+	"schemaVersion": "2.0",
+	"id": 1686,
+	"name": "@swissjs/vite-plugin-swiss",
+	"variant": "project",
+	"kind": 1,
+	"flags": {},
+	"children": [
+		{
+			"id": 1687,
+			"name": "swissPlugin",
+			"variant": "declaration",
+			"kind": 64,
+			"flags": {},
+			"sources": [
+				{
+					"fileName": "index.ts",
+					"line": 4,
+					"character": 16,
+					"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/vite-plugin-swiss/src/index.ts#L4"
+				}
+			],
+			"signatures": [
+				{
+					"id": 1688,
+					"name": "swissPlugin",
+					"variant": "signature",
+					"kind": 4096,
+					"flags": {},
+					"sources": [
+						{
+							"fileName": "index.ts",
+							"line": 4,
+							"character": 16,
+							"url": "https://github.com/ThembaMzumara/SWISS/blob/5ce50149149caccb2b16f23191644853ba82f963/packages/plugins/vite-plugin-swiss/src/index.ts#L4"
+						}
+					],
+					"type": {
+						"type": "reference",
+						"target": {
+							"packageName": "vite",
+							"packagePath": "dist/node/index.d.ts",
+							"qualifiedName": "Plugin"
+						},
+						"name": "Plugin",
+						"package": "vite"
+					}
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "Functions",
+			"children": [
+				1687
+			]
+		}
+	],
+	"packageName": "@swissjs/vite-plugin-swiss",
+	"packageVersion": "0.1.1",
+	"symbolIdMap": {
+		"1686": {
+			"packageName": "@swissjs/vite-plugin-swiss",
+			"packagePath": "src/index.ts",
+			"qualifiedName": ""
+		},
+		"1687": {
+			"packageName": "@swissjs/vite-plugin-swiss",
+			"packagePath": "src/index.ts",
+			"qualifiedName": "swissPlugin"
+		},
+		"1688": {
+			"packageName": "@swissjs/vite-plugin-swiss",
+			"packagePath": "src/index.ts",
+			"qualifiedName": "swissPlugin"
+		}
+	},
+	"files": {
+		"entries": {
+			"1": "packages/plugins/vite-plugin-swiss/src/index.ts"
+		},
+		"reflections": {
+			"1": 1686
+		}
+	}
+}

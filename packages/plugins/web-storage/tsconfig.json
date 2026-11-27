@@ -1,0 +1,22 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "Node16",
+    "composite": true,
+    "tsBuildInfoFile": "./dist/.tsbuildinfo",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "declaration": true,
+    "noEmitOnError": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "__tests__",
+    "**/*.test.ts",
+    "**/*.spec.ts",
+    "**/*.d.ts.map"
+  ],
+  "references": [{ "path": "../../core" }]
+}
